@@ -5,20 +5,30 @@
 
 /* ---------- CSS Custom Properties ---------- */
 :root {
-  --color-primary: #a0704e;
-  --color-primary-dark: #8b5e3c;
-  --color-primary-light: #b8896a;
-  --color-olive: #4a5440;
-  --color-olive-dark: #3d4635;
-  --color-olive-light: #5c6a50;
-  --color-cream: #f5f0eb;
-  --color-cream-dark: #ede6de;
+  /* Main accent: rich terracotta/rust */
+  --color-primary: #b85c2a;
+  --color-primary-dark: #9e4d22;
+  --color-primary-light: #c97040;
+
+  /* Dark section bg: deep forest olive */
+  --color-olive: #2c3b28;
+  --color-olive-dark: #222f1e;
+  --color-olive-light: #4a5e42;
+
+  /* Cream/Off-white */
+  --color-cream: #f2ede6;
+  --color-cream-dark: #e8e0d5;
   --color-white: #ffffff;
-  --color-black: #1a1a1a;
-  --color-text: #3a3a3a;
-  --color-text-light: #6b6b6b;
-  --color-terracotta: #c06a35;
-  --color-border: #d5cfc7;
+
+  /* Text */
+  --color-black: #1c1c1a;
+  --color-text: #2e2e2b;
+  --color-text-light: #7a7268;
+
+  /* Terracotta (warm orange-brown for wine/table sections) */
+  --color-terracotta: #b85c2a;
+
+  --color-border: #d4ccc2;
 
   --font-serif: "Cormorant Garamond", "Georgia", serif;
   --font-sans: "Inter", "Helvetica Neue", sans-serif;
@@ -83,7 +93,7 @@ ul {
 
 .section-subtitle {
   font-family: var(--font-sans);
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   letter-spacing: 2px;
   color: var(--color-olive-light);
   text-align: center;
@@ -108,7 +118,7 @@ ul {
 
 .cta-link {
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--color-text);
@@ -337,10 +347,10 @@ ul {
   height: 100%;
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.25) 0%,
-    rgba(0, 0, 0, 0.05) 40%,
-    rgba(0, 0, 0, 0.1) 70%,
-    rgba(0, 0, 0, 0.35) 100%
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.05) 35%,
+    rgba(0, 0, 0, 0.08) 65%,
+    rgba(0, 0, 0, 0.4) 100%
   );
   z-index: 2;
 }
@@ -354,12 +364,12 @@ ul {
   z-index: 10;
   display: flex;
   align-items: stretch;
-  height: 56px;
+  height: 54px;
 }
 
 .nav-hamburger {
-  width: 56px;
-  height: 56px;
+  width: 54px;
+  height: 54px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -369,8 +379,8 @@ ul {
 }
 
 .hamburger-icon {
-  width: 22px;
-  height: 16px;
+  width: 20px;
+  height: 14px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -379,7 +389,7 @@ ul {
 .hamburger-icon span {
   display: block;
   width: 100%;
-  height: 2px;
+  height: 1.5px;
   background: var(--color-white);
   border-radius: 1px;
   transition: transform 0.3s ease;
@@ -391,15 +401,15 @@ ul {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgba(160, 112, 78, 0.85);
+  background: rgba(184, 92, 42, 0.88);
   backdrop-filter: blur(10px);
   padding: 0 20px;
 }
 
 .nav-logo-title {
   font-family: var(--font-sans);
-  font-size: 1rem;
-  letter-spacing: 8px;
+  font-size: 0.95rem;
+  letter-spacing: 9px;
   color: var(--color-white);
   font-weight: 400;
   text-transform: uppercase;
@@ -407,7 +417,7 @@ ul {
 
 .nav-logo-subtitle {
   font-family: var(--font-serif);
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   color: rgba(255, 255, 255, 0.8);
   letter-spacing: 3px;
   font-style: italic;
@@ -420,16 +430,17 @@ ul {
 }
 
 .nav-phone {
-  width: 56px;
-  height: 56px;
+  width: 54px;
+  height: 54px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: var(--color-primary);
   color: var(--color-white);
-  font-size: 1.1rem;
+  font-size: 1rem;
   cursor: pointer;
   transition: background 0.3s ease;
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .nav-phone:hover {
@@ -440,11 +451,11 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 20px;
+  padding: 0 22px;
   background: var(--color-primary);
   color: var(--color-white);
   font-family: var(--font-sans);
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   font-weight: 500;
@@ -465,7 +476,7 @@ ul {
   background: var(--color-primary);
   color: var(--color-white);
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   letter-spacing: 1px;
   font-weight: 500;
   cursor: pointer;
@@ -475,7 +486,7 @@ ul {
 
 .nav-lang::after {
   content: "▾";
-  font-size: 0.6rem;
+  font-size: 0.55rem;
 }
 
 /* --- Hero Content --- */
@@ -487,18 +498,18 @@ ul {
   text-align: center;
   z-index: 5;
   width: 90%;
-  max-width: 600px;
+  max-width: 620px;
 }
 
 .hero-title {
   font-family: var(--font-serif);
-  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-size: clamp(2.4rem, 5.5vw, 3.6rem);
   font-weight: 300;
   color: var(--color-white);
-  line-height: 1.3;
-  margin-bottom: 20px;
+  line-height: 1.2;
+  margin-bottom: 22px;
   animation: heroTextReveal 1s ease 0.3s both;
-  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.25);
 }
 
 .hero-title em {
@@ -511,12 +522,12 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  color: rgba(255, 255, 255, 0.9);
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.92);
   font-family: var(--font-sans);
-  font-size: 0.8rem;
-  letter-spacing: 1px;
-  margin-bottom: 14px;
+  font-size: 0.78rem;
+  letter-spacing: 1.5px;
+  margin-bottom: 16px;
   animation: heroTextReveal 1s ease 0.6s both;
 }
 
@@ -546,14 +557,14 @@ ul {
 
 .hero-scroll {
   position: absolute;
-  bottom: 40px;
+  bottom: 38px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 5;
   color: var(--color-white);
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   animation: floatDown 2s ease-in-out infinite;
-  opacity: 0.8;
+  opacity: 0.75;
 }
 
 .hero-scroll a {
@@ -565,27 +576,27 @@ ul {
    SECTION 2: FOUR BLOCKS
    ============================================ */
 .four-blocks {
-  padding: 100px 0 80px;
+  padding: 90px 0 80px;
   background: var(--color-cream);
 }
 
 .four-blocks-header {
   text-align: center;
-  max-width: 800px;
-  margin: 0 auto 60px;
+  max-width: 820px;
+  margin: 0 auto 56px;
   padding: 0 5%;
 }
 
 .four-blocks-title-wrapper {
   border: 1px solid var(--color-olive-light);
-  padding: 18px 30px;
-  margin-bottom: 24px;
+  padding: 16px 32px;
+  margin-bottom: 22px;
   display: inline-block;
 }
 
 .four-blocks-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+  font-size: clamp(1.4rem, 3vw, 2rem);
   font-weight: 400;
   color: var(--color-black);
   line-height: 1.3;
@@ -598,17 +609,17 @@ ul {
 
 .four-blocks-desc {
   font-family: var(--font-serif);
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: var(--color-text-light);
-  line-height: 1.6;
-  margin-bottom: 20px;
+  line-height: 1.65;
+  margin-bottom: 18px;
   font-style: italic;
 }
 
 .four-blocks-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 36px;
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 5%;
@@ -620,7 +631,7 @@ ul {
 
 .block-card-image {
   width: 100%;
-  height: 300px;
+  height: 310px;
   overflow: hidden;
   border-radius: 0;
 }
@@ -629,7 +640,7 @@ ul {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  transition: transform 0.7s ease;
 }
 
 .block-card:hover .block-card-image img {
@@ -637,11 +648,11 @@ ul {
 }
 
 .block-card-content {
-  padding: 20px 0;
+  padding: 18px 0;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 15px;
+  gap: 14px;
 }
 
 .block-card-meta {
@@ -651,24 +662,24 @@ ul {
 .block-card-number {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   font-family: var(--font-sans);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: var(--color-text-light);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .block-card-number::after {
   content: "";
   display: block;
-  width: 40px;
+  width: 36px;
   height: 1px;
   background: var(--color-text-light);
 }
 
 .block-card-title {
   font-family: var(--font-serif);
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   font-weight: 500;
   color: var(--color-black);
   margin-bottom: 6px;
@@ -676,7 +687,7 @@ ul {
 
 .block-card-text {
   font-family: var(--font-sans);
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   color: var(--color-text-light);
   line-height: 1.6;
 }
@@ -688,10 +699,10 @@ ul {
 
 .btn-outline {
   display: inline-block;
-  padding: 10px 22px;
+  padding: 9px 20px;
   border: 1px solid var(--color-text-light);
   font-family: var(--font-sans);
-  font-size: 0.65rem;
+  font-size: 0.62rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--color-text);
@@ -735,10 +746,11 @@ ul {
 
 .hameau-keywords {
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   letter-spacing: 2px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.55);
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 .hameau-title {
@@ -747,7 +759,7 @@ ul {
   font-weight: 300;
   line-height: 1.25;
   color: var(--color-white);
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .hameau-title em {
@@ -757,23 +769,23 @@ ul {
 
 .hameau-tagline {
   font-family: var(--font-serif);
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.65);
   font-style: italic;
 }
 
 .hameau-top-right {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.72);
   font-family: var(--font-serif);
-  font-size: 0.95rem;
-  line-height: 1.8;
+  font-size: 0.92rem;
+  line-height: 1.85;
   font-style: italic;
 }
 
 /* --- Hameau Banner Image --- */
 .hameau-banner {
   width: 100%;
-  height: 500px;
+  height: 520px;
   overflow: hidden;
 }
 
@@ -797,7 +809,7 @@ ul {
 
 .hameau-content-subtitle {
   font-family: var(--font-serif);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: var(--color-olive-light);
   font-style: italic;
   margin-bottom: 12px;
@@ -825,16 +837,16 @@ ul {
 
 .hameau-text-col p {
   font-family: var(--font-serif);
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   color: var(--color-text-light);
-  line-height: 1.8;
+  line-height: 1.85;
   margin-bottom: 20px;
   font-style: italic;
 }
 
 .hameau-image-right {
   width: 100%;
-  height: 350px;
+  height: 360px;
   overflow: hidden;
 }
 
@@ -842,7 +854,7 @@ ul {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  transition: transform 0.7s ease;
 }
 
 .hameau-image-right:hover img {
@@ -852,7 +864,7 @@ ul {
 .hameau-bottom-images {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  gap: 28px;
   margin-top: 40px;
 }
 
@@ -866,7 +878,7 @@ ul {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  transition: transform 0.7s ease;
 }
 
 .hameau-bottom-img:hover img {
@@ -907,7 +919,7 @@ ul {
   font-family: var(--font-serif);
   font-size: 0.9rem;
   color: var(--color-text-light);
-  line-height: 1.7;
+  line-height: 1.75;
   margin-bottom: 16px;
   font-style: italic;
   padding: 0 10%;
@@ -921,7 +933,7 @@ ul {
 /* --- Carousel --- */
 .sejours-carousel {
   display: flex;
-  gap: 20px;
+  gap: 18px;
   padding: 0 3%;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -940,13 +952,13 @@ ul {
   flex-shrink: 0;
   scroll-snap-align: center;
   position: relative;
-  border-radius: 4px;
+  border-radius: 2px;
   overflow: hidden;
 }
 
 .sejours-card-image {
   width: 100%;
-  height: 420px;
+  height: 430px;
   position: relative;
   overflow: hidden;
 }
@@ -955,7 +967,7 @@ ul {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  transition: transform 0.7s ease;
 }
 
 .sejours-card:hover .sejours-card-image img {
@@ -967,8 +979,8 @@ ul {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 30px 25px;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+  padding: 32px 24px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.65));
   color: var(--color-white);
 }
 
@@ -976,21 +988,22 @@ ul {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.65);
   margin-bottom: 6px;
+  font-family: var(--font-sans);
 }
 
 .sejours-card-number::after {
   content: "";
-  width: 25px;
+  width: 22px;
   height: 1px;
   background: rgba(255, 255, 255, 0.5);
 }
 
 .sejours-card-title {
   font-family: var(--font-serif);
-  font-size: 1.5rem;
+  font-size: 1.55rem;
   font-weight: 400;
   margin-bottom: 14px;
 }
@@ -1002,28 +1015,29 @@ ul {
 
 .sejours-card-amenities {
   display: flex;
-  gap: 20px;
-  font-size: 0.72rem;
-  color: rgba(255, 255, 255, 0.8);
+  gap: 18px;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.82);
   margin-bottom: 16px;
+  font-family: var(--font-sans);
 }
 
 .amenity {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
 }
 
 .amenity-icon {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
 }
 
 .sejours-card-btn {
   display: inline-block;
-  padding: 10px 22px;
-  border: 1px solid rgba(255, 255, 255, 0.6);
+  padding: 9px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
   font-family: var(--font-sans);
-  font-size: 0.6rem;
+  font-size: 0.58rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--color-white);
@@ -1065,10 +1079,11 @@ ul {
 
 .vins-keywords {
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   letter-spacing: 2px;
-  color: var(--color-terracotta);
+  color: var(--color-primary-light);
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 .vins-title {
@@ -1077,7 +1092,7 @@ ul {
   font-weight: 300;
   line-height: 1.25;
   color: var(--color-white);
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .vins-title em {
@@ -1087,23 +1102,23 @@ ul {
 
 .vins-tagline {
   font-family: var(--font-serif);
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.65);
   font-style: italic;
 }
 
 .vins-top-right {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.72);
   font-family: var(--font-serif);
-  font-size: 0.95rem;
-  line-height: 1.8;
+  font-size: 0.92rem;
+  line-height: 1.85;
   font-style: italic;
 }
 
 /* --- Vins Banner --- */
 .vins-banner {
   width: 100%;
-  height: 450px;
+  height: 460px;
   overflow: hidden;
 }
 
@@ -1135,7 +1150,7 @@ ul {
 
 .vins-content-subtitle {
   font-family: var(--font-serif);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: var(--color-olive-light);
   font-style: italic;
   margin-bottom: 12px;
@@ -1146,7 +1161,7 @@ ul {
   font-size: clamp(1.6rem, 3.5vw, 2.4rem);
   font-weight: 400;
   color: var(--color-black);
-  margin-bottom: 24px;
+  margin-bottom: 22px;
   line-height: 1.25;
 }
 
@@ -1157,23 +1172,23 @@ ul {
 
 .vins-content-text {
   font-family: var(--font-serif);
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   color: var(--color-text-light);
-  line-height: 1.8;
-  margin-bottom: 30px;
+  line-height: 1.85;
+  margin-bottom: 28px;
   font-style: italic;
 }
 
 /* --- Wine List --- */
 .wine-list {
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .wine-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 0;
+  padding: 13px 0;
   border-bottom: 1px solid var(--color-border);
   transition: padding-left 0.3s ease;
 }
@@ -1188,7 +1203,7 @@ ul {
 
 .wine-name {
   font-family: var(--font-sans);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--color-terracotta);
@@ -1196,7 +1211,7 @@ ul {
 }
 
 .wine-arrow {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: var(--color-terracotta);
   transition: transform 0.3s ease;
 }
@@ -1215,7 +1230,7 @@ ul {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  transition: transform 0.7s ease;
 }
 
 .vins-content-image:hover img {
@@ -1233,13 +1248,13 @@ ul {
 
 .wine-showcase-header {
   text-align: center;
-  max-width: 800px;
+  max-width: 820px;
   margin: 0 auto 60px;
 }
 
 .wine-showcase-subtitle {
   font-family: var(--font-serif);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: var(--color-terracotta);
   font-style: italic;
   margin-bottom: 10px;
@@ -1250,7 +1265,7 @@ ul {
   font-size: clamp(1.6rem, 3.5vw, 2.4rem);
   font-weight: 400;
   color: var(--color-black);
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   line-height: 1.3;
 }
 
@@ -1261,11 +1276,11 @@ ul {
 
 .wine-showcase-desc {
   font-family: var(--font-serif);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: var(--color-text-light);
-  line-height: 1.7;
+  line-height: 1.75;
   font-style: italic;
-  max-width: 700px;
+  max-width: 680px;
   margin: 0 auto;
 }
 
@@ -1287,15 +1302,15 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
   overflow: hidden;
 }
 
 .wine-bottle-image img {
   max-height: 100%;
-  max-width: 180px;
+  max-width: 170px;
   object-fit: contain;
-  transition: transform 0.6s ease;
+  transition: transform 0.7s ease;
 }
 
 .wine-bottle-card:hover .wine-bottle-image img {
@@ -1304,7 +1319,7 @@ ul {
 
 .wine-bottle-name {
   font-family: var(--font-serif);
-  font-size: 1.5rem;
+  font-size: 1.45rem;
   font-weight: 400;
   color: var(--color-black);
   margin-bottom: 6px;
@@ -1317,7 +1332,7 @@ ul {
 
 .wine-bottle-type {
   font-family: var(--font-sans);
-  font-size: 0.65rem;
+  font-size: 0.62rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--color-terracotta);
@@ -1327,19 +1342,19 @@ ul {
 
 .wine-bottle-desc {
   font-family: var(--font-sans);
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   color: var(--color-text-light);
-  line-height: 1.6;
+  line-height: 1.65;
   margin-bottom: 20px;
   padding: 0 10px;
 }
 
 .btn-outline-terracotta {
   display: inline-block;
-  padding: 10px 22px;
+  padding: 9px 20px;
   border: 1px solid var(--color-terracotta);
   font-family: var(--font-sans);
-  font-size: 0.6rem;
+  font-size: 0.58rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--color-terracotta);
@@ -1384,15 +1399,15 @@ ul {
 }
 
 .wine-showcase-dark .wine-bottle-desc {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.72);
 }
 
 .btn-outline-white {
   display: inline-block;
-  padding: 10px 22px;
+  padding: 9px 20px;
   border: 1px solid rgba(255, 255, 255, 0.6);
   font-family: var(--font-sans);
-  font-size: 0.6rem;
+  font-size: 0.58rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--color-white);
@@ -1435,10 +1450,11 @@ ul {
 
 .table-keywords {
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   letter-spacing: 2px;
-  color: var(--color-terracotta);
+  color: var(--color-primary-light);
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 .table-title {
@@ -1447,7 +1463,7 @@ ul {
   font-weight: 300;
   line-height: 1.25;
   color: var(--color-white);
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .table-title em {
@@ -1457,23 +1473,23 @@ ul {
 
 .table-tagline {
   font-family: var(--font-serif);
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.65);
   font-style: italic;
 }
 
 .table-top-right {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.72);
   font-family: var(--font-serif);
-  font-size: 0.95rem;
-  line-height: 1.8;
+  font-size: 0.92rem;
+  line-height: 1.85;
   font-style: italic;
 }
 
 /* --- Table Banner --- */
 .table-banner {
   width: 100%;
-  height: 500px;
+  height: 520px;
   overflow: hidden;
 }
 
@@ -1521,7 +1537,7 @@ ul {
 
 .table-content-subtitle {
   font-family: var(--font-serif);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: var(--color-primary);
   font-style: italic;
   margin-bottom: 12px;
@@ -1532,7 +1548,7 @@ ul {
   font-size: clamp(1.5rem, 3vw, 2.2rem);
   font-weight: 400;
   color: var(--color-black);
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   line-height: 1.3;
 }
 
@@ -1543,35 +1559,35 @@ ul {
 
 .table-content-text {
   font-family: var(--font-sans);
-  font-size: 0.85rem;
+  font-size: 0.83rem;
   color: var(--color-text-light);
   line-height: 1.7;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .table-content-text-serif {
   font-family: var(--font-serif);
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   color: var(--color-text-light);
-  line-height: 1.8;
-  margin-bottom: 24px;
+  line-height: 1.85;
+  margin-bottom: 22px;
   font-style: italic;
 }
 
 /* --- Table Links --- */
 .table-links {
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .table-link-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 0;
+  padding: 13px 0;
   border-bottom: 1px solid var(--color-border);
   transition: padding-left 0.3s ease;
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--color-primary);
@@ -1587,7 +1603,7 @@ ul {
 }
 
 .table-link-arrow {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: var(--color-primary);
   transition: transform 0.3s ease;
 }
@@ -1606,7 +1622,7 @@ ul {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  transition: transform 0.7s ease;
 }
 
 .table-image-side:hover img {
@@ -1639,8 +1655,8 @@ ul {
 
 .table-extended-subtitle {
   font-family: var(--font-serif);
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.68);
   font-style: italic;
   margin-bottom: 12px;
 }
@@ -1650,7 +1666,7 @@ ul {
   font-size: clamp(1.6rem, 3.5vw, 2.4rem);
   font-weight: 400;
   color: var(--color-white);
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   line-height: 1.25;
 }
 
@@ -1661,34 +1677,34 @@ ul {
 
 .table-extended-text {
   font-family: var(--font-sans);
-  font-size: 0.85rem;
+  font-size: 0.83rem;
   color: rgba(255, 255, 255, 0.75);
-  line-height: 1.7;
-  margin-bottom: 20px;
+  line-height: 1.72;
+  margin-bottom: 18px;
 }
 
 /* --- Quote Box --- */
 .quote-box {
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 30px 28px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  padding: 28px 26px;
   position: relative;
   align-self: start;
-  margin-top: 20px;
+  margin-top: 18px;
 }
 
 .quote-box-text {
   font-family: var(--font-serif);
-  font-size: 0.92rem;
-  color: rgba(255, 255, 255, 0.85);
-  line-height: 1.7;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.75;
   font-style: italic;
   margin-bottom: 14px;
 }
 
 .quote-box-author {
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   color: var(--color-white);
   letter-spacing: 1px;
   text-align: right;
@@ -1712,7 +1728,7 @@ ul {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  transition: transform 0.7s ease;
 }
 
 .table-extended-image:hover img {
@@ -1725,9 +1741,9 @@ ul {
 
 .table-extended-details p {
   font-family: var(--font-sans);
-  font-size: 0.85rem;
+  font-size: 0.83rem;
   color: rgba(255, 255, 255, 0.75);
-  line-height: 1.7;
+  line-height: 1.72;
   margin-bottom: 16px;
 }
 
@@ -1738,8 +1754,8 @@ ul {
 
 .bullet-list li {
   font-family: var(--font-serif);
-  font-size: 0.88rem;
-  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.87rem;
+  color: rgba(255, 255, 255, 0.82);
   padding: 5px 0;
   font-style: italic;
   display: flex;
@@ -1750,14 +1766,14 @@ ul {
 .bullet-list li::before {
   content: "~";
   color: rgba(255, 255, 255, 0.5);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
 }
 
 .table-closing-text {
   font-family: var(--font-serif);
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.8);
-  line-height: 1.7;
+  line-height: 1.75;
   font-style: italic;
   margin-top: 20px;
   padding-top: 20px;
@@ -1784,7 +1800,7 @@ ul {
   font-size: clamp(1.6rem, 3.5vw, 2.4rem);
   font-weight: 400;
   color: var(--color-black);
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   line-height: 1.3;
 }
 
@@ -1795,16 +1811,16 @@ ul {
 
 .deux-choix-desc {
   font-family: var(--font-serif);
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   color: var(--color-text-light);
-  line-height: 1.6;
+  line-height: 1.65;
   font-style: italic;
 }
 
 .deux-choix-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 36px;
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 5%;
@@ -1816,7 +1832,7 @@ ul {
 
 .choix-card-image {
   width: 100%;
-  height: 350px;
+  height: 360px;
   overflow: hidden;
 }
 
@@ -1824,7 +1840,7 @@ ul {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  transition: transform 0.7s ease;
 }
 
 .choix-card:hover .choix-card-image img {
@@ -1832,15 +1848,15 @@ ul {
 }
 
 .choix-card-content {
-  padding: 20px 0;
+  padding: 18px 0;
 }
 
 .choix-card-number {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   font-family: var(--font-sans);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: var(--color-text-light);
   margin-bottom: 8px;
 }
@@ -1848,7 +1864,7 @@ ul {
 .choix-card-number::after {
   content: "";
   display: block;
-  width: 40px;
+  width: 36px;
   height: 1px;
   background: var(--color-text-light);
 }
@@ -1868,7 +1884,7 @@ ul {
 
 .choix-card-text {
   font-family: var(--font-sans);
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   color: var(--color-text-light);
   line-height: 1.6;
   margin-bottom: 16px;
@@ -1896,24 +1912,24 @@ ul {
 
   .nav-reserve {
     padding: 0 14px;
-    font-size: 0.65rem;
+    font-size: 0.62rem;
   }
 
   .nav-logo-title {
     font-size: 0.85rem;
-    letter-spacing: 5px;
+    letter-spacing: 6px;
   }
 
   .hero-title {
-    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-size: clamp(2rem, 4.5vw, 3rem);
   }
 
   .four-blocks-grid {
-    gap: 30px;
+    gap: 28px;
   }
 
   .block-card-image {
-    height: 240px;
+    height: 250px;
   }
 
   .hameau-top-inner,
@@ -1924,7 +1940,7 @@ ul {
   }
 
   .hameau-banner {
-    height: 380px;
+    height: 400px;
   }
 
   .hameau-content-body {
@@ -1945,11 +1961,11 @@ ul {
 
   .sejours-card {
     min-width: 320px;
-    max-width: 350px;
+    max-width: 360px;
   }
 
   .sejours-card-image {
-    height: 360px;
+    height: 370px;
   }
 
   .vins-content-inner {
@@ -1966,10 +1982,9 @@ ul {
   }
 
   .vins-banner {
-    height: 350px;
+    height: 360px;
   }
 
-  /* New sections tablet */
   .wine-bottle-image {
     height: 300px;
   }
@@ -1979,7 +1994,7 @@ ul {
   }
 
   .table-banner {
-    height: 380px;
+    height: 390px;
   }
 
   .table-content-block {
@@ -1997,11 +2012,11 @@ ul {
   }
 
   .deux-choix-grid {
-    gap: 30px;
+    gap: 28px;
   }
 
   .choix-card-image {
-    height: 280px;
+    height: 290px;
   }
 }
 
@@ -2031,7 +2046,7 @@ ul {
 
   .nav-lang {
     padding: 0 12px;
-    font-size: 0.7rem;
+    font-size: 0.68rem;
   }
 
   .nav-logo-title {
@@ -2044,7 +2059,7 @@ ul {
   }
 
   .hero-title {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
   }
 
   .hero-info {
@@ -2053,21 +2068,17 @@ ul {
     justify-content: center;
   }
 
-  .hero-author {
-    font-size: 0.65rem;
-  }
-
   .four-blocks {
     padding: 60px 0 50px;
   }
 
   .four-blocks-grid {
     grid-template-columns: 1fr;
-    gap: 35px;
+    gap: 32px;
   }
 
   .block-card-image {
-    height: 250px;
+    height: 260px;
   }
 
   .block-card-content {
@@ -2084,7 +2095,7 @@ ul {
   }
 
   .hameau-banner {
-    height: 280px;
+    height: 290px;
   }
 
   .hameau-content {
@@ -2096,7 +2107,7 @@ ul {
   }
 
   .hameau-image-right {
-    height: 260px;
+    height: 270px;
   }
 
   .hameau-bottom-images {
@@ -2117,8 +2128,8 @@ ul {
   }
 
   .sejours-card {
-    min-width: 280px;
-    max-width: 300px;
+    min-width: 285px;
+    max-width: 310px;
   }
 
   .sejours-card-image {
@@ -2130,7 +2141,7 @@ ul {
   }
 
   .vins-banner {
-    height: 260px;
+    height: 270px;
   }
 
   .vins-content {
@@ -2146,7 +2157,6 @@ ul {
     height: 320px;
   }
 
-  /* New sections mobile */
   .wine-bottles-grid {
     grid-template-columns: 1fr;
     gap: 50px;
@@ -2166,7 +2176,7 @@ ul {
   }
 
   .table-banner {
-    height: 260px;
+    height: 270px;
   }
 
   .table-content {
@@ -2210,11 +2220,11 @@ ul {
 
   .deux-choix-grid {
     grid-template-columns: 1fr;
-    gap: 35px;
+    gap: 32px;
   }
 
   .choix-card-image {
-    height: 250px;
+    height: 260px;
   }
 }
 
@@ -2254,7 +2264,7 @@ ul {
   }
 
   .hero-title {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 
   .hero-info {
@@ -2270,7 +2280,7 @@ ul {
   }
 
   .block-card-image {
-    height: 200px;
+    height: 210px;
   }
 
   .block-card-title {
@@ -2280,24 +2290,24 @@ ul {
   .hameau-title,
   .vins-title,
   .table-title {
-    font-size: 1.6rem;
+    font-size: 1.65rem;
   }
 
   .hameau-banner {
-    height: 200px;
+    height: 210px;
   }
 
   .hameau-image-right {
-    height: 200px;
+    height: 210px;
   }
 
   .hameau-bottom-img {
-    height: 180px;
+    height: 185px;
   }
 
   .sejours-card {
-    min-width: 250px;
-    max-width: 270px;
+    min-width: 255px;
+    max-width: 275px;
   }
 
   .sejours-card-image {
@@ -2310,11 +2320,11 @@ ul {
   }
 
   .vins-banner {
-    height: 200px;
+    height: 210px;
   }
 
   .vins-content-image {
-    height: 260px;
+    height: 270px;
   }
 
   .wine-name {
@@ -2322,7 +2332,6 @@ ul {
     letter-spacing: 2px;
   }
 
-  /* New sections small mobile */
   .wine-bottle-image {
     height: 280px;
   }
@@ -2332,23 +2341,23 @@ ul {
   }
 
   .wine-bottle-name {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
   }
 
   .table-banner {
-    height: 200px;
+    height: 210px;
   }
 
   .table-image-side {
-    height: 220px;
+    height: 225px;
   }
 
   .table-extended-image {
-    height: 200px;
+    height: 205px;
   }
 
   .choix-card-image {
-    height: 200px;
+    height: 210px;
   }
 
   .quote-box {
@@ -2373,7 +2382,7 @@ ul {
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.08;
+  opacity: 0.07;
   pointer-events: none;
 }
 
@@ -2399,7 +2408,7 @@ ul {
   font-weight: 400;
   color: var(--color-white);
   line-height: 1.3;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
 .engagement-title em {
@@ -2409,9 +2418,9 @@ ul {
 
 .engagement-text {
   font-family: var(--font-serif);
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.75);
-  line-height: 1.85;
+  font-size: 0.93rem;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.9;
   font-style: italic;
 }
 
@@ -2434,7 +2443,7 @@ ul {
 
 .esprit-subtitle {
   font-family: var(--font-serif);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: var(--color-olive-light);
   font-style: italic;
   margin-bottom: 12px;
@@ -2446,7 +2455,7 @@ ul {
   font-weight: 400;
   color: var(--color-black);
   line-height: 1.25;
-  margin-bottom: 28px;
+  margin-bottom: 26px;
 }
 
 .esprit-title em {
@@ -2456,9 +2465,9 @@ ul {
 
 .esprit-text {
   font-family: var(--font-serif);
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   color: var(--color-text-light);
-  line-height: 1.8;
+  line-height: 1.85;
   margin-bottom: 18px;
   font-style: italic;
 }
@@ -2475,7 +2484,7 @@ ul {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 220px;
-  gap: 12px;
+  gap: 10px;
   max-width: var(--max-width);
   margin: 0 auto;
 }
@@ -2489,7 +2498,7 @@ ul {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  transition: transform 0.7s ease;
 }
 
 .gallery-item:hover img {
@@ -2505,7 +2514,7 @@ ul {
   bottom: 10px;
   right: 12px;
   color: var(--color-white);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   opacity: 0.8;
 }
 
@@ -2533,7 +2542,7 @@ ul {
   font-weight: 400;
   color: var(--color-white);
   line-height: 1.3;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
 }
 
 .hospitalite-title em {
@@ -2543,16 +2552,16 @@ ul {
 
 .hospitalite-text {
   font-family: var(--font-serif);
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.8);
-  line-height: 1.85;
+  line-height: 1.9;
   font-style: italic;
 }
 
 .hospitalite-images {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  gap: 12px;
+  gap: 10px;
   max-width: var(--max-width);
   margin: 0 auto;
 }
@@ -2566,7 +2575,7 @@ ul {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  transition: transform 0.7s ease;
 }
 
 .hospitalite-img:hover img {
@@ -2599,8 +2608,8 @@ ul {
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.1),
-    rgba(0, 0, 0, 0.45)
+    rgba(0, 0, 0, 0.08),
+    rgba(0, 0, 0, 0.5)
   );
 }
 
@@ -2615,11 +2624,11 @@ ul {
 
 .provence-title {
   font-family: var(--font-serif);
-  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-size: clamp(2.2rem, 5.5vw, 3.6rem);
   font-weight: 300;
   color: var(--color-white);
   line-height: 1.25;
-  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.25);
 }
 
 .provence-title em {
@@ -2636,9 +2645,9 @@ ul {
 
 .provence-text {
   font-family: var(--font-serif);
-  font-size: 0.95rem;
+  font-size: 0.93rem;
   color: var(--color-text-light);
-  line-height: 1.85;
+  line-height: 1.9;
   font-style: italic;
 }
 
@@ -2681,7 +2690,7 @@ ul {
 
 .footer-logo-title {
   font-family: var(--font-sans);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   letter-spacing: 6px;
   color: var(--color-white);
   font-weight: 400;
@@ -2689,8 +2698,8 @@ ul {
 
 .footer-logo-subtitle {
   font-family: var(--font-serif);
-  font-size: 0.65rem;
-  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.63rem;
+  color: rgba(255, 255, 255, 0.6);
   letter-spacing: 2px;
   font-style: italic;
 }
@@ -2698,12 +2707,12 @@ ul {
 .footer-columns {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 30px;
+  gap: 28px;
 }
 
 .footer-col-title {
   font-family: var(--font-sans);
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--color-white);
@@ -2717,8 +2726,8 @@ ul {
 
 .footer-col ul li a {
   font-family: var(--font-serif);
-  font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.55);
   font-style: italic;
   transition: color 0.3s ease;
 }
