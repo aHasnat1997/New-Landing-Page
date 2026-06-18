@@ -20,6 +20,10 @@
   --color-cream-dark: #e8e0d5;
   --color-white: #ffffff;
 
+  /* Golden/mustard bg for table-extended */
+  --color-gold: #c8a96e;
+  --color-gold-dark: #b8975a;
+
   /* Text */
   --color-black: #1c1c1a;
   --color-text: #2e2e2b;
@@ -347,10 +351,10 @@ ul {
   height: 100%;
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.3) 0%,
-    rgba(0, 0, 0, 0.05) 35%,
-    rgba(0, 0, 0, 0.08) 65%,
-    rgba(0, 0, 0, 0.4) 100%
+    rgba(0, 0, 0, 0.28) 0%,
+    rgba(0, 0, 0, 0.04) 35%,
+    rgba(0, 0, 0, 0.06) 65%,
+    rgba(0, 0, 0, 0.38) 100%
   );
   z-index: 2;
 }
@@ -364,12 +368,12 @@ ul {
   z-index: 10;
   display: flex;
   align-items: stretch;
-  height: 54px;
+  height: 52px;
 }
 
 .nav-hamburger {
-  width: 54px;
-  height: 54px;
+  width: 52px;
+  height: 52px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -408,7 +412,7 @@ ul {
 
 .nav-logo-title {
   font-family: var(--font-sans);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   letter-spacing: 9px;
   color: var(--color-white);
   font-weight: 400;
@@ -417,7 +421,7 @@ ul {
 
 .nav-logo-subtitle {
   font-family: var(--font-serif);
-  font-size: 0.65rem;
+  font-size: 0.63rem;
   color: rgba(255, 255, 255, 0.8);
   letter-spacing: 3px;
   font-style: italic;
@@ -430,8 +434,8 @@ ul {
 }
 
 .nav-phone {
-  width: 54px;
-  height: 54px;
+  width: 52px;
+  height: 52px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -455,7 +459,7 @@ ul {
   background: var(--color-primary);
   color: var(--color-white);
   font-family: var(--font-sans);
-  font-size: 0.65rem;
+  font-size: 0.63rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   font-weight: 500;
@@ -503,13 +507,13 @@ ul {
 
 .hero-title {
   font-family: var(--font-serif);
-  font-size: clamp(2.4rem, 5.5vw, 3.6rem);
+  font-size: clamp(2.4rem, 5.5vw, 3.8rem);
   font-weight: 300;
   color: var(--color-white);
   line-height: 1.2;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
   animation: heroTextReveal 1s ease 0.3s both;
-  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.22);
 }
 
 .hero-title em {
@@ -525,7 +529,7 @@ ul {
   gap: 10px;
   color: rgba(255, 255, 255, 0.92);
   font-family: var(--font-sans);
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   letter-spacing: 1.5px;
   margin-bottom: 16px;
   animation: heroTextReveal 1s ease 0.6s both;
@@ -557,7 +561,7 @@ ul {
 
 .hero-scroll {
   position: absolute;
-  bottom: 38px;
+  bottom: 36px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 5;
@@ -576,27 +580,27 @@ ul {
    SECTION 2: FOUR BLOCKS
    ============================================ */
 .four-blocks {
-  padding: 90px 0 80px;
+  padding: 80px 0 70px;
   background: var(--color-cream);
 }
 
 .four-blocks-header {
   text-align: center;
-  max-width: 820px;
-  margin: 0 auto 56px;
+  max-width: 760px;
+  margin: 0 auto 50px;
   padding: 0 5%;
 }
 
 .four-blocks-title-wrapper {
   border: 1px solid var(--color-olive-light);
-  padding: 16px 32px;
-  margin-bottom: 22px;
+  padding: 14px 28px;
+  margin-bottom: 20px;
   display: inline-block;
 }
 
 .four-blocks-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-size: clamp(1.3rem, 2.8vw, 1.9rem);
   font-weight: 400;
   color: var(--color-black);
   line-height: 1.3;
@@ -609,20 +613,21 @@ ul {
 
 .four-blocks-desc {
   font-family: var(--font-serif);
-  font-size: 0.95rem;
+  font-size: 0.93rem;
   color: var(--color-text-light);
   line-height: 1.65;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
   font-style: italic;
 }
 
+/* 2x2 grid: images on top, text below */
 .four-blocks-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 36px;
+  gap: 0;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 5%;
+  padding: 0;
 }
 
 .block-card {
@@ -631,9 +636,8 @@ ul {
 
 .block-card-image {
   width: 100%;
-  height: 310px;
+  height: 300px;
   overflow: hidden;
-  border-radius: 0;
 }
 
 .block-card-image img {
@@ -648,11 +652,13 @@ ul {
 }
 
 .block-card-content {
-  padding: 18px 0;
+  padding: 20px 24px 26px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: 14px;
+  background: var(--color-cream);
+  border-top: 1px solid var(--color-border);
 }
 
 .block-card-meta {
@@ -664,30 +670,30 @@ ul {
   align-items: center;
   gap: 10px;
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   color: var(--color-text-light);
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 }
 
 .block-card-number::after {
   content: "";
   display: block;
-  width: 36px;
+  width: 32px;
   height: 1px;
   background: var(--color-text-light);
 }
 
 .block-card-title {
   font-family: var(--font-serif);
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   font-weight: 500;
   color: var(--color-black);
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 }
 
 .block-card-text {
   font-family: var(--font-sans);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: var(--color-text-light);
   line-height: 1.6;
 }
@@ -699,10 +705,10 @@ ul {
 
 .btn-outline {
   display: inline-block;
-  padding: 9px 20px;
+  padding: 8px 18px;
   border: 1px solid var(--color-text-light);
   font-family: var(--font-sans);
-  font-size: 0.62rem;
+  font-size: 0.6rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--color-text);
@@ -728,7 +734,7 @@ ul {
 /* --- Hameau Top (Dark BG) --- */
 .hameau-top {
   background: var(--color-olive-dark);
-  padding: 80px 5%;
+  padding: 72px 5%;
 }
 
 .hameau-top-inner {
@@ -746,20 +752,20 @@ ul {
 
 .hameau-keywords {
   font-family: var(--font-sans);
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   letter-spacing: 2px;
-  color: rgba(255, 255, 255, 0.55);
-  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 18px;
   text-transform: uppercase;
 }
 
 .hameau-title {
   font-family: var(--font-serif);
-  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-size: clamp(1.9rem, 3.8vw, 2.7rem);
   font-weight: 300;
-  line-height: 1.25;
+  line-height: 1.22;
   color: var(--color-white);
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .hameau-title em {
@@ -769,15 +775,15 @@ ul {
 
 .hameau-tagline {
   font-family: var(--font-serif);
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.93rem;
+  color: rgba(255, 255, 255, 0.62);
   font-style: italic;
 }
 
 .hameau-top-right {
   color: rgba(255, 255, 255, 0.72);
   font-family: var(--font-serif);
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   line-height: 1.85;
   font-style: italic;
 }
@@ -785,7 +791,7 @@ ul {
 /* --- Hameau Banner Image --- */
 .hameau-banner {
   width: 100%;
-  height: 520px;
+  height: 500px;
   overflow: hidden;
 }
 
@@ -796,10 +802,10 @@ ul {
   object-position: center;
 }
 
-/* --- Hameau Content (Light BG) --- */
+/* --- Hameau Content (White BG) --- */
 .hameau-content {
   background: var(--color-white);
-  padding: 80px 5%;
+  padding: 72px 5%;
 }
 
 .hameau-content-inner {
@@ -809,18 +815,18 @@ ul {
 
 .hameau-content-subtitle {
   font-family: var(--font-serif);
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   color: var(--color-olive-light);
   font-style: italic;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .hameau-content-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-size: clamp(1.55rem, 3.2vw, 2.3rem);
   font-weight: 400;
   color: var(--color-black);
-  margin-bottom: 40px;
+  margin-bottom: 36px;
   line-height: 1.3;
 }
 
@@ -833,20 +839,21 @@ ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
+  margin-bottom: 40px;
 }
 
 .hameau-text-col p {
   font-family: var(--font-serif);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: var(--color-text-light);
   line-height: 1.85;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   font-style: italic;
 }
 
 .hameau-image-right {
   width: 100%;
-  height: 360px;
+  height: 340px;
   overflow: hidden;
 }
 
@@ -864,13 +871,13 @@ ul {
 .hameau-bottom-images {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 28px;
-  margin-top: 40px;
+  gap: 24px;
+  margin-top: 0;
 }
 
 .hameau-bottom-img {
   width: 100%;
-  height: 280px;
+  height: 260px;
   overflow: hidden;
 }
 
@@ -889,25 +896,25 @@ ul {
    SECTION 4: SÉJOURS CAROUSEL
    ============================================ */
 .sejours-section {
-  padding: 100px 0 80px;
+  padding: 90px 0 70px;
   background: var(--color-cream);
   overflow: hidden;
 }
 
 .sejours-header {
   text-align: center;
-  max-width: 700px;
-  margin: 0 auto 20px;
+  max-width: 680px;
+  margin: 0 auto 18px;
   padding: 0 5%;
 }
 
 .sejours-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-size: clamp(1.7rem, 3.8vw, 2.5rem);
   font-weight: 400;
   color: var(--color-black);
   line-height: 1.3;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .sejours-title em {
@@ -917,23 +924,23 @@ ul {
 
 .sejours-desc {
   font-family: var(--font-serif);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: var(--color-text-light);
   line-height: 1.75;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   font-style: italic;
-  padding: 0 10%;
+  padding: 0 8%;
 }
 
 .sejours-cta {
-  margin-bottom: 50px;
+  margin-bottom: 44px;
   text-align: center;
 }
 
 /* --- Carousel --- */
 .sejours-carousel {
   display: flex;
-  gap: 18px;
+  gap: 16px;
   padding: 0 3%;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -947,18 +954,18 @@ ul {
 }
 
 .sejours-card {
-  min-width: 380px;
-  max-width: 420px;
+  min-width: 370px;
+  max-width: 400px;
   flex-shrink: 0;
   scroll-snap-align: center;
   position: relative;
-  border-radius: 2px;
+  border-radius: 0;
   overflow: hidden;
 }
 
 .sejours-card-image {
   width: 100%;
-  height: 430px;
+  height: 420px;
   position: relative;
   overflow: hidden;
 }
@@ -979,8 +986,8 @@ ul {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 32px 24px;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.65));
+  padding: 30px 22px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.68));
   color: var(--color-white);
 }
 
@@ -988,24 +995,24 @@ ul {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.72rem;
-  color: rgba(255, 255, 255, 0.65);
-  margin-bottom: 6px;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.62);
+  margin-bottom: 5px;
   font-family: var(--font-sans);
 }
 
 .sejours-card-number::after {
   content: "";
-  width: 22px;
+  width: 20px;
   height: 1px;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.45);
 }
 
 .sejours-card-title {
   font-family: var(--font-serif);
-  font-size: 1.55rem;
+  font-size: 1.5rem;
   font-weight: 400;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .sejours-card-title em {
@@ -1015,29 +1022,29 @@ ul {
 
 .sejours-card-amenities {
   display: flex;
-  gap: 18px;
-  font-size: 0.7rem;
+  gap: 16px;
+  font-size: 0.68rem;
   color: rgba(255, 255, 255, 0.82);
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   font-family: var(--font-sans);
 }
 
 .amenity {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 4px;
 }
 
 .amenity-icon {
-  font-size: 0.82rem;
+  font-size: 0.8rem;
 }
 
 .sejours-card-btn {
   display: inline-block;
-  padding: 9px 20px;
-  border: 1px solid rgba(255, 255, 255, 0.55);
+  padding: 8px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
   font-family: var(--font-sans);
-  font-size: 0.58rem;
+  font-size: 0.57rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--color-white);
@@ -1061,7 +1068,7 @@ ul {
 /* --- Vins Top (Dark BG) --- */
 .vins-top {
   background: var(--color-olive-dark);
-  padding: 80px 5%;
+  padding: 72px 5%;
 }
 
 .vins-top-inner {
@@ -1079,20 +1086,20 @@ ul {
 
 .vins-keywords {
   font-family: var(--font-sans);
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   letter-spacing: 2px;
   color: var(--color-primary-light);
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   text-transform: uppercase;
 }
 
 .vins-title {
   font-family: var(--font-serif);
-  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-size: clamp(1.9rem, 3.8vw, 2.7rem);
   font-weight: 300;
-  line-height: 1.25;
+  line-height: 1.22;
   color: var(--color-white);
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .vins-title em {
@@ -1102,15 +1109,15 @@ ul {
 
 .vins-tagline {
   font-family: var(--font-serif);
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.93rem;
+  color: rgba(255, 255, 255, 0.62);
   font-style: italic;
 }
 
 .vins-top-right {
   color: rgba(255, 255, 255, 0.72);
   font-family: var(--font-serif);
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   line-height: 1.85;
   font-style: italic;
 }
@@ -1118,7 +1125,7 @@ ul {
 /* --- Vins Banner --- */
 .vins-banner {
   width: 100%;
-  height: 460px;
+  height: 440px;
   overflow: hidden;
 }
 
@@ -1129,10 +1136,10 @@ ul {
   object-position: center 30%;
 }
 
-/* --- Vins Content --- */
+/* --- Vins Content (White BG) --- */
 .vins-content {
   background: var(--color-white);
-  padding: 80px 5%;
+  padding: 72px 5%;
 }
 
 .vins-content-inner {
@@ -1145,23 +1152,23 @@ ul {
 }
 
 .vins-content-left {
-  padding-right: 20px;
+  padding-right: 16px;
 }
 
 .vins-content-subtitle {
   font-family: var(--font-serif);
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   color: var(--color-olive-light);
   font-style: italic;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .vins-content-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-size: clamp(1.55rem, 3.2vw, 2.3rem);
   font-weight: 400;
   color: var(--color-black);
-  margin-bottom: 22px;
+  margin-bottom: 20px;
   line-height: 1.25;
 }
 
@@ -1172,23 +1179,23 @@ ul {
 
 .vins-content-text {
   font-family: var(--font-serif);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: var(--color-text-light);
   line-height: 1.85;
-  margin-bottom: 28px;
+  margin-bottom: 26px;
   font-style: italic;
 }
 
 /* --- Wine List --- */
 .wine-list {
-  margin-top: 8px;
+  margin-top: 6px;
 }
 
 .wine-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 13px 0;
+  padding: 12px 0;
   border-bottom: 1px solid var(--color-border);
   transition: padding-left 0.3s ease;
 }
@@ -1203,7 +1210,7 @@ ul {
 
 .wine-name {
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--color-terracotta);
@@ -1222,7 +1229,7 @@ ul {
 
 .vins-content-image {
   width: 100%;
-  height: 480px;
+  height: 460px;
   overflow: hidden;
 }
 
@@ -1238,34 +1245,34 @@ ul {
 }
 
 /* ============================================
-   SECTION 6: WINE BOTTLES SHOWCASE (LIGHT)
+   SECTION 6: WINE BOTTLES SHOWCASE (LIGHT / CREAM)
    ============================================ */
 .wine-showcase {
-  padding: 80px 5% 100px;
+  padding: 80px 5% 90px;
   background: var(--color-cream);
   position: relative;
 }
 
 .wine-showcase-header {
   text-align: center;
-  max-width: 820px;
-  margin: 0 auto 60px;
+  max-width: 780px;
+  margin: 0 auto 55px;
 }
 
 .wine-showcase-subtitle {
   font-family: var(--font-serif);
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   color: var(--color-terracotta);
   font-style: italic;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .wine-showcase-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-size: clamp(1.55rem, 3.2vw, 2.3rem);
   font-weight: 400;
   color: var(--color-black);
-  margin-bottom: 18px;
+  margin-bottom: 16px;
   line-height: 1.3;
 }
 
@@ -1276,18 +1283,18 @@ ul {
 
 .wine-showcase-desc {
   font-family: var(--font-serif);
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   color: var(--color-text-light);
   line-height: 1.75;
   font-style: italic;
-  max-width: 680px;
+  max-width: 640px;
   margin: 0 auto;
 }
 
 .wine-bottles-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  gap: 36px;
   max-width: var(--max-width);
   margin: 0 auto;
 }
@@ -1298,17 +1305,17 @@ ul {
 
 .wine-bottle-image {
   width: 100%;
-  height: 380px;
+  height: 360px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
   overflow: hidden;
 }
 
 .wine-bottle-image img {
   max-height: 100%;
-  max-width: 170px;
+  max-width: 160px;
   object-fit: contain;
   transition: transform 0.7s ease;
 }
@@ -1319,10 +1326,10 @@ ul {
 
 .wine-bottle-name {
   font-family: var(--font-serif);
-  font-size: 1.45rem;
+  font-size: 1.38rem;
   font-weight: 400;
   color: var(--color-black);
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 }
 
 .wine-bottle-name em {
@@ -1332,29 +1339,29 @@ ul {
 
 .wine-bottle-type {
   font-family: var(--font-sans);
-  font-size: 0.62rem;
+  font-size: 0.6rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--color-terracotta);
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   font-weight: 500;
 }
 
 .wine-bottle-desc {
   font-family: var(--font-sans);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: var(--color-text-light);
   line-height: 1.65;
-  margin-bottom: 20px;
-  padding: 0 10px;
+  margin-bottom: 18px;
+  padding: 0 8px;
 }
 
 .btn-outline-terracotta {
   display: inline-block;
-  padding: 9px 20px;
+  padding: 8px 18px;
   border: 1px solid var(--color-terracotta);
   font-family: var(--font-sans);
-  font-size: 0.58rem;
+  font-size: 0.57rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--color-terracotta);
@@ -1370,10 +1377,10 @@ ul {
 }
 
 /* ============================================
-   SECTION 7: WINE BOTTLES (DARK / TERRACOTTA)
+   SECTION 7: WINE BOTTLES (DARK / TERRACOTTA BG)
    ============================================ */
 .wine-showcase-dark {
-  padding: 80px 5% 100px;
+  padding: 80px 5% 90px;
   background: var(--color-primary);
   position: relative;
 }
@@ -1381,33 +1388,28 @@ ul {
 .wine-showcase-dark .wine-showcase-header {
   color: var(--color-white);
 }
-
 .wine-showcase-dark .wine-showcase-title {
   color: var(--color-white);
 }
-
 .wine-showcase-dark .wine-showcase-desc {
   color: rgba(255, 255, 255, 0.75);
 }
-
 .wine-showcase-dark .wine-bottle-name {
   color: var(--color-white);
 }
-
 .wine-showcase-dark .wine-bottle-type {
   color: rgba(255, 255, 255, 0.7);
 }
-
 .wine-showcase-dark .wine-bottle-desc {
   color: rgba(255, 255, 255, 0.72);
 }
 
 .btn-outline-white {
   display: inline-block;
-  padding: 9px 20px;
+  padding: 8px 18px;
   border: 1px solid rgba(255, 255, 255, 0.6);
   font-family: var(--font-sans);
-  font-size: 0.58rem;
+  font-size: 0.57rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--color-white);
@@ -1432,7 +1434,7 @@ ul {
 /* --- Table Top (Dark BG) --- */
 .table-top {
   background: var(--color-olive-dark);
-  padding: 80px 5%;
+  padding: 72px 5%;
 }
 
 .table-top-inner {
@@ -1450,20 +1452,20 @@ ul {
 
 .table-keywords {
   font-family: var(--font-sans);
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   letter-spacing: 2px;
   color: var(--color-primary-light);
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   text-transform: uppercase;
 }
 
 .table-title {
   font-family: var(--font-serif);
-  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-size: clamp(1.9rem, 3.8vw, 2.7rem);
   font-weight: 300;
-  line-height: 1.25;
+  line-height: 1.22;
   color: var(--color-white);
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .table-title em {
@@ -1473,15 +1475,15 @@ ul {
 
 .table-tagline {
   font-family: var(--font-serif);
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.93rem;
+  color: rgba(255, 255, 255, 0.62);
   font-style: italic;
 }
 
 .table-top-right {
   color: rgba(255, 255, 255, 0.72);
   font-family: var(--font-serif);
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   line-height: 1.85;
   font-style: italic;
 }
@@ -1489,7 +1491,7 @@ ul {
 /* --- Table Banner --- */
 .table-banner {
   width: 100%;
-  height: 520px;
+  height: 500px;
   overflow: hidden;
 }
 
@@ -1500,10 +1502,10 @@ ul {
   object-position: center;
 }
 
-/* --- Table Content --- */
+/* --- Table Content (White BG, alternating blocks) --- */
 .table-content {
   background: var(--color-white);
-  padding: 80px 5%;
+  padding: 72px 5%;
 }
 
 .table-content-inner {
@@ -1516,7 +1518,7 @@ ul {
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
-  margin-bottom: 80px;
+  margin-bottom: 72px;
 }
 
 .table-content-block:last-child {
@@ -1526,29 +1528,28 @@ ul {
 .table-content-block.reversed {
   direction: rtl;
 }
-
 .table-content-block.reversed > * {
   direction: ltr;
 }
 
 .table-text-side {
-  padding-right: 20px;
+  padding-right: 16px;
 }
 
 .table-content-subtitle {
   font-family: var(--font-serif);
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   color: var(--color-primary);
   font-style: italic;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .table-content-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-size: clamp(1.4rem, 2.8vw, 2.1rem);
   font-weight: 400;
   color: var(--color-black);
-  margin-bottom: 18px;
+  margin-bottom: 16px;
   line-height: 1.3;
 }
 
@@ -1559,35 +1560,35 @@ ul {
 
 .table-content-text {
   font-family: var(--font-sans);
-  font-size: 0.83rem;
+  font-size: 0.82rem;
   color: var(--color-text-light);
   line-height: 1.7;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .table-content-text-serif {
   font-family: var(--font-serif);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: var(--color-text-light);
   line-height: 1.85;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
   font-style: italic;
 }
 
 /* --- Table Links --- */
 .table-links {
-  margin-top: 8px;
+  margin-top: 6px;
 }
 
 .table-link-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 13px 0;
+  padding: 12px 0;
   border-bottom: 1px solid var(--color-border);
   transition: padding-left 0.3s ease;
   font-family: var(--font-sans);
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--color-primary);
@@ -1597,7 +1598,6 @@ ul {
 .table-link-item:first-child {
   border-top: 1px solid var(--color-border);
 }
-
 .table-link-item:hover {
   padding-left: 10px;
 }
@@ -1614,7 +1614,7 @@ ul {
 
 .table-image-side {
   width: 100%;
-  height: 400px;
+  height: 390px;
   overflow: hidden;
 }
 
@@ -1630,11 +1630,12 @@ ul {
 }
 
 /* ============================================
-   SECTION 9: LA TABLE EXTENDED (TERRACOTTA BG)
+   SECTION 9: LA TABLE EXTENDED (GOLDEN/MUSTARD BG)
    ============================================ */
+/* In the design image, this section has a warm gold/khaki bg, not terracotta */
 .table-extended {
-  background: var(--color-primary);
-  padding: 80px 5%;
+  background: #c4a06b;
+  padding: 72px 5%;
 }
 
 .table-extended-inner {
@@ -1646,7 +1647,7 @@ ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 48px;
 }
 
 .table-extended-left {
@@ -1655,18 +1656,18 @@ ul {
 
 .table-extended-subtitle {
   font-family: var(--font-serif);
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   color: rgba(255, 255, 255, 0.68);
   font-style: italic;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .table-extended-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-size: clamp(1.55rem, 3.2vw, 2.3rem);
   font-weight: 400;
   color: var(--color-white);
-  margin-bottom: 18px;
+  margin-bottom: 16px;
   line-height: 1.25;
 }
 
@@ -1677,34 +1678,34 @@ ul {
 
 .table-extended-text {
   font-family: var(--font-sans);
-  font-size: 0.83rem;
-  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.8);
   line-height: 1.72;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 /* --- Quote Box --- */
 .quote-box {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  padding: 28px 26px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 26px 24px;
   position: relative;
   align-self: start;
-  margin-top: 18px;
+  margin-top: 16px;
 }
 
 .quote-box-text {
   font-family: var(--font-serif);
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.9);
   line-height: 1.75;
   font-style: italic;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .quote-box-author {
   font-family: var(--font-sans);
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   color: var(--color-white);
   letter-spacing: 1px;
   text-align: right;
@@ -1720,7 +1721,7 @@ ul {
 
 .table-extended-image {
   width: 100%;
-  height: 300px;
+  height: 290px;
   overflow: hidden;
 }
 
@@ -1741,22 +1742,22 @@ ul {
 
 .table-extended-details p {
   font-family: var(--font-sans);
-  font-size: 0.83rem;
-  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.8);
   line-height: 1.72;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .bullet-list {
-  margin: 16px 0 20px;
+  margin: 14px 0 18px;
   padding-left: 0;
 }
 
 .bullet-list li {
   font-family: var(--font-serif);
-  font-size: 0.87rem;
-  color: rgba(255, 255, 255, 0.82);
-  padding: 5px 0;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 4px 0;
   font-style: italic;
   display: flex;
   align-items: center;
@@ -1771,36 +1772,36 @@ ul {
 
 .table-closing-text {
   font-family: var(--font-serif);
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.82);
   line-height: 1.75;
   font-style: italic;
-  margin-top: 20px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 /* ============================================
    SECTION 10: DEUX CHOIX (EVENTS)
    ============================================ */
 .deux-choix-section {
-  padding: 100px 0 80px;
+  padding: 90px 0 70px;
   background: var(--color-cream);
 }
 
 .deux-choix-header {
   text-align: center;
-  max-width: 800px;
-  margin: 0 auto 60px;
+  max-width: 760px;
+  margin: 0 auto 54px;
   padding: 0 5%;
 }
 
 .deux-choix-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-size: clamp(1.55rem, 3.2vw, 2.3rem);
   font-weight: 400;
   color: var(--color-black);
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   line-height: 1.3;
 }
 
@@ -1811,7 +1812,7 @@ ul {
 
 .deux-choix-desc {
   font-family: var(--font-serif);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: var(--color-text-light);
   line-height: 1.65;
   font-style: italic;
@@ -1820,7 +1821,7 @@ ul {
 .deux-choix-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 36px;
+  gap: 32px;
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 5%;
@@ -1832,7 +1833,7 @@ ul {
 
 .choix-card-image {
   width: 100%;
-  height: 360px;
+  height: 350px;
   overflow: hidden;
 }
 
@@ -1848,7 +1849,7 @@ ul {
 }
 
 .choix-card-content {
-  padding: 18px 0;
+  padding: 16px 0;
 }
 
 .choix-card-number {
@@ -1856,25 +1857,25 @@ ul {
   align-items: center;
   gap: 10px;
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   color: var(--color-text-light);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .choix-card-number::after {
   content: "";
   display: block;
-  width: 36px;
+  width: 32px;
   height: 1px;
   background: var(--color-text-light);
 }
 
 .choix-card-title {
   font-family: var(--font-serif);
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   font-weight: 500;
   color: var(--color-black);
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 }
 
 .choix-card-title em {
@@ -1884,485 +1885,10 @@ ul {
 
 .choix-card-text {
   font-family: var(--font-sans);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: var(--color-text-light);
   line-height: 1.6;
-  margin-bottom: 16px;
-}
-
-/* ============================================
-   RESPONSIVE DESIGN
-   ============================================ */
-
-/* --- Tablet (max 1024px) --- */
-@media (max-width: 1024px) {
-  .navbar {
-    height: 50px;
-  }
-
-  .nav-hamburger {
-    width: 50px;
-    height: 50px;
-  }
-
-  .nav-phone {
-    width: 50px;
-    height: 50px;
-  }
-
-  .nav-reserve {
-    padding: 0 14px;
-    font-size: 0.62rem;
-  }
-
-  .nav-logo-title {
-    font-size: 0.85rem;
-    letter-spacing: 6px;
-  }
-
-  .hero-title {
-    font-size: clamp(2rem, 4.5vw, 3rem);
-  }
-
-  .four-blocks-grid {
-    gap: 28px;
-  }
-
-  .block-card-image {
-    height: 250px;
-  }
-
-  .hameau-top-inner,
-  .vins-top-inner,
-  .table-top-inner {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .hameau-banner {
-    height: 400px;
-  }
-
-  .hameau-content-body {
-    grid-template-columns: 1fr;
-  }
-
-  .hameau-image-right {
-    height: 300px;
-  }
-
-  .hameau-bottom-images {
-    gap: 20px;
-  }
-
-  .hameau-bottom-img {
-    height: 220px;
-  }
-
-  .sejours-card {
-    min-width: 320px;
-    max-width: 360px;
-  }
-
-  .sejours-card-image {
-    height: 370px;
-  }
-
-  .vins-content-inner {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .vins-content-left {
-    padding-right: 0;
-  }
-
-  .vins-content-image {
-    height: 380px;
-  }
-
-  .vins-banner {
-    height: 360px;
-  }
-
-  .wine-bottle-image {
-    height: 300px;
-  }
-
-  .wine-bottle-image img {
-    max-width: 140px;
-  }
-
-  .table-banner {
-    height: 390px;
-  }
-
-  .table-content-block {
-    gap: 40px;
-  }
-
-  .table-image-side {
-    height: 320px;
-  }
-
-  .table-extended-top,
-  .table-extended-bottom {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .deux-choix-grid {
-    gap: 28px;
-  }
-
-  .choix-card-image {
-    height: 290px;
-  }
-}
-
-/* --- Mobile Large (max 768px) --- */
-@media (max-width: 768px) {
-  :root {
-    --section-padding: 60px 0;
-  }
-
-  .navbar {
-    height: 46px;
-  }
-
-  .nav-hamburger {
-    width: 46px;
-    height: 46px;
-  }
-
-  .nav-phone {
-    width: 46px;
-    height: 46px;
-  }
-
-  .nav-reserve {
-    display: none;
-  }
-
-  .nav-lang {
-    padding: 0 12px;
-    font-size: 0.68rem;
-  }
-
-  .nav-logo-title {
-    font-size: 0.75rem;
-    letter-spacing: 4px;
-  }
-
-  .nav-logo-subtitle {
-    font-size: 0.6rem;
-  }
-
-  .hero-title {
-    font-size: 1.9rem;
-  }
-
-  .hero-info {
-    font-size: 0.7rem;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .four-blocks {
-    padding: 60px 0 50px;
-  }
-
-  .four-blocks-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .block-card-image {
-    height: 260px;
-  }
-
-  .block-card-content {
-    flex-direction: column;
-    gap: 14px;
-  }
-
-  .block-card-btn {
-    align-self: flex-start;
-  }
-
-  .hameau-top {
-    padding: 50px 5%;
-  }
-
-  .hameau-banner {
-    height: 290px;
-  }
-
-  .hameau-content {
-    padding: 50px 5%;
-  }
-
-  .hameau-content-body {
-    grid-template-columns: 1fr;
-  }
-
-  .hameau-image-right {
-    height: 270px;
-  }
-
-  .hameau-bottom-images {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .hameau-bottom-img {
-    height: 220px;
-  }
-
-  .sejours-section {
-    padding: 60px 0 50px;
-  }
-
-  .sejours-desc {
-    padding: 0;
-  }
-
-  .sejours-card {
-    min-width: 285px;
-    max-width: 310px;
-  }
-
-  .sejours-card-image {
-    height: 340px;
-  }
-
-  .vins-top {
-    padding: 50px 5%;
-  }
-
-  .vins-banner {
-    height: 270px;
-  }
-
-  .vins-content {
-    padding: 50px 5%;
-  }
-
-  .vins-content-inner {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .vins-content-image {
-    height: 320px;
-  }
-
-  .wine-bottles-grid {
-    grid-template-columns: 1fr;
-    gap: 50px;
-  }
-
-  .wine-bottle-image {
-    height: 320px;
-  }
-
-  .wine-showcase,
-  .wine-showcase-dark {
-    padding: 60px 5% 70px;
-  }
-
-  .table-top {
-    padding: 50px 5%;
-  }
-
-  .table-banner {
-    height: 270px;
-  }
-
-  .table-content {
-    padding: 50px 5%;
-  }
-
-  .table-content-block {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .table-content-block.reversed {
-    direction: ltr;
-  }
-
-  .table-text-side {
-    padding-right: 0;
-  }
-
-  .table-image-side {
-    height: 280px;
-  }
-
-  .table-extended {
-    padding: 50px 5%;
-  }
-
-  .table-extended-top,
-  .table-extended-bottom {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .table-extended-image {
-    height: 240px;
-  }
-
-  .deux-choix-section {
-    padding: 60px 0 50px;
-  }
-
-  .deux-choix-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .choix-card-image {
-    height: 260px;
-  }
-}
-
-/* --- Mobile Small (max 480px) --- */
-@media (max-width: 480px) {
-  .navbar {
-    height: 42px;
-  }
-
-  .nav-hamburger {
-    width: 42px;
-    height: 42px;
-  }
-
-  .nav-phone {
-    width: 42px;
-    height: 42px;
-    font-size: 0.9rem;
-  }
-
-  .nav-lang {
-    padding: 0 10px;
-    font-size: 0.65rem;
-  }
-
-  .nav-logo-title {
-    font-size: 0.65rem;
-    letter-spacing: 3px;
-  }
-
-  .nav-logo-subtitle {
-    display: none;
-  }
-
-  .hero {
-    min-height: 500px;
-  }
-
-  .hero-title {
-    font-size: 1.6rem;
-  }
-
-  .hero-info {
-    font-size: 0.65rem;
-  }
-
-  .four-blocks-title-wrapper {
-    padding: 12px 16px;
-  }
-
-  .four-blocks-title {
-    font-size: 1.3rem;
-  }
-
-  .block-card-image {
-    height: 210px;
-  }
-
-  .block-card-title {
-    font-size: 1.2rem;
-  }
-
-  .hameau-title,
-  .vins-title,
-  .table-title {
-    font-size: 1.65rem;
-  }
-
-  .hameau-banner {
-    height: 210px;
-  }
-
-  .hameau-image-right {
-    height: 210px;
-  }
-
-  .hameau-bottom-img {
-    height: 185px;
-  }
-
-  .sejours-card {
-    min-width: 255px;
-    max-width: 275px;
-  }
-
-  .sejours-card-image {
-    height: 300px;
-  }
-
-  .sejours-card-amenities {
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  .vins-banner {
-    height: 210px;
-  }
-
-  .vins-content-image {
-    height: 270px;
-  }
-
-  .wine-name {
-    font-size: 0.7rem;
-    letter-spacing: 2px;
-  }
-
-  .wine-bottle-image {
-    height: 280px;
-  }
-
-  .wine-bottle-image img {
-    max-width: 120px;
-  }
-
-  .wine-bottle-name {
-    font-size: 1.25rem;
-  }
-
-  .table-banner {
-    height: 210px;
-  }
-
-  .table-image-side {
-    height: 225px;
-  }
-
-  .table-extended-image {
-    height: 205px;
-  }
-
-  .choix-card-image {
-    height: 210px;
-  }
-
-  .quote-box {
-    padding: 20px 18px;
-  }
+  margin-bottom: 14px;
 }
 
 /* ============================================
@@ -2371,7 +1897,7 @@ ul {
 .engagement-section {
   position: relative;
   background: var(--color-olive-dark);
-  padding: 100px 5%;
+  padding: 90px 5%;
   overflow: hidden;
   text-align: center;
 }
@@ -2398,17 +1924,17 @@ ul {
 }
 
 .engagement-inner {
-  max-width: 760px;
+  max-width: 720px;
   margin: 0 auto;
 }
 
 .engagement-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-size: clamp(1.7rem, 3.8vw, 2.7rem);
   font-weight: 400;
   color: var(--color-white);
   line-height: 1.3;
-  margin-bottom: 28px;
+  margin-bottom: 26px;
 }
 
 .engagement-title em {
@@ -2418,7 +1944,7 @@ ul {
 
 .engagement-text {
   font-family: var(--font-serif);
-  font-size: 0.93rem;
+  font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.72);
   line-height: 1.9;
   font-style: italic;
@@ -2429,7 +1955,7 @@ ul {
    ============================================ */
 .esprit-section {
   background: var(--color-cream);
-  padding: 100px 5%;
+  padding: 90px 5%;
 }
 
 .esprit-inner {
@@ -2438,24 +1964,24 @@ ul {
 }
 
 .esprit-content {
-  max-width: 580px;
+  max-width: 560px;
 }
 
 .esprit-subtitle {
   font-family: var(--font-serif);
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   color: var(--color-olive-light);
   font-style: italic;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .esprit-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-size: clamp(1.7rem, 3.8vw, 2.7rem);
   font-weight: 400;
   color: var(--color-black);
   line-height: 1.25;
-  margin-bottom: 26px;
+  margin-bottom: 24px;
 }
 
 .esprit-title em {
@@ -2465,10 +1991,10 @@ ul {
 
 .esprit-text {
   font-family: var(--font-serif);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: var(--color-text-light);
   line-height: 1.85;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
   font-style: italic;
 }
 
@@ -2477,14 +2003,14 @@ ul {
    ============================================ */
 .gallery-section {
   background: var(--color-cream);
-  padding: 0 5% 80px;
+  padding: 0 5% 70px;
 }
 
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 220px;
-  gap: 10px;
+  grid-auto-rows: 210px;
+  gap: 8px;
   max-width: var(--max-width);
   margin: 0 auto;
 }
@@ -2514,7 +2040,7 @@ ul {
   bottom: 10px;
   right: 12px;
   color: var(--color-white);
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   opacity: 0.8;
 }
 
@@ -2523,26 +2049,26 @@ ul {
    ============================================ */
 .hospitalite-section {
   background: var(--color-primary);
-  padding: 80px 5%;
+  padding: 72px 5%;
 }
 
 .hospitalite-header {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 44px;
 }
 
 .hospitalite-inner {
-  max-width: 700px;
+  max-width: 680px;
   margin: 0 auto;
 }
 
 .hospitalite-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-size: clamp(1.7rem, 3.8vw, 2.7rem);
   font-weight: 400;
   color: var(--color-white);
   line-height: 1.3;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 }
 
 .hospitalite-title em {
@@ -2552,7 +2078,7 @@ ul {
 
 .hospitalite-text {
   font-family: var(--font-serif);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.9;
   font-style: italic;
@@ -2561,14 +2087,14 @@ ul {
 .hospitalite-images {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  gap: 10px;
+  gap: 8px;
   max-width: var(--max-width);
   margin: 0 auto;
 }
 
 .hospitalite-img {
   overflow: hidden;
-  height: 320px;
+  height: 310px;
 }
 
 .hospitalite-img img {
@@ -2592,8 +2118,8 @@ ul {
 .provence-image-wrapper {
   position: relative;
   width: 100%;
-  height: 80vh;
-  min-height: 500px;
+  height: 78vh;
+  min-height: 480px;
   overflow: hidden;
 }
 
@@ -2608,14 +2134,14 @@ ul {
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.08),
-    rgba(0, 0, 0, 0.5)
+    rgba(0, 0, 0, 0.06),
+    rgba(0, 0, 0, 0.52)
   );
 }
 
 .provence-content {
   position: absolute;
-  bottom: 60px;
+  bottom: 56px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -2624,11 +2150,11 @@ ul {
 
 .provence-title {
   font-family: var(--font-serif);
-  font-size: clamp(2.2rem, 5.5vw, 3.6rem);
+  font-size: clamp(2.1rem, 5vw, 3.4rem);
   font-weight: 300;
   color: var(--color-white);
   line-height: 1.25;
-  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.22);
 }
 
 .provence-title em {
@@ -2637,15 +2163,15 @@ ul {
 }
 
 .provence-text-block {
-  padding: 60px 5%;
-  max-width: 700px;
+  padding: 56px 5%;
+  max-width: 680px;
   margin: 0 auto;
   text-align: center;
 }
 
 .provence-text {
   font-family: var(--font-serif);
-  font-size: 0.93rem;
+  font-size: 0.9rem;
   color: var(--color-text-light);
   line-height: 1.9;
   font-style: italic;
@@ -2655,8 +2181,8 @@ ul {
    FOOTER
    ============================================ */
 .site-footer {
-  background: var(--color-olive-dark);
-  padding: 60px 5%;
+  background: var(--color-primary);
+  padding: 56px 5%;
 }
 
 .footer-inner {
@@ -2664,7 +2190,7 @@ ul {
   margin: 0 auto;
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 60px;
+  gap: 56px;
   align-items: start;
 }
 
@@ -2672,8 +2198,8 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
-  min-width: 140px;
+  gap: 10px;
+  min-width: 130px;
 }
 
 .footer-logo-icon {
@@ -2690,7 +2216,7 @@ ul {
 
 .footer-logo-title {
   font-family: var(--font-sans);
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   letter-spacing: 6px;
   color: var(--color-white);
   font-weight: 400;
@@ -2698,8 +2224,8 @@ ul {
 
 .footer-logo-subtitle {
   font-family: var(--font-serif);
-  font-size: 0.63rem;
-  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.6rem;
+  color: rgba(255, 255, 255, 0.55);
   letter-spacing: 2px;
   font-style: italic;
 }
@@ -2707,27 +2233,27 @@ ul {
 .footer-columns {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 28px;
+  gap: 24px;
 }
 
 .footer-col-title {
   font-family: var(--font-sans);
-  font-size: 0.68rem;
+  font-size: 0.66rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--color-white);
   font-weight: 500;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .footer-col ul li {
-  margin-bottom: 10px;
+  margin-bottom: 9px;
 }
 
 .footer-col ul li a {
   font-family: var(--font-serif);
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.52);
   font-style: italic;
   transition: color 0.3s ease;
 }
@@ -2735,96 +2261,6 @@ ul {
 .footer-col ul li a:hover {
   color: var(--color-white);
   opacity: 1;
-}
-
-/* Footer responsive */
-@media (max-width: 1024px) {
-  .footer-columns {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .footer-inner {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .footer-brand {
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .footer-columns {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-  }
-
-  .engagement-section {
-    padding: 70px 5%;
-  }
-
-  .esprit-section {
-    padding: 70px 5%;
-  }
-
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 180px;
-  }
-
-  .gallery-item-wide {
-    grid-column: span 2;
-  }
-
-  .hospitalite-images {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .hospitalite-img-large {
-    grid-column: span 2;
-  }
-
-  .hospitalite-img {
-    height: 250px;
-  }
-
-  .provence-image-wrapper {
-    height: 60vh;
-  }
-}
-
-@media (max-width: 480px) {
-  .footer-columns {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-
-  .gallery-grid {
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 150px;
-  }
-
-  .hospitalite-images {
-    grid-template-columns: 1fr;
-  }
-
-  .hospitalite-img-large {
-    grid-column: span 1;
-  }
-
-  .hospitalite-img {
-    height: 220px;
-  }
-
-  .provence-image-wrapper {
-    height: 50vh;
-    min-height: 350px;
-  }
-
-  .provence-content {
-    bottom: 40px;
-  }
 }
 
 /* ---------- Image Hover Parallax Effect ---------- */
@@ -2844,15 +2280,482 @@ ul {
 .delay-1 {
   animation-delay: 0.1s;
 }
-
 .delay-2 {
   animation-delay: 0.2s;
 }
-
 .delay-3 {
   animation-delay: 0.3s;
 }
-
 .delay-4 {
   animation-delay: 0.4s;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* --- Tablet (max 1024px) --- */
+@media (max-width: 1024px) {
+  .navbar {
+    height: 50px;
+  }
+  .nav-hamburger {
+    width: 50px;
+    height: 50px;
+  }
+  .nav-phone {
+    width: 50px;
+    height: 50px;
+  }
+  .nav-reserve {
+    padding: 0 14px;
+    font-size: 0.6rem;
+  }
+  .nav-logo-title {
+    font-size: 0.82rem;
+    letter-spacing: 6px;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 4.5vw, 3rem);
+  }
+
+  .four-blocks-grid {
+    gap: 0;
+  }
+  .block-card-image {
+    height: 240px;
+  }
+
+  .hameau-top-inner,
+  .vins-top-inner,
+  .table-top-inner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .hameau-banner {
+    height: 380px;
+  }
+  .hameau-content-body {
+    grid-template-columns: 1fr;
+  }
+  .hameau-image-right {
+    height: 290px;
+  }
+  .hameau-bottom-images {
+    gap: 18px;
+  }
+  .hameau-bottom-img {
+    height: 210px;
+  }
+
+  .sejours-card {
+    min-width: 310px;
+    max-width: 350px;
+  }
+  .sejours-card-image {
+    height: 360px;
+  }
+
+  .vins-content-inner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .vins-content-left {
+    padding-right: 0;
+  }
+  .vins-content-image {
+    height: 360px;
+  }
+  .vins-banner {
+    height: 340px;
+  }
+
+  .wine-bottle-image {
+    height: 290px;
+  }
+  .wine-bottle-image img {
+    max-width: 135px;
+  }
+
+  .table-banner {
+    height: 370px;
+  }
+  .table-content-block {
+    gap: 36px;
+  }
+  .table-image-side {
+    height: 310px;
+  }
+
+  .table-extended-top,
+  .table-extended-bottom {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .deux-choix-grid {
+    gap: 24px;
+  }
+  .choix-card-image {
+    height: 280px;
+  }
+
+  .footer-columns {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* --- Mobile Large (max 768px) --- */
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 60px 0;
+  }
+
+  .navbar {
+    height: 46px;
+  }
+  .nav-hamburger {
+    width: 46px;
+    height: 46px;
+  }
+  .nav-phone {
+    width: 46px;
+    height: 46px;
+  }
+  .nav-reserve {
+    display: none;
+  }
+  .nav-lang {
+    padding: 0 12px;
+    font-size: 0.66rem;
+  }
+  .nav-logo-title {
+    font-size: 0.72rem;
+    letter-spacing: 4px;
+  }
+  .nav-logo-subtitle {
+    font-size: 0.58rem;
+  }
+
+  .hero-title {
+    font-size: 1.9rem;
+  }
+  .hero-info {
+    font-size: 0.68rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .four-blocks {
+    padding: 56px 0 48px;
+  }
+  .four-blocks-grid {
+    grid-template-columns: 1fr;
+  }
+  .block-card-image {
+    height: 255px;
+  }
+  .block-card-content {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .block-card-btn {
+    align-self: flex-start;
+  }
+
+  .hameau-top {
+    padding: 48px 5%;
+  }
+  .hameau-banner {
+    height: 270px;
+  }
+  .hameau-content {
+    padding: 48px 5%;
+  }
+  .hameau-content-body {
+    grid-template-columns: 1fr;
+  }
+  .hameau-image-right {
+    height: 260px;
+  }
+  .hameau-bottom-images {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .hameau-bottom-img {
+    height: 210px;
+  }
+
+  .sejours-section {
+    padding: 56px 0 48px;
+  }
+  .sejours-desc {
+    padding: 0;
+  }
+  .sejours-card {
+    min-width: 278px;
+    max-width: 305px;
+  }
+  .sejours-card-image {
+    height: 330px;
+  }
+
+  .vins-top {
+    padding: 48px 5%;
+  }
+  .vins-banner {
+    height: 255px;
+  }
+  .vins-content {
+    padding: 48px 5%;
+  }
+  .vins-content-inner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .vins-content-image {
+    height: 310px;
+  }
+
+  .wine-bottles-grid {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+  .wine-bottle-image {
+    height: 310px;
+  }
+  .wine-showcase,
+  .wine-showcase-dark {
+    padding: 56px 5% 64px;
+  }
+
+  .table-top {
+    padding: 48px 5%;
+  }
+  .table-banner {
+    height: 255px;
+  }
+  .table-content {
+    padding: 48px 5%;
+  }
+  .table-content-block {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .table-content-block.reversed {
+    direction: ltr;
+  }
+  .table-text-side {
+    padding-right: 0;
+  }
+  .table-image-side {
+    height: 270px;
+  }
+  .table-extended {
+    padding: 48px 5%;
+  }
+  .table-extended-top,
+  .table-extended-bottom {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .table-extended-image {
+    height: 230px;
+  }
+
+  .deux-choix-section {
+    padding: 56px 0 48px;
+  }
+  .deux-choix-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .choix-card-image {
+    height: 250px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 175px;
+  }
+  .gallery-item-wide {
+    grid-column: span 2;
+  }
+
+  .hospitalite-images {
+    grid-template-columns: 1fr 1fr;
+  }
+  .hospitalite-img-large {
+    grid-column: span 2;
+  }
+  .hospitalite-img {
+    height: 240px;
+  }
+
+  .provence-image-wrapper {
+    height: 58vh;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .footer-brand {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .footer-columns {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+
+  .engagement-section {
+    padding: 64px 5%;
+  }
+  .esprit-section {
+    padding: 64px 5%;
+  }
+}
+
+/* --- Mobile Small (max 480px) --- */
+@media (max-width: 480px) {
+  .navbar {
+    height: 42px;
+  }
+  .nav-hamburger {
+    width: 42px;
+    height: 42px;
+  }
+  .nav-phone {
+    width: 42px;
+    height: 42px;
+    font-size: 0.9rem;
+  }
+  .nav-lang {
+    padding: 0 10px;
+    font-size: 0.63rem;
+  }
+  .nav-logo-title {
+    font-size: 0.63rem;
+    letter-spacing: 3px;
+  }
+  .nav-logo-subtitle {
+    display: none;
+  }
+
+  .hero {
+    min-height: 500px;
+  }
+  .hero-title {
+    font-size: 1.6rem;
+  }
+  .hero-info {
+    font-size: 0.63rem;
+  }
+
+  .four-blocks-title-wrapper {
+    padding: 10px 14px;
+  }
+  .four-blocks-title {
+    font-size: 1.25rem;
+  }
+  .block-card-image {
+    height: 205px;
+  }
+  .block-card-title {
+    font-size: 1.15rem;
+  }
+
+  .hameau-title,
+  .vins-title,
+  .table-title {
+    font-size: 1.6rem;
+  }
+  .hameau-banner {
+    height: 200px;
+  }
+  .hameau-image-right {
+    height: 200px;
+  }
+  .hameau-bottom-img {
+    height: 175px;
+  }
+
+  .sejours-card {
+    min-width: 248px;
+    max-width: 268px;
+  }
+  .sejours-card-image {
+    height: 290px;
+  }
+  .sejours-card-amenities {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .vins-banner {
+    height: 200px;
+  }
+  .vins-content-image {
+    height: 260px;
+  }
+  .wine-name {
+    font-size: 0.68rem;
+    letter-spacing: 2px;
+  }
+  .wine-bottle-image {
+    height: 270px;
+  }
+  .wine-bottle-image img {
+    max-width: 115px;
+  }
+  .wine-bottle-name {
+    font-size: 1.2rem;
+  }
+
+  .table-banner {
+    height: 200px;
+  }
+  .table-image-side {
+    height: 215px;
+  }
+  .table-extended-image {
+    height: 195px;
+  }
+
+  .choix-card-image {
+    height: 200px;
+  }
+  .quote-box {
+    padding: 18px 16px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 145px;
+  }
+  .hospitalite-images {
+    grid-template-columns: 1fr;
+  }
+  .hospitalite-img-large {
+    grid-column: span 1;
+  }
+  .hospitalite-img {
+    height: 210px;
+  }
+
+  .provence-image-wrapper {
+    height: 48vh;
+    min-height: 340px;
+  }
+  .provence-content {
+    bottom: 36px;
+  }
+
+  .footer-columns {
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
 }
