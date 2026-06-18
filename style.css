@@ -5,41 +5,32 @@
 
 /* ---------- CSS Custom Properties ---------- */
 :root {
-  /* Main accent: rich terracotta/rust */
   --color-primary: #b85c2a;
   --color-primary-dark: #9e4d22;
   --color-primary-light: #c97040;
 
-  /* Dark section bg: deep forest olive */
   --color-olive: #2c3b28;
   --color-olive-dark: #222f1e;
   --color-olive-light: #4a5e42;
 
-  /* Cream/Off-white */
   --color-cream: #f2ede6;
   --color-cream-dark: #e8e0d5;
   --color-white: #ffffff;
 
-  /* Golden/mustard bg for table-extended */
-  --color-gold: #c8a96e;
-  --color-gold-dark: #b8975a;
+  /* Golden mustard for table-extended section */
+  --color-gold: #c4a46a;
 
-  /* Text */
   --color-black: #1c1c1a;
   --color-text: #2e2e2b;
   --color-text-light: #7a7268;
 
-  /* Terracotta (warm orange-brown for wine/table sections) */
   --color-terracotta: #b85c2a;
-
   --color-border: #d4ccc2;
 
   --font-serif: "Cormorant Garamond", "Georgia", serif;
   --font-sans: "Inter", "Helvetica Neue", sans-serif;
 
   --max-width: 1280px;
-  --section-padding: 100px 0;
-  --container-padding: 0 5%;
 }
 
 /* ---------- Reset & Base ---------- */
@@ -63,7 +54,6 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 img {
@@ -79,7 +69,6 @@ a {
     color 0.3s ease,
     opacity 0.3s ease;
 }
-
 a:hover {
   opacity: 0.8;
 }
@@ -88,41 +77,20 @@ ul {
   list-style: none;
 }
 
-/* ---------- Utility Classes ---------- */
-.container {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: var(--container-padding);
-}
-
+/* ---------- Shared Utility ---------- */
 .section-subtitle {
   font-family: var(--font-sans);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   letter-spacing: 2px;
   color: var(--color-olive-light);
   text-align: center;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   font-weight: 400;
-}
-
-.section-title {
-  font-family: var(--font-serif);
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
-  font-weight: 400;
-  line-height: 1.3;
-  color: var(--color-black);
-}
-
-.section-title em,
-.section-title i {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-weight: 300;
 }
 
 .cta-link {
   font-family: var(--font-sans);
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--color-text);
@@ -134,24 +102,21 @@ ul {
     color 0.3s ease;
   font-weight: 500;
 }
-
 .cta-link:hover {
   gap: 16px;
   opacity: 1;
   color: var(--color-primary);
 }
-
 .cta-link::after {
   content: "→";
   font-size: 1rem;
   transition: transform 0.3s ease;
 }
-
 .cta-link:hover::after {
   transform: translateX(4px);
 }
 
-/* ---------- CSS-Only Scroll Reveal Animations ---------- */
+/* ---------- Animations ---------- */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -162,7 +127,6 @@ ul {
     transform: translateY(0);
   }
 }
-
 @keyframes fadeInLeft {
   from {
     opacity: 0;
@@ -173,7 +137,6 @@ ul {
     transform: translateX(0);
   }
 }
-
 @keyframes fadeInRight {
   from {
     opacity: 0;
@@ -184,7 +147,6 @@ ul {
     transform: translateX(0);
   }
 }
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -193,29 +155,16 @@ ul {
     opacity: 1;
   }
 }
-
 @keyframes scaleIn {
   from {
     opacity: 0;
-    transform: scale(0.95);
+    transform: scale(0.96);
   }
   to {
     opacity: 1;
     transform: scale(1);
   }
 }
-
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(60px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 @keyframes heroTextReveal {
   from {
     opacity: 0;
@@ -228,7 +177,6 @@ ul {
     filter: blur(0);
   }
 }
-
 @keyframes floatDown {
   0%,
   100% {
@@ -239,16 +187,6 @@ ul {
   }
 }
 
-@keyframes lineGrow {
-  from {
-    width: 0;
-  }
-  to {
-    width: 40px;
-  }
-}
-
-/* Scroll-driven animation using animation-timeline: view() */
 .reveal {
   opacity: 0;
   transform: translateY(40px);
@@ -256,7 +194,6 @@ ul {
   animation-timeline: view();
   animation-range: entry 0% entry 35%;
 }
-
 .reveal-left {
   opacity: 0;
   transform: translateX(-40px);
@@ -264,7 +201,6 @@ ul {
   animation-timeline: view();
   animation-range: entry 0% entry 35%;
 }
-
 .reveal-right {
   opacity: 0;
   transform: translateX(40px);
@@ -272,15 +208,13 @@ ul {
   animation-timeline: view();
   animation-range: entry 0% entry 35%;
 }
-
 .reveal-scale {
   opacity: 0;
-  transform: scale(0.95);
+  transform: scale(0.96);
   animation: scaleIn 0.8s ease both;
   animation-timeline: view();
   animation-range: entry 0% entry 35%;
 }
-
 .reveal-fade {
   opacity: 0;
   animation: fadeIn 1s ease both;
@@ -288,1995 +222,43 @@ ul {
   animation-range: entry 0% entry 30%;
 }
 
-/* Fallback for browsers not supporting animation-timeline */
 @supports not (animation-timeline: view()) {
-  .reveal,
-  .reveal-left,
-  .reveal-right,
-  .reveal-scale,
-  .reveal-fade {
+  .reveal {
     opacity: 1;
     transform: none;
-    animation: none;
-  }
-  .reveal {
     animation: fadeInUp 0.8s ease 0.2s both;
   }
   .reveal-left {
+    opacity: 1;
+    transform: none;
     animation: fadeInLeft 0.8s ease 0.3s both;
   }
   .reveal-right {
+    opacity: 1;
+    transform: none;
     animation: fadeInRight 0.8s ease 0.3s both;
   }
   .reveal-scale {
+    opacity: 1;
+    transform: none;
     animation: scaleIn 0.8s ease 0.2s both;
   }
   .reveal-fade {
+    opacity: 1;
     animation: fadeIn 1s ease 0.2s both;
   }
 }
 
-/* ============================================
-   SECTION 1: HERO
-   ============================================ */
-.hero {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  min-height: 600px;
-  overflow: hidden;
-}
-
-.hero-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-.hero-bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.28) 0%,
-    rgba(0, 0, 0, 0.04) 35%,
-    rgba(0, 0, 0, 0.06) 65%,
-    rgba(0, 0, 0, 0.38) 100%
-  );
-  z-index: 2;
-}
-
-/* --- Navbar --- */
-.navbar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-  display: flex;
-  align-items: stretch;
-  height: 52px;
-}
-
-.nav-hamburger {
-  width: 52px;
-  height: 52px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--color-primary);
-  cursor: pointer;
-  flex-shrink: 0;
-}
-
-.hamburger-icon {
-  width: 20px;
-  height: 14px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.hamburger-icon span {
-  display: block;
-  width: 100%;
-  height: 1.5px;
-  background: var(--color-white);
-  border-radius: 1px;
-  transition: transform 0.3s ease;
-}
-
-.nav-logo {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: rgba(184, 92, 42, 0.88);
-  backdrop-filter: blur(10px);
-  padding: 0 20px;
-}
-
-.nav-logo-title {
-  font-family: var(--font-sans);
-  font-size: 0.9rem;
-  letter-spacing: 9px;
-  color: var(--color-white);
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
-.nav-logo-subtitle {
-  font-family: var(--font-serif);
-  font-size: 0.63rem;
-  color: rgba(255, 255, 255, 0.8);
-  letter-spacing: 3px;
-  font-style: italic;
-}
-
-.nav-actions {
-  display: flex;
-  align-items: stretch;
-  flex-shrink: 0;
-}
-
-.nav-phone {
-  width: 52px;
-  height: 52px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--color-primary);
-  color: var(--color-white);
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  border-left: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.nav-phone:hover {
-  background: var(--color-primary-dark);
-}
-
-.nav-reserve {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 22px;
-  background: var(--color-primary);
-  color: var(--color-white);
-  font-family: var(--font-sans);
-  font-size: 0.63rem;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  border-left: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.nav-reserve:hover {
-  background: var(--color-primary-dark);
-}
-
-.nav-lang {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 16px;
-  background: var(--color-primary);
-  color: var(--color-white);
-  font-family: var(--font-sans);
-  font-size: 0.72rem;
-  letter-spacing: 1px;
-  font-weight: 500;
-  cursor: pointer;
-  gap: 4px;
-  border-left: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.nav-lang::after {
-  content: "▾";
-  font-size: 0.55rem;
-}
-
-/* --- Hero Content --- */
-.hero-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: 5;
-  width: 90%;
-  max-width: 620px;
-}
-
-.hero-title {
-  font-family: var(--font-serif);
-  font-size: clamp(2.4rem, 5.5vw, 3.8rem);
-  font-weight: 300;
-  color: var(--color-white);
-  line-height: 1.2;
-  margin-bottom: 20px;
-  animation: heroTextReveal 1s ease 0.3s both;
-  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.22);
-}
-
-.hero-title em {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-weight: 300;
-}
-
-.hero-info {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  color: rgba(255, 255, 255, 0.92);
-  font-family: var(--font-sans);
-  font-size: 0.76rem;
-  letter-spacing: 1.5px;
-  margin-bottom: 16px;
-  animation: heroTextReveal 1s ease 0.6s both;
-}
-
-.hero-info span {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.hero-info .separator {
-  width: 3px;
-  height: 3px;
-  background: rgba(255, 255, 255, 0.6);
-  border-radius: 50%;
-}
-
-.hero-author {
-  display: inline-block;
-  background: var(--color-primary);
-  color: var(--color-white);
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
-  padding: 6px 16px;
-  letter-spacing: 1px;
-  animation: heroTextReveal 1s ease 0.9s both;
-}
-
-.hero-scroll {
-  position: absolute;
-  bottom: 36px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 5;
-  color: var(--color-white);
-  font-size: 1.3rem;
-  animation: floatDown 2s ease-in-out infinite;
-  opacity: 0.75;
-}
-
-.hero-scroll a {
-  color: var(--color-white);
-  text-decoration: none;
-}
-
-/* ============================================
-   SECTION 2: FOUR BLOCKS
-   ============================================ */
-.four-blocks {
-  padding: 80px 0 70px;
-  background: var(--color-cream);
-}
-
-.four-blocks-header {
-  text-align: center;
-  max-width: 760px;
-  margin: 0 auto 50px;
-  padding: 0 5%;
-}
-
-.four-blocks-title-wrapper {
-  border: 1px solid var(--color-olive-light);
-  padding: 14px 28px;
-  margin-bottom: 20px;
-  display: inline-block;
-}
-
-.four-blocks-title {
-  font-family: var(--font-serif);
-  font-size: clamp(1.3rem, 2.8vw, 1.9rem);
-  font-weight: 400;
-  color: var(--color-black);
-  line-height: 1.3;
-}
-
-.four-blocks-title em {
-  font-style: italic;
-  font-weight: 300;
-}
-
-.four-blocks-desc {
-  font-family: var(--font-serif);
-  font-size: 0.93rem;
-  color: var(--color-text-light);
-  line-height: 1.65;
-  margin-bottom: 16px;
-  font-style: italic;
-}
-
-/* 2x2 grid: images on top, text below */
-.four-blocks-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0;
-}
-
-.block-card {
-  overflow: hidden;
-}
-
-.block-card-image {
-  width: 100%;
-  height: 300px;
-  overflow: hidden;
-}
-
-.block-card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.7s ease;
-}
-
-.block-card:hover .block-card-image img {
-  transform: scale(1.05);
-}
-
-.block-card-content {
-  padding: 20px 24px 26px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 14px;
-  background: var(--color-cream);
-  border-top: 1px solid var(--color-border);
-}
-
-.block-card-meta {
-  flex: 1;
-}
-
-.block-card-number {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-family: var(--font-sans);
-  font-size: 0.72rem;
-  color: var(--color-text-light);
-  margin-bottom: 5px;
-}
-
-.block-card-number::after {
-  content: "";
-  display: block;
-  width: 32px;
-  height: 1px;
-  background: var(--color-text-light);
-}
-
-.block-card-title {
-  font-family: var(--font-serif);
-  font-size: 1.25rem;
-  font-weight: 500;
-  color: var(--color-black);
-  margin-bottom: 5px;
-}
-
-.block-card-text {
-  font-family: var(--font-sans);
-  font-size: 0.78rem;
-  color: var(--color-text-light);
-  line-height: 1.6;
-}
-
-.block-card-btn {
-  flex-shrink: 0;
-  align-self: flex-end;
-}
-
-.btn-outline {
-  display: inline-block;
-  padding: 8px 18px;
-  border: 1px solid var(--color-text-light);
-  font-family: var(--font-sans);
-  font-size: 0.6rem;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--color-text);
-  transition: all 0.3s ease;
-  cursor: pointer;
-  font-weight: 500;
-}
-
-.btn-outline:hover {
-  background: var(--color-olive);
-  color: var(--color-white);
-  border-color: var(--color-olive);
-  opacity: 1;
-}
-
-/* ============================================
-   SECTION 3: HAMEAU
-   ============================================ */
-.hameau-section {
-  width: 100%;
-}
-
-/* --- Hameau Top (Dark BG) --- */
-.hameau-top {
-  background: var(--color-olive-dark);
-  padding: 72px 5%;
-}
-
-.hameau-top-inner {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
-
-.hameau-top-left {
-  color: var(--color-white);
-}
-
-.hameau-keywords {
-  font-family: var(--font-sans);
-  font-size: 0.7rem;
-  letter-spacing: 2px;
-  color: rgba(255, 255, 255, 0.5);
-  margin-bottom: 18px;
-  text-transform: uppercase;
-}
-
-.hameau-title {
-  font-family: var(--font-serif);
-  font-size: clamp(1.9rem, 3.8vw, 2.7rem);
-  font-weight: 300;
-  line-height: 1.22;
-  color: var(--color-white);
-  margin-bottom: 16px;
-}
-
-.hameau-title em {
-  font-style: italic;
-  font-weight: 300;
-}
-
-.hameau-tagline {
-  font-family: var(--font-serif);
-  font-size: 0.93rem;
-  color: rgba(255, 255, 255, 0.62);
-  font-style: italic;
-}
-
-.hameau-top-right {
-  color: rgba(255, 255, 255, 0.72);
-  font-family: var(--font-serif);
-  font-size: 0.9rem;
-  line-height: 1.85;
-  font-style: italic;
-}
-
-/* --- Hameau Banner Image --- */
-.hameau-banner {
-  width: 100%;
-  height: 500px;
-  overflow: hidden;
-}
-
-.hameau-banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-/* --- Hameau Content (White BG) --- */
-.hameau-content {
-  background: var(--color-white);
-  padding: 72px 5%;
-}
-
-.hameau-content-inner {
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
-
-.hameau-content-subtitle {
-  font-family: var(--font-serif);
-  font-size: 0.86rem;
-  color: var(--color-olive-light);
-  font-style: italic;
-  margin-bottom: 10px;
-}
-
-.hameau-content-title {
-  font-family: var(--font-serif);
-  font-size: clamp(1.55rem, 3.2vw, 2.3rem);
-  font-weight: 400;
-  color: var(--color-black);
-  margin-bottom: 36px;
-  line-height: 1.3;
-}
-
-.hameau-content-title em {
-  font-style: italic;
-  font-weight: 300;
-}
-
-.hameau-content-body {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  margin-bottom: 40px;
-}
-
-.hameau-text-col p {
-  font-family: var(--font-serif);
-  font-size: 0.88rem;
-  color: var(--color-text-light);
-  line-height: 1.85;
-  margin-bottom: 18px;
-  font-style: italic;
-}
-
-.hameau-image-right {
-  width: 100%;
-  height: 340px;
-  overflow: hidden;
-}
-
-.hameau-image-right img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.7s ease;
-}
-
-.hameau-image-right:hover img {
-  transform: scale(1.03);
-}
-
-.hameau-bottom-images {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  margin-top: 0;
-}
-
-.hameau-bottom-img {
-  width: 100%;
-  height: 260px;
-  overflow: hidden;
-}
-
-.hameau-bottom-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.7s ease;
-}
-
-.hameau-bottom-img:hover img {
-  transform: scale(1.03);
-}
-
-/* ============================================
-   SECTION 4: SÉJOURS CAROUSEL
-   ============================================ */
-.sejours-section {
-  padding: 90px 0 70px;
-  background: var(--color-cream);
-  overflow: hidden;
-}
-
-.sejours-header {
-  text-align: center;
-  max-width: 680px;
-  margin: 0 auto 18px;
-  padding: 0 5%;
-}
-
-.sejours-title {
-  font-family: var(--font-serif);
-  font-size: clamp(1.7rem, 3.8vw, 2.5rem);
-  font-weight: 400;
-  color: var(--color-black);
-  line-height: 1.3;
-  margin-bottom: 18px;
-}
-
-.sejours-title em {
-  font-style: italic;
-  font-weight: 300;
-}
-
-.sejours-desc {
-  font-family: var(--font-serif);
-  font-size: 0.88rem;
-  color: var(--color-text-light);
-  line-height: 1.75;
-  margin-bottom: 14px;
-  font-style: italic;
-  padding: 0 8%;
-}
-
-.sejours-cta {
-  margin-bottom: 44px;
-  text-align: center;
-}
-
-/* --- Carousel --- */
-.sejours-carousel {
-  display: flex;
-  gap: 16px;
-  padding: 0 3%;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.sejours-carousel::-webkit-scrollbar {
-  display: none;
-}
-
-.sejours-card {
-  min-width: 370px;
-  max-width: 400px;
-  flex-shrink: 0;
-  scroll-snap-align: center;
-  position: relative;
-  border-radius: 0;
-  overflow: hidden;
-}
-
-.sejours-card-image {
-  width: 100%;
-  height: 420px;
-  position: relative;
-  overflow: hidden;
-}
-
-.sejours-card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.7s ease;
-}
-
-.sejours-card:hover .sejours-card-image img {
-  transform: scale(1.05);
-}
-
-.sejours-card-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 30px 22px;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.68));
-  color: var(--color-white);
-}
-
-.sejours-card-number {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.7rem;
-  color: rgba(255, 255, 255, 0.62);
-  margin-bottom: 5px;
-  font-family: var(--font-sans);
-}
-
-.sejours-card-number::after {
-  content: "";
-  width: 20px;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.45);
-}
-
-.sejours-card-title {
-  font-family: var(--font-serif);
-  font-size: 1.5rem;
-  font-weight: 400;
-  margin-bottom: 12px;
-}
-
-.sejours-card-title em {
-  font-style: italic;
-  font-weight: 300;
-}
-
-.sejours-card-amenities {
-  display: flex;
-  gap: 16px;
-  font-size: 0.68rem;
-  color: rgba(255, 255, 255, 0.82);
-  margin-bottom: 14px;
-  font-family: var(--font-sans);
-}
-
-.amenity {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.amenity-icon {
-  font-size: 0.8rem;
-}
-
-.sejours-card-btn {
-  display: inline-block;
-  padding: 8px 18px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  font-family: var(--font-sans);
-  font-size: 0.57rem;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--color-white);
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.sejours-card-btn:hover {
-  background: var(--color-white);
-  color: var(--color-olive);
-  border-color: var(--color-white);
-}
-
-/* ============================================
-   SECTION 5: LES VINS
-   ============================================ */
-.vins-section {
-  width: 100%;
-}
-
-/* --- Vins Top (Dark BG) --- */
-.vins-top {
-  background: var(--color-olive-dark);
-  padding: 72px 5%;
-}
-
-.vins-top-inner {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
-
-.vins-top-left {
-  color: var(--color-white);
-}
-
-.vins-keywords {
-  font-family: var(--font-sans);
-  font-size: 0.7rem;
-  letter-spacing: 2px;
-  color: var(--color-primary-light);
-  margin-bottom: 18px;
-  text-transform: uppercase;
-}
-
-.vins-title {
-  font-family: var(--font-serif);
-  font-size: clamp(1.9rem, 3.8vw, 2.7rem);
-  font-weight: 300;
-  line-height: 1.22;
-  color: var(--color-white);
-  margin-bottom: 16px;
-}
-
-.vins-title em {
-  font-style: italic;
-  font-weight: 300;
-}
-
-.vins-tagline {
-  font-family: var(--font-serif);
-  font-size: 0.93rem;
-  color: rgba(255, 255, 255, 0.62);
-  font-style: italic;
-}
-
-.vins-top-right {
-  color: rgba(255, 255, 255, 0.72);
-  font-family: var(--font-serif);
-  font-size: 0.9rem;
-  line-height: 1.85;
-  font-style: italic;
-}
-
-/* --- Vins Banner --- */
-.vins-banner {
-  width: 100%;
-  height: 440px;
-  overflow: hidden;
-}
-
-.vins-banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 30%;
-}
-
-/* --- Vins Content (White BG) --- */
-.vins-content {
-  background: var(--color-white);
-  padding: 72px 5%;
-}
-
-.vins-content-inner {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: start;
-}
-
-.vins-content-left {
-  padding-right: 16px;
-}
-
-.vins-content-subtitle {
-  font-family: var(--font-serif);
-  font-size: 0.86rem;
-  color: var(--color-olive-light);
-  font-style: italic;
-  margin-bottom: 10px;
-}
-
-.vins-content-title {
-  font-family: var(--font-serif);
-  font-size: clamp(1.55rem, 3.2vw, 2.3rem);
-  font-weight: 400;
-  color: var(--color-black);
-  margin-bottom: 20px;
-  line-height: 1.25;
-}
-
-.vins-content-title em {
-  font-style: italic;
-  font-weight: 300;
-}
-
-.vins-content-text {
-  font-family: var(--font-serif);
-  font-size: 0.88rem;
-  color: var(--color-text-light);
-  line-height: 1.85;
-  margin-bottom: 26px;
-  font-style: italic;
-}
-
-/* --- Wine List --- */
-.wine-list {
-  margin-top: 6px;
-}
-
-.wine-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 0;
-  border-bottom: 1px solid var(--color-border);
-  transition: padding-left 0.3s ease;
-}
-
-.wine-item:first-child {
-  border-top: 1px solid var(--color-border);
-}
-
-.wine-item:hover {
-  padding-left: 10px;
-}
-
-.wine-name {
-  font-family: var(--font-sans);
-  font-size: 0.72rem;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--color-terracotta);
-  font-weight: 500;
-}
-
-.wine-arrow {
-  font-size: 0.88rem;
-  color: var(--color-terracotta);
-  transition: transform 0.3s ease;
-}
-
-.wine-item:hover .wine-arrow {
-  transform: translateX(6px);
-}
-
-.vins-content-image {
-  width: 100%;
-  height: 460px;
-  overflow: hidden;
-}
-
-.vins-content-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.7s ease;
-}
-
-.vins-content-image:hover img {
-  transform: scale(1.03);
-}
-
-/* ============================================
-   SECTION 6: WINE BOTTLES SHOWCASE (LIGHT / CREAM)
-   ============================================ */
-.wine-showcase {
-  padding: 80px 5% 90px;
-  background: var(--color-cream);
-  position: relative;
-}
-
-.wine-showcase-header {
-  text-align: center;
-  max-width: 780px;
-  margin: 0 auto 55px;
-}
-
-.wine-showcase-subtitle {
-  font-family: var(--font-serif);
-  font-size: 0.86rem;
-  color: var(--color-terracotta);
-  font-style: italic;
-  margin-bottom: 8px;
-}
-
-.wine-showcase-title {
-  font-family: var(--font-serif);
-  font-size: clamp(1.55rem, 3.2vw, 2.3rem);
-  font-weight: 400;
-  color: var(--color-black);
-  margin-bottom: 16px;
-  line-height: 1.3;
-}
-
-.wine-showcase-title em {
-  font-style: italic;
-  font-weight: 300;
-}
-
-.wine-showcase-desc {
-  font-family: var(--font-serif);
-  font-size: 0.86rem;
-  color: var(--color-text-light);
-  line-height: 1.75;
-  font-style: italic;
-  max-width: 640px;
-  margin: 0 auto;
-}
-
-.wine-bottles-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 36px;
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
-
-.wine-bottle-card {
-  text-align: center;
-}
-
-.wine-bottle-image {
-  width: 100%;
-  height: 360px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  overflow: hidden;
-}
-
-.wine-bottle-image img {
-  max-height: 100%;
-  max-width: 160px;
-  object-fit: contain;
-  transition: transform 0.7s ease;
-}
-
-.wine-bottle-card:hover .wine-bottle-image img {
-  transform: translateY(-8px);
-}
-
-.wine-bottle-name {
-  font-family: var(--font-serif);
-  font-size: 1.38rem;
-  font-weight: 400;
-  color: var(--color-black);
-  margin-bottom: 5px;
-}
-
-.wine-bottle-name em {
-  font-style: italic;
-  font-weight: 300;
-}
-
-.wine-bottle-type {
-  font-family: var(--font-sans);
-  font-size: 0.6rem;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--color-terracotta);
-  margin-bottom: 12px;
-  font-weight: 500;
-}
-
-.wine-bottle-desc {
-  font-family: var(--font-sans);
-  font-size: 0.78rem;
-  color: var(--color-text-light);
-  line-height: 1.65;
-  margin-bottom: 18px;
-  padding: 0 8px;
-}
-
-.btn-outline-terracotta {
-  display: inline-block;
-  padding: 8px 18px;
-  border: 1px solid var(--color-terracotta);
-  font-family: var(--font-sans);
-  font-size: 0.57rem;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--color-terracotta);
-  transition: all 0.3s ease;
-  cursor: pointer;
-  font-weight: 500;
-}
-
-.btn-outline-terracotta:hover {
-  background: var(--color-terracotta);
-  color: var(--color-white);
-  opacity: 1;
-}
-
-/* ============================================
-   SECTION 7: WINE BOTTLES (DARK / TERRACOTTA BG)
-   ============================================ */
-.wine-showcase-dark {
-  padding: 80px 5% 90px;
-  background: var(--color-primary);
-  position: relative;
-}
-
-.wine-showcase-dark .wine-showcase-header {
-  color: var(--color-white);
-}
-.wine-showcase-dark .wine-showcase-title {
-  color: var(--color-white);
-}
-.wine-showcase-dark .wine-showcase-desc {
-  color: rgba(255, 255, 255, 0.75);
-}
-.wine-showcase-dark .wine-bottle-name {
-  color: var(--color-white);
-}
-.wine-showcase-dark .wine-bottle-type {
-  color: rgba(255, 255, 255, 0.7);
-}
-.wine-showcase-dark .wine-bottle-desc {
-  color: rgba(255, 255, 255, 0.72);
-}
-
-.btn-outline-white {
-  display: inline-block;
-  padding: 8px 18px;
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  font-family: var(--font-sans);
-  font-size: 0.57rem;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--color-white);
-  transition: all 0.3s ease;
-  cursor: pointer;
-  font-weight: 500;
-}
-
-.btn-outline-white:hover {
-  background: var(--color-white);
-  color: var(--color-primary);
-  opacity: 1;
-}
-
-/* ============================================
-   SECTION 8: LA TABLE DE BLACAILLOUX
-   ============================================ */
-.table-section {
-  width: 100%;
-}
-
-/* --- Table Top (Dark BG) --- */
-.table-top {
-  background: var(--color-olive-dark);
-  padding: 72px 5%;
-}
-
-.table-top-inner {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
-
-.table-top-left {
-  color: var(--color-white);
-}
-
-.table-keywords {
-  font-family: var(--font-sans);
-  font-size: 0.7rem;
-  letter-spacing: 2px;
-  color: var(--color-primary-light);
-  margin-bottom: 18px;
-  text-transform: uppercase;
-}
-
-.table-title {
-  font-family: var(--font-serif);
-  font-size: clamp(1.9rem, 3.8vw, 2.7rem);
-  font-weight: 300;
-  line-height: 1.22;
-  color: var(--color-white);
-  margin-bottom: 16px;
-}
-
-.table-title em {
-  font-style: italic;
-  font-weight: 300;
-}
-
-.table-tagline {
-  font-family: var(--font-serif);
-  font-size: 0.93rem;
-  color: rgba(255, 255, 255, 0.62);
-  font-style: italic;
-}
-
-.table-top-right {
-  color: rgba(255, 255, 255, 0.72);
-  font-family: var(--font-serif);
-  font-size: 0.9rem;
-  line-height: 1.85;
-  font-style: italic;
-}
-
-/* --- Table Banner --- */
-.table-banner {
-  width: 100%;
-  height: 500px;
-  overflow: hidden;
-}
-
-.table-banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-/* --- Table Content (White BG, alternating blocks) --- */
-.table-content {
-  background: var(--color-white);
-  padding: 72px 5%;
-}
-
-.table-content-inner {
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
-
-.table-content-block {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-  margin-bottom: 72px;
-}
-
-.table-content-block:last-child {
-  margin-bottom: 0;
-}
-
-.table-content-block.reversed {
-  direction: rtl;
-}
-.table-content-block.reversed > * {
-  direction: ltr;
-}
-
-.table-text-side {
-  padding-right: 16px;
-}
-
-.table-content-subtitle {
-  font-family: var(--font-serif);
-  font-size: 0.86rem;
-  color: var(--color-primary);
-  font-style: italic;
-  margin-bottom: 10px;
-}
-
-.table-content-title {
-  font-family: var(--font-serif);
-  font-size: clamp(1.4rem, 2.8vw, 2.1rem);
-  font-weight: 400;
-  color: var(--color-black);
-  margin-bottom: 16px;
-  line-height: 1.3;
-}
-
-.table-content-title em {
-  font-style: italic;
-  font-weight: 300;
-}
-
-.table-content-text {
-  font-family: var(--font-sans);
-  font-size: 0.82rem;
-  color: var(--color-text-light);
-  line-height: 1.7;
-  margin-bottom: 16px;
-}
-
-.table-content-text-serif {
-  font-family: var(--font-serif);
-  font-size: 0.88rem;
-  color: var(--color-text-light);
-  line-height: 1.85;
-  margin-bottom: 20px;
-  font-style: italic;
-}
-
-/* --- Table Links --- */
-.table-links {
-  margin-top: 6px;
-}
-
-.table-link-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 0;
-  border-bottom: 1px solid var(--color-border);
-  transition: padding-left 0.3s ease;
-  font-family: var(--font-sans);
-  font-size: 0.68rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--color-primary);
-  font-weight: 500;
-}
-
-.table-link-item:first-child {
-  border-top: 1px solid var(--color-border);
-}
-.table-link-item:hover {
-  padding-left: 10px;
-}
-
-.table-link-arrow {
-  font-size: 0.88rem;
-  color: var(--color-primary);
-  transition: transform 0.3s ease;
-}
-
-.table-link-item:hover .table-link-arrow {
-  transform: translateX(6px);
-}
-
-.table-image-side {
-  width: 100%;
-  height: 390px;
-  overflow: hidden;
-}
-
-.table-image-side img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.7s ease;
-}
-
-.table-image-side:hover img {
-  transform: scale(1.03);
-}
-
-/* ============================================
-   SECTION 9: LA TABLE EXTENDED (GOLDEN/MUSTARD BG)
-   ============================================ */
-/* In the design image, this section has a warm gold/khaki bg, not terracotta */
-.table-extended {
-  background: #c4a06b;
-  padding: 72px 5%;
-}
-
-.table-extended-inner {
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
-
-.table-extended-top {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  margin-bottom: 48px;
-}
-
-.table-extended-left {
-  color: var(--color-white);
-}
-
-.table-extended-subtitle {
-  font-family: var(--font-serif);
-  font-size: 0.86rem;
-  color: rgba(255, 255, 255, 0.68);
-  font-style: italic;
-  margin-bottom: 10px;
-}
-
-.table-extended-title {
-  font-family: var(--font-serif);
-  font-size: clamp(1.55rem, 3.2vw, 2.3rem);
-  font-weight: 400;
-  color: var(--color-white);
-  margin-bottom: 16px;
-  line-height: 1.25;
-}
-
-.table-extended-title em {
-  font-style: italic;
-  font-weight: 300;
-}
-
-.table-extended-text {
-  font-family: var(--font-sans);
-  font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.8);
-  line-height: 1.72;
-  margin-bottom: 16px;
-}
-
-/* --- Quote Box --- */
-.quote-box {
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  padding: 26px 24px;
-  position: relative;
-  align-self: start;
-  margin-top: 16px;
-}
-
-.quote-box-text {
-  font-family: var(--font-serif);
-  font-size: 0.88rem;
-  color: rgba(255, 255, 255, 0.9);
-  line-height: 1.75;
-  font-style: italic;
-  margin-bottom: 12px;
-}
-
-.quote-box-author {
-  font-family: var(--font-sans);
-  font-size: 0.7rem;
-  color: var(--color-white);
-  letter-spacing: 1px;
-  text-align: right;
-}
-
-/* --- Extended Bottom Content --- */
-.table-extended-bottom {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: start;
-}
-
-.table-extended-image {
-  width: 100%;
-  height: 290px;
-  overflow: hidden;
-}
-
-.table-extended-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.7s ease;
-}
-
-.table-extended-image:hover img {
-  transform: scale(1.03);
-}
-
-.table-extended-details {
-  color: var(--color-white);
-}
-
-.table-extended-details p {
-  font-family: var(--font-sans);
-  font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.8);
-  line-height: 1.72;
-  margin-bottom: 14px;
-}
-
-.bullet-list {
-  margin: 14px 0 18px;
-  padding-left: 0;
-}
-
-.bullet-list li {
-  font-family: var(--font-serif);
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.85);
-  padding: 4px 0;
-  font-style: italic;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.bullet-list li::before {
-  content: "~";
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 0.88rem;
-}
-
-.table-closing-text {
-  font-family: var(--font-serif);
-  font-size: 0.88rem;
-  color: rgba(255, 255, 255, 0.82);
-  line-height: 1.75;
-  font-style: italic;
-  margin-top: 18px;
-  padding-top: 18px;
-  border-top: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-/* ============================================
-   SECTION 10: DEUX CHOIX (EVENTS)
-   ============================================ */
-.deux-choix-section {
-  padding: 90px 0 70px;
-  background: var(--color-cream);
-}
-
-.deux-choix-header {
-  text-align: center;
-  max-width: 760px;
-  margin: 0 auto 54px;
-  padding: 0 5%;
-}
-
-.deux-choix-title {
-  font-family: var(--font-serif);
-  font-size: clamp(1.55rem, 3.2vw, 2.3rem);
-  font-weight: 400;
-  color: var(--color-black);
-  margin-bottom: 12px;
-  line-height: 1.3;
-}
-
-.deux-choix-title em {
-  font-style: italic;
-  font-weight: 300;
-}
-
-.deux-choix-desc {
-  font-family: var(--font-serif);
-  font-size: 0.88rem;
-  color: var(--color-text-light);
-  line-height: 1.65;
-  font-style: italic;
-}
-
-.deux-choix-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 5%;
-}
-
-.choix-card {
-  overflow: hidden;
-}
-
-.choix-card-image {
-  width: 100%;
-  height: 350px;
-  overflow: hidden;
-}
-
-.choix-card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.7s ease;
-}
-
-.choix-card:hover .choix-card-image img {
-  transform: scale(1.05);
-}
-
-.choix-card-content {
-  padding: 16px 0;
-}
-
-.choix-card-number {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-family: var(--font-sans);
-  font-size: 0.72rem;
-  color: var(--color-text-light);
-  margin-bottom: 6px;
-}
-
-.choix-card-number::after {
-  content: "";
-  display: block;
-  width: 32px;
-  height: 1px;
-  background: var(--color-text-light);
-}
-
-.choix-card-title {
-  font-family: var(--font-serif);
-  font-size: 1.35rem;
-  font-weight: 500;
-  color: var(--color-black);
-  margin-bottom: 5px;
-}
-
-.choix-card-title em {
-  font-style: italic;
-  font-weight: 300;
-}
-
-.choix-card-text {
-  font-family: var(--font-sans);
-  font-size: 0.78rem;
-  color: var(--color-text-light);
-  line-height: 1.6;
-  margin-bottom: 14px;
-}
-
-/* ============================================
-   SECTION 11: UN ENGAGEMENT HUMAIN ET TERRITORIAL
-   ============================================ */
-.engagement-section {
-  position: relative;
-  background: var(--color-olive-dark);
-  padding: 90px 5%;
-  overflow: hidden;
-  text-align: center;
-}
-
-.engagement-leaves {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.07;
-  pointer-events: none;
-}
-
-.engagement-leaves img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.engagement-body {
-  position: relative;
-  z-index: 2;
-}
-
-.engagement-inner {
-  max-width: 720px;
-  margin: 0 auto;
-}
-
-.engagement-title {
-  font-family: var(--font-serif);
-  font-size: clamp(1.7rem, 3.8vw, 2.7rem);
-  font-weight: 400;
-  color: var(--color-white);
-  line-height: 1.3;
-  margin-bottom: 26px;
-}
-
-.engagement-title em {
-  font-style: italic;
-  font-weight: 300;
-}
-
-.engagement-text {
-  font-family: var(--font-serif);
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.72);
-  line-height: 1.9;
-  font-style: italic;
-}
-
-/* ============================================
-   SECTION 12: L'ESPRIT DES LIEUX
-   ============================================ */
-.esprit-section {
-  background: var(--color-cream);
-  padding: 90px 5%;
-}
-
-.esprit-inner {
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
-
-.esprit-content {
-  max-width: 560px;
-}
-
-.esprit-subtitle {
-  font-family: var(--font-serif);
-  font-size: 0.86rem;
-  color: var(--color-olive-light);
-  font-style: italic;
-  margin-bottom: 10px;
-}
-
-.esprit-title {
-  font-family: var(--font-serif);
-  font-size: clamp(1.7rem, 3.8vw, 2.7rem);
-  font-weight: 400;
-  color: var(--color-black);
-  line-height: 1.25;
-  margin-bottom: 24px;
-}
-
-.esprit-title em {
-  font-style: italic;
-  font-weight: 300;
-}
-
-.esprit-text {
-  font-family: var(--font-serif);
-  font-size: 0.88rem;
-  color: var(--color-text-light);
-  line-height: 1.85;
-  margin-bottom: 16px;
-  font-style: italic;
-}
-
-/* ============================================
-   SECTION 13: PHOTO GALLERY
-   ============================================ */
-.gallery-section {
-  background: var(--color-cream);
-  padding: 0 5% 70px;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 210px;
-  gap: 8px;
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
-
-.gallery-item {
-  position: relative;
-  overflow: hidden;
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.7s ease;
-}
-
-.gallery-item:hover img {
-  transform: scale(1.06);
-}
-
-.gallery-item-wide {
-  grid-column: span 2;
-}
-
-.gallery-heart {
-  position: absolute;
-  bottom: 10px;
-  right: 12px;
-  color: var(--color-white);
-  font-size: 0.8rem;
-  opacity: 0.8;
-}
-
-/* ============================================
-   SECTION 14: UNE HOSPITALITÉ ANCRÉE
-   ============================================ */
-.hospitalite-section {
-  background: var(--color-primary);
-  padding: 72px 5%;
-}
-
-.hospitalite-header {
-  text-align: center;
-  margin-bottom: 44px;
-}
-
-.hospitalite-inner {
-  max-width: 680px;
-  margin: 0 auto;
-}
-
-.hospitalite-title {
-  font-family: var(--font-serif);
-  font-size: clamp(1.7rem, 3.8vw, 2.7rem);
-  font-weight: 400;
-  color: var(--color-white);
-  line-height: 1.3;
-  margin-bottom: 20px;
-}
-
-.hospitalite-title em {
-  font-style: italic;
-  font-weight: 300;
-}
-
-.hospitalite-text {
-  font-family: var(--font-serif);
-  font-size: 0.88rem;
-  color: rgba(255, 255, 255, 0.8);
-  line-height: 1.9;
-  font-style: italic;
-}
-
-.hospitalite-images {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 8px;
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
-
-.hospitalite-img {
-  overflow: hidden;
-  height: 310px;
-}
-
-.hospitalite-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.7s ease;
-}
-
-.hospitalite-img:hover img {
-  transform: scale(1.05);
-}
-
-/* ============================================
-   SECTION 15: POUR UNE PROVENCE VIVANTE
-   ============================================ */
-.provence-section {
-  background: var(--color-cream);
-}
-
-.provence-image-wrapper {
-  position: relative;
-  width: 100%;
-  height: 78vh;
-  min-height: 480px;
-  overflow: hidden;
-}
-
-.provence-image-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.provence-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.06),
-    rgba(0, 0, 0, 0.52)
-  );
-}
-
-.provence-content {
-  position: absolute;
-  bottom: 56px;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  width: 90%;
-}
-
-.provence-title {
-  font-family: var(--font-serif);
-  font-size: clamp(2.1rem, 5vw, 3.4rem);
-  font-weight: 300;
-  color: var(--color-white);
-  line-height: 1.25;
-  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.22);
-}
-
-.provence-title em {
-  font-style: italic;
-  font-weight: 300;
-}
-
-.provence-text-block {
-  padding: 56px 5%;
-  max-width: 680px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.provence-text {
-  font-family: var(--font-serif);
-  font-size: 0.9rem;
-  color: var(--color-text-light);
-  line-height: 1.9;
-  font-style: italic;
-}
-
-/* ============================================
-   FOOTER
-   ============================================ */
-.site-footer {
-  background: var(--color-primary);
-  padding: 56px 5%;
-}
-
-.footer-inner {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 56px;
-  align-items: start;
-}
-
-.footer-brand {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  min-width: 130px;
-}
-
-.footer-logo-icon {
-  color: var(--color-white);
-  opacity: 0.9;
-}
-
-.footer-logo-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-}
-
-.footer-logo-title {
-  font-family: var(--font-sans);
-  font-size: 0.78rem;
-  letter-spacing: 6px;
-  color: var(--color-white);
-  font-weight: 400;
-}
-
-.footer-logo-subtitle {
-  font-family: var(--font-serif);
-  font-size: 0.6rem;
-  color: rgba(255, 255, 255, 0.55);
-  letter-spacing: 2px;
-  font-style: italic;
-}
-
-.footer-columns {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 24px;
-}
-
-.footer-col-title {
-  font-family: var(--font-sans);
-  font-size: 0.66rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--color-white);
-  font-weight: 500;
-  margin-bottom: 14px;
-}
-
-.footer-col ul li {
-  margin-bottom: 9px;
-}
-
-.footer-col ul li a {
-  font-family: var(--font-serif);
-  font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.52);
-  font-style: italic;
-  transition: color 0.3s ease;
-}
-
-.footer-col ul li a:hover {
-  color: var(--color-white);
-  opacity: 1;
-}
-
-/* ---------- Image Hover Parallax Effect ---------- */
 .parallax-hover {
   overflow: hidden;
 }
-
 .parallax-hover img {
   transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-
 .parallax-hover:hover img {
   transform: scale(1.06);
 }
 
-/* ---------- Stagger Animation Delays ---------- */
 .delay-1 {
   animation-delay: 0.1s;
 }
@@ -2291,68 +273,1736 @@ ul {
 }
 
 /* ============================================
-   RESPONSIVE DESIGN
+   SECTION 1: HERO
    ============================================ */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.05) 40%,
+    rgba(0, 0, 0, 0.05) 60%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+  z-index: 2;
+}
 
-/* --- Tablet (max 1024px) --- */
+/* Navbar */
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  align-items: stretch;
+  height: 52px;
+}
+.nav-hamburger {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.hamburger-icon {
+  width: 20px;
+  height: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.hamburger-icon span {
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background: #fff;
+  border-radius: 1px;
+}
+.nav-logo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(184, 92, 42, 0.88);
+  backdrop-filter: blur(10px);
+  padding: 0 20px;
+}
+.nav-logo-title {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  letter-spacing: 9px;
+  color: #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.nav-logo-subtitle {
+  font-family: var(--font-serif);
+  font-size: 0.62rem;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 3px;
+  font-style: italic;
+}
+.nav-actions {
+  display: flex;
+  align-items: stretch;
+  flex-shrink: 0;
+}
+.nav-phone {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 1rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  transition: background 0.3s ease;
+}
+.nav-phone:hover {
+  background: var(--color-primary-dark);
+}
+.nav-reserve {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  background: var(--color-primary);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  transition: background 0.3s ease;
+}
+.nav-reserve:hover {
+  background: var(--color-primary-dark);
+}
+.nav-lang {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 14px;
+  background: var(--color-primary);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+  gap: 4px;
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+}
+.nav-lang::after {
+  content: "▾";
+  font-size: 0.52rem;
+}
+
+/* Hero Content */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 5;
+  width: 90%;
+  max-width: 600px;
+}
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  animation: heroTextReveal 1s ease 0.3s both;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.2);
+}
+.hero-title em {
+  font-style: italic;
+  font-weight: 300;
+}
+.hero-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.92);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  animation: heroTextReveal 1s ease 0.6s both;
+}
+.hero-info span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.hero-info .separator {
+  width: 3px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+}
+.hero-scroll {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  color: #fff;
+  font-size: 1.3rem;
+  animation: floatDown 2s ease-in-out infinite;
+  opacity: 0.75;
+}
+.hero-scroll a {
+  color: #fff;
+}
+
+/* ============================================
+   SECTION 2: FOUR BLOCKS
+   ============================================ */
+.four-blocks {
+  padding: 80px 0 70px;
+  background: var(--color-cream);
+}
+
+/* Centered header with bordered title */
+.four-blocks-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px;
+  padding: 0 5%;
+}
+.four-blocks-title-wrapper {
+  border: 1px solid var(--color-olive-light);
+  padding: 12px 28px;
+  margin-bottom: 18px;
+  display: inline-block;
+}
+.four-blocks-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.2rem, 2.5vw, 1.75rem);
+  font-weight: 400;
+  color: var(--color-black);
+  line-height: 1.3;
+}
+.four-blocks-title em {
+  font-style: italic;
+  font-weight: 300;
+}
+.four-blocks-desc {
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  line-height: 1.7;
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
+/* 2x2 grid with horizontal gap, padded sides */
+.four-blocks-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.block-card {
+  overflow: hidden;
+}
+
+.block-card-image {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+}
+.block-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+.block-card:hover .block-card-image img {
+  transform: scale(1.05);
+}
+
+.block-card-content {
+  padding: 16px 0 6px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+.block-card-meta {
+  flex: 1;
+}
+.block-card-number {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  color: var(--color-text-light);
+  margin-bottom: 4px;
+}
+.block-card-number::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 1px;
+  background: var(--color-text-light);
+}
+.block-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--color-black);
+  margin-bottom: 4px;
+}
+.block-card-text {
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+.block-card-btn {
+  flex-shrink: 0;
+  align-self: flex-end;
+}
+
+.btn-outline {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid var(--color-text-light);
+  font-family: var(--font-sans);
+  font-size: 0.58rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-text);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-weight: 500;
+}
+.btn-outline:hover {
+  background: var(--color-olive);
+  color: #fff;
+  border-color: var(--color-olive);
+  opacity: 1;
+}
+
+/* ============================================
+   SECTION 3: HAMEAU DE FONTFRESQUE
+   ============================================ */
+.hameau-section {
+  width: 100%;
+}
+
+/* Dark olive top — 2 col text */
+.hameau-top {
+  background: var(--color-olive-dark);
+  padding: 70px 5%;
+}
+.hameau-top-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.hameau-top-left {
+  color: #fff;
+}
+.hameau-keywords {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+.hameau-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+  font-weight: 300;
+  line-height: 1.22;
+  color: #fff;
+  margin-bottom: 14px;
+}
+.hameau-title em {
+  font-style: italic;
+  font-weight: 300;
+}
+.hameau-tagline {
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+}
+.hameau-top-right {
+  color: rgba(255, 255, 255, 0.72);
+  font-family: var(--font-serif);
+  font-size: 0.88rem;
+  line-height: 1.85;
+  font-style: italic;
+}
+
+/* Full-width banner — WIDE, no side padding */
+.hameau-banner {
+  width: 100%;
+  height: 480px;
+  overflow: hidden;
+}
+.hameau-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* White bg content area */
+.hameau-content {
+  background: var(--color-white);
+  padding: 70px 5%;
+}
+.hameau-content-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.hameau-content-subtitle {
+  font-family: var(--font-serif);
+  font-size: 0.82rem;
+  color: var(--color-olive-light);
+  font-style: italic;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.hameau-content-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 400;
+  color: var(--color-black);
+  margin-bottom: 36px;
+  line-height: 1.3;
+  text-align: center;
+}
+.hameau-content-title em {
+  font-style: italic;
+  font-weight: 300;
+}
+
+/* Text left + image right */
+.hameau-content-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 36px;
+}
+.hameau-text-col p {
+  font-family: var(--font-serif);
+  font-size: 0.86rem;
+  color: var(--color-text-light);
+  line-height: 1.85;
+  margin-bottom: 16px;
+  font-style: italic;
+}
+.hameau-image-right {
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+}
+.hameau-image-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+.hameau-image-right:hover img {
+  transform: scale(1.03);
+}
+
+/* 2 images at bottom */
+.hameau-bottom-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+.hameau-bottom-img {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+}
+.hameau-bottom-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+.hameau-bottom-img:hover img {
+  transform: scale(1.03);
+}
+
+/* ============================================
+   SECTION 4: SÉJOURS & DEMEURES CAROUSEL
+   ============================================ */
+.sejours-section {
+  padding: 85px 0 65px;
+  background: var(--color-cream);
+  overflow: hidden;
+}
+.sejours-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 16px;
+  padding: 0 5%;
+}
+.sejours-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 400;
+  color: var(--color-black);
+  line-height: 1.3;
+  margin-bottom: 16px;
+}
+.sejours-title em {
+  font-style: italic;
+  font-weight: 300;
+}
+.sejours-desc {
+  font-family: var(--font-serif);
+  font-size: 0.86rem;
+  color: var(--color-text-light);
+  line-height: 1.75;
+  margin-bottom: 14px;
+  font-style: italic;
+  padding: 0 6%;
+}
+.sejours-cta {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.sejours-carousel {
+  display: flex;
+  gap: 14px;
+  padding: 0 3%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.sejours-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.sejours-card {
+  min-width: 360px;
+  max-width: 390px;
+  flex-shrink: 0;
+  scroll-snap-align: center;
+  overflow: hidden;
+}
+.sejours-card-image {
+  width: 100%;
+  height: 410px;
+  position: relative;
+  overflow: hidden;
+}
+.sejours-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+.sejours-card:hover .sejours-card-image img {
+  transform: scale(1.05);
+}
+.sejours-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 28px 20px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.65));
+  color: #fff;
+}
+.sejours-card-number {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.68rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 4px;
+  font-family: var(--font-sans);
+}
+.sejours-card-number::after {
+  content: "";
+  width: 18px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.4);
+}
+.sejours-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.sejours-card-title em {
+  font-style: italic;
+  font-weight: 300;
+}
+.sejours-card-amenities {
+  display: flex;
+  gap: 14px;
+  font-size: 0.66rem;
+  color: rgba(255, 255, 255, 0.82);
+  margin-bottom: 12px;
+  font-family: var(--font-sans);
+}
+.amenity {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.amenity-icon {
+  font-size: 0.78rem;
+}
+.sejours-card-btn {
+  display: inline-block;
+  padding: 7px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-family: var(--font-sans);
+  font-size: 0.55rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.sejours-card-btn:hover {
+  background: #fff;
+  color: var(--color-olive);
+  border-color: #fff;
+}
+
+/* ============================================
+   SECTION 5: LES VINS
+   ============================================ */
+.vins-section {
+  width: 100%;
+}
+
+.vins-top {
+  background: var(--color-olive-dark);
+  padding: 70px 5%;
+}
+.vins-top-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.vins-top-left {
+  color: #fff;
+}
+.vins-keywords {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  letter-spacing: 2px;
+  color: var(--color-primary-light);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+.vins-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+  font-weight: 300;
+  line-height: 1.22;
+  color: #fff;
+  margin-bottom: 14px;
+}
+.vins-title em {
+  font-style: italic;
+  font-weight: 300;
+}
+.vins-tagline {
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+}
+.vins-top-right {
+  color: rgba(255, 255, 255, 0.72);
+  font-family: var(--font-serif);
+  font-size: 0.88rem;
+  line-height: 1.85;
+  font-style: italic;
+}
+
+.vins-banner {
+  width: 100%;
+  height: 440px;
+  overflow: hidden;
+}
+.vins-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+.vins-content {
+  background: var(--color-white);
+  padding: 70px 5%;
+}
+.vins-content-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+.vins-content-left {
+  padding-right: 10px;
+}
+.vins-content-subtitle {
+  font-family: var(--font-serif);
+  font-size: 0.82rem;
+  color: var(--color-olive-light);
+  font-style: italic;
+  margin-bottom: 8px;
+}
+.vins-content-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 400;
+  color: var(--color-black);
+  margin-bottom: 18px;
+  line-height: 1.25;
+}
+.vins-content-title em {
+  font-style: italic;
+  font-weight: 300;
+}
+.vins-content-text {
+  font-family: var(--font-serif);
+  font-size: 0.86rem;
+  color: var(--color-text-light);
+  line-height: 1.85;
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+.wine-list {
+  margin-top: 4px;
+}
+.wine-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--color-border);
+  transition: padding-left 0.3s ease;
+}
+.wine-item:first-child {
+  border-top: 1px solid var(--color-border);
+}
+.wine-item:hover {
+  padding-left: 10px;
+}
+.wine-name {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-terracotta);
+  font-weight: 500;
+}
+.wine-arrow {
+  font-size: 0.85rem;
+  color: var(--color-terracotta);
+  transition: transform 0.3s ease;
+}
+.wine-item:hover .wine-arrow {
+  transform: translateX(6px);
+}
+.vins-content-image {
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+}
+.vins-content-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+.vins-content-image:hover img {
+  transform: scale(1.03);
+}
+
+/* ============================================
+   SECTION 6: WINE BOTTLES (LIGHT / CREAM BG)
+   ============================================ */
+.wine-showcase {
+  padding: 78px 5% 88px;
+  background: var(--color-cream);
+}
+.wine-showcase-header {
+  text-align: center;
+  max-width: 740px;
+  margin: 0 auto 52px;
+}
+.wine-showcase-subtitle {
+  font-family: var(--font-serif);
+  font-size: 0.82rem;
+  color: var(--color-terracotta);
+  font-style: italic;
+  margin-bottom: 8px;
+}
+.wine-showcase-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 400;
+  color: var(--color-black);
+  margin-bottom: 14px;
+  line-height: 1.3;
+}
+.wine-showcase-title em {
+  font-style: italic;
+  font-weight: 300;
+}
+.wine-showcase-desc {
+  font-family: var(--font-serif);
+  font-size: 0.84rem;
+  color: var(--color-text-light);
+  line-height: 1.75;
+  font-style: italic;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.wine-bottles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.wine-bottle-card {
+  text-align: center;
+}
+.wine-bottle-image {
+  width: 100%;
+  height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  overflow: hidden;
+}
+.wine-bottle-image img {
+  max-height: 100%;
+  max-width: 155px;
+  object-fit: contain;
+  transition: transform 0.7s ease;
+}
+.wine-bottle-card:hover .wine-bottle-image img {
+  transform: translateY(-8px);
+}
+.wine-bottle-name {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: var(--color-black);
+  margin-bottom: 5px;
+}
+.wine-bottle-name em {
+  font-style: italic;
+  font-weight: 300;
+}
+.wine-bottle-type {
+  font-family: var(--font-sans);
+  font-size: 0.58rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-terracotta);
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.wine-bottle-desc {
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  color: var(--color-text-light);
+  line-height: 1.65;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+.btn-outline-terracotta {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid var(--color-terracotta);
+  font-family: var(--font-sans);
+  font-size: 0.56rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-terracotta);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-weight: 500;
+}
+.btn-outline-terracotta:hover {
+  background: var(--color-terracotta);
+  color: #fff;
+  opacity: 1;
+}
+
+/* ============================================
+   SECTION 7: WINE BOTTLES (DARK TERRACOTTA BG)
+   ============================================ */
+.wine-showcase-dark {
+  padding: 78px 5% 88px;
+  background: var(--color-primary);
+}
+.wine-showcase-dark .wine-showcase-title {
+  color: #fff;
+}
+.wine-showcase-dark .wine-showcase-desc {
+  color: rgba(255, 255, 255, 0.75);
+}
+.wine-showcase-dark .wine-bottle-name {
+  color: #fff;
+}
+.wine-showcase-dark .wine-bottle-type {
+  color: rgba(255, 255, 255, 0.7);
+}
+.wine-showcase-dark .wine-bottle-desc {
+  color: rgba(255, 255, 255, 0.72);
+}
+.btn-outline-white {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  font-family: var(--font-sans);
+  font-size: 0.56rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #fff;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-weight: 500;
+}
+.btn-outline-white:hover {
+  background: #fff;
+  color: var(--color-primary);
+  opacity: 1;
+}
+
+/* ============================================
+   SECTION 8: LA TABLE DE BLACAILLOUX
+   ============================================ */
+.table-section {
+  width: 100%;
+}
+
+.table-top {
+  background: var(--color-olive-dark);
+  padding: 70px 5%;
+}
+.table-top-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.table-top-left {
+  color: #fff;
+}
+.table-keywords {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  letter-spacing: 2px;
+  color: var(--color-primary-light);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+.table-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+  font-weight: 300;
+  line-height: 1.22;
+  color: #fff;
+  margin-bottom: 14px;
+}
+.table-title em {
+  font-style: italic;
+  font-weight: 300;
+}
+.table-tagline {
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+}
+.table-top-right {
+  color: rgba(255, 255, 255, 0.72);
+  font-family: var(--font-serif);
+  font-size: 0.88rem;
+  line-height: 1.85;
+  font-style: italic;
+}
+
+.table-banner {
+  width: 100%;
+  height: 480px;
+  overflow: hidden;
+}
+.table-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* White bg — alternating text/image blocks */
+.table-content {
+  background: var(--color-white);
+  padding: 70px 5%;
+}
+.table-content-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.table-content-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 70px;
+}
+.table-content-block:last-child {
+  margin-bottom: 0;
+}
+.table-content-block.reversed {
+  direction: rtl;
+}
+.table-content-block.reversed > * {
+  direction: ltr;
+}
+.table-text-side {
+  padding-right: 10px;
+}
+.table-content-subtitle {
+  font-family: var(--font-serif);
+  font-size: 0.82rem;
+  color: var(--color-primary);
+  font-style: italic;
+  margin-bottom: 8px;
+}
+.table-content-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.35rem, 2.6vw, 2rem);
+  font-weight: 400;
+  color: var(--color-black);
+  margin-bottom: 14px;
+  line-height: 1.3;
+}
+.table-content-title em {
+  font-style: italic;
+  font-weight: 300;
+}
+.table-content-text {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+.table-content-text-serif {
+  font-family: var(--font-serif);
+  font-size: 0.86rem;
+  color: var(--color-text-light);
+  line-height: 1.85;
+  margin-bottom: 18px;
+  font-style: italic;
+}
+.table-links {
+  margin-top: 4px;
+}
+.table-link-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--color-border);
+  transition: padding-left 0.3s ease;
+  font-family: var(--font-sans);
+  font-size: 0.66rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  font-weight: 500;
+}
+.table-link-item:first-child {
+  border-top: 1px solid var(--color-border);
+}
+.table-link-item:hover {
+  padding-left: 10px;
+}
+.table-link-arrow {
+  font-size: 0.85rem;
+  color: var(--color-primary);
+  transition: transform 0.3s ease;
+}
+.table-link-item:hover .table-link-arrow {
+  transform: translateX(6px);
+}
+.table-image-side {
+  width: 100%;
+  height: 380px;
+  overflow: hidden;
+}
+.table-image-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+.table-image-side:hover img {
+  transform: scale(1.03);
+}
+
+/* ============================================
+   SECTION 9: TABLE EXTENDED — GOLDEN MUSTARD BG
+   ============================================ */
+.table-extended {
+  background: #c4a46a; /* warm golden mustard — matches design image */
+  padding: 70px 5%;
+}
+.table-extended-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.table-extended-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 46px;
+}
+.table-extended-left {
+  color: #fff;
+}
+.table-extended-subtitle {
+  font-family: var(--font-serif);
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.68);
+  font-style: italic;
+  margin-bottom: 8px;
+}
+.table-extended-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 14px;
+  line-height: 1.25;
+}
+.table-extended-title em {
+  font-style: italic;
+  font-weight: 300;
+}
+.table-extended-text {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.72;
+  margin-bottom: 14px;
+}
+.quote-box {
+  background: rgba(255, 255, 255, 0.13);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  padding: 24px 22px;
+  align-self: start;
+  margin-top: 14px;
+}
+.quote-box-text {
+  font-family: var(--font-serif);
+  font-size: 0.86rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.75;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+.quote-box-author {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  color: #fff;
+  letter-spacing: 1px;
+  text-align: right;
+}
+.table-extended-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 38px;
+  align-items: start;
+}
+.table-extended-image {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+.table-extended-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+.table-extended-image:hover img {
+  transform: scale(1.03);
+}
+.table-extended-details {
+  color: #fff;
+}
+.table-extended-details p {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.72;
+  margin-bottom: 12px;
+}
+.bullet-list {
+  margin: 12px 0 16px;
+  padding-left: 0;
+}
+.bullet-list li {
+  font-family: var(--font-serif);
+  font-size: 0.84rem;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 4px 0;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.bullet-list li::before {
+  content: "~";
+  color: rgba(255, 255, 255, 0.48);
+}
+.table-closing-text {
+  font-family: var(--font-serif);
+  font-size: 0.86rem;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.75;
+  font-style: italic;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* ============================================
+   SECTION 10: DEUX CHOIX (EVENTS)
+   ============================================ */
+.deux-choix-section {
+  padding: 85px 0 65px;
+  background: var(--color-cream);
+}
+.deux-choix-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 50px;
+  padding: 0 5%;
+}
+.deux-choix-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 400;
+  color: var(--color-black);
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+.deux-choix-title em {
+  font-style: italic;
+  font-weight: 300;
+}
+.deux-choix-desc {
+  font-family: var(--font-serif);
+  font-size: 0.86rem;
+  color: var(--color-text-light);
+  line-height: 1.65;
+  font-style: italic;
+}
+.deux-choix-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 5%;
+}
+.choix-card {
+  overflow: hidden;
+}
+.choix-card-image {
+  width: 100%;
+  height: 340px;
+  overflow: hidden;
+}
+.choix-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+.choix-card:hover .choix-card-image img {
+  transform: scale(1.05);
+}
+.choix-card-content {
+  padding: 14px 0;
+}
+.choix-card-number {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  color: var(--color-text-light);
+  margin-bottom: 5px;
+}
+.choix-card-number::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 1px;
+  background: var(--color-text-light);
+}
+.choix-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--color-black);
+  margin-bottom: 4px;
+}
+.choix-card-title em {
+  font-style: italic;
+  font-weight: 300;
+}
+.choix-card-text {
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  color: var(--color-text-light);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+/* ============================================
+   SECTION 11: ENGAGEMENT
+   ============================================ */
+.engagement-section {
+  position: relative;
+  background: var(--color-olive-dark);
+  padding: 88px 5%;
+  overflow: hidden;
+  text-align: center;
+}
+.engagement-leaves {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.07;
+  pointer-events: none;
+}
+.engagement-leaves img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.engagement-body {
+  position: relative;
+  z-index: 2;
+}
+.engagement-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.engagement-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 3.5vw, 2.5rem);
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.3;
+  margin-bottom: 24px;
+}
+.engagement-title em {
+  font-style: italic;
+  font-weight: 300;
+}
+.engagement-text {
+  font-family: var(--font-serif);
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.9;
+  font-style: italic;
+}
+
+/* ============================================
+   SECTION 12: L'ESPRIT DES LIEUX
+   ============================================ */
+.esprit-section {
+  background: var(--color-cream);
+  padding: 88px 5%;
+}
+.esprit-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.esprit-content {
+  max-width: 540px;
+}
+.esprit-subtitle {
+  font-family: var(--font-serif);
+  font-size: 0.82rem;
+  color: var(--color-olive-light);
+  font-style: italic;
+  margin-bottom: 8px;
+}
+.esprit-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 3.5vw, 2.5rem);
+  font-weight: 400;
+  color: var(--color-black);
+  line-height: 1.25;
+  margin-bottom: 22px;
+}
+.esprit-title em {
+  font-style: italic;
+  font-weight: 300;
+}
+.esprit-text {
+  font-family: var(--font-serif);
+  font-size: 0.86rem;
+  color: var(--color-text-light);
+  line-height: 1.85;
+  margin-bottom: 14px;
+  font-style: italic;
+}
+
+/* ============================================
+   SECTION 13: PHOTO GALLERY
+   ============================================ */
+.gallery-section {
+  background: var(--color-cream);
+  padding: 0 5% 65px;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+  gap: 6px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+.gallery-item:hover img {
+  transform: scale(1.06);
+}
+.gallery-item-wide {
+  grid-column: span 2;
+}
+.gallery-heart {
+  position: absolute;
+  bottom: 9px;
+  right: 11px;
+  color: #fff;
+  font-size: 0.76rem;
+  opacity: 0.8;
+}
+
+/* ============================================
+   SECTION 14: UNE HOSPITALITÉ ANCRÉE — TERRACOTTA BG
+   ============================================ */
+.hospitalite-section {
+  background: var(--color-primary);
+  padding: 70px 5%;
+}
+.hospitalite-header {
+  text-align: center;
+  margin-bottom: 42px;
+}
+.hospitalite-inner {
+  max-width: 650px;
+  margin: 0 auto;
+}
+.hospitalite-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 3.5vw, 2.5rem);
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.3;
+  margin-bottom: 18px;
+}
+.hospitalite-title em {
+  font-style: italic;
+  font-weight: 300;
+}
+.hospitalite-text {
+  font-family: var(--font-serif);
+  font-size: 0.86rem;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.9;
+  font-style: italic;
+}
+/* 3 images: large left (2fr) + 2 smaller (1fr each) */
+.hospitalite-images {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 6px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.hospitalite-img {
+  overflow: hidden;
+  height: 300px;
+}
+.hospitalite-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+.hospitalite-img:hover img {
+  transform: scale(1.05);
+}
+
+/* ============================================
+   SECTION 15: POUR UNE PROVENCE VIVANTE
+   ============================================ */
+.provence-section {
+  background: var(--color-cream);
+}
+.provence-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+  min-height: 460px;
+  overflow: hidden;
+}
+.provence-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.provence-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.465),
+    rgba(0, 0, 0, 0.659)
+  );
+}
+.provence-content {
+  position: absolute;
+  bottom: 50%;
+  /* right: 0; */
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+  font-size: 4rem;
+}
+.provence-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.25;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.2);
+}
+.provence-title em {
+  font-style: italic;
+  font-weight: 300;
+}
+.provence-text-block {
+  padding: 52px 5%;
+  max-width: 660px;
+  margin: 0 auto;
+  text-align: center;
+}
+.provence-text {
+  font-family: var(--font-serif);
+  font-size: 0.88rem;
+  color: var(--color-text-light);
+  line-height: 1.9;
+  font-style: italic;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.site-footer {
+  background: var(--color-primary);
+  padding: 54px 5%;
+}
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 52px;
+  align-items: start;
+}
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  min-width: 120px;
+}
+.footer-logo-icon {
+  color: #fff;
+  opacity: 0.9;
+}
+.footer-logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.footer-logo-title {
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  letter-spacing: 6px;
+  color: #fff;
+  font-weight: 400;
+}
+.footer-logo-subtitle {
+  font-family: var(--font-serif);
+  font-size: 0.58rem;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 2px;
+  font-style: italic;
+}
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 22px;
+}
+.footer-col-title {
+  font-family: var(--font-sans);
+  font-size: 0.64rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+.footer-col ul li a {
+  font-family: var(--font-serif);
+  font-size: 0.76rem;
+  color: rgba(255, 255, 255, 0.52);
+  font-style: italic;
+  transition: color 0.3s ease;
+}
+.footer-col ul li a:hover {
+  color: #fff;
+  opacity: 1;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
 @media (max-width: 1024px) {
   .navbar {
     height: 50px;
   }
-  .nav-hamburger {
-    width: 50px;
-    height: 50px;
-  }
+  .nav-hamburger,
   .nav-phone {
     width: 50px;
     height: 50px;
   }
-  .nav-reserve {
-    padding: 0 14px;
-    font-size: 0.6rem;
-  }
-  .nav-logo-title {
-    font-size: 0.82rem;
-    letter-spacing: 6px;
-  }
-
-  .hero-title {
-    font-size: clamp(2rem, 4.5vw, 3rem);
-  }
 
   .four-blocks-grid {
-    gap: 0;
+    gap: 20px;
   }
   .block-card-image {
-    height: 240px;
+    height: 220px;
   }
 
   .hameau-top-inner,
   .vins-top-inner,
   .table-top-inner {
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: 26px;
   }
-
-  .hameau-banner {
-    height: 380px;
+  .hameau-banner,
+  .vins-banner,
+  .table-banner {
+    height: 360px;
   }
   .hameau-content-body {
     grid-template-columns: 1fr;
   }
   .hameau-image-right {
-    height: 290px;
-  }
-  .hameau-bottom-images {
-    gap: 18px;
+    height: 270px;
   }
   .hameau-bottom-img {
-    height: 210px;
+    height: 200px;
   }
 
   .sejours-card {
-    min-width: 310px;
-    max-width: 350px;
+    min-width: 300px;
+    max-width: 340px;
   }
   .sejours-card-image {
     height: 360px;
@@ -2360,46 +2010,43 @@ ul {
 
   .vins-content-inner {
     grid-template-columns: 1fr;
-    gap: 36px;
-  }
-  .vins-content-left {
-    padding-right: 0;
+    gap: 32px;
   }
   .vins-content-image {
-    height: 360px;
-  }
-  .vins-banner {
     height: 340px;
   }
 
-  .wine-bottle-image {
-    height: 290px;
+  .wine-bottles-grid {
+    gap: 28px;
   }
-  .wine-bottle-image img {
-    max-width: 135px;
+  .wine-bottle-image {
+    height: 280px;
   }
 
-  .table-banner {
-    height: 370px;
-  }
   .table-content-block {
     gap: 36px;
   }
   .table-image-side {
-    height: 310px;
+    height: 300px;
   }
-
   .table-extended-top,
   .table-extended-bottom {
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: 26px;
   }
 
   .deux-choix-grid {
-    gap: 24px;
+    gap: 22px;
   }
   .choix-card-image {
-    height: 280px;
+    height: 270px;
+  }
+
+  .hospitalite-images {
+    grid-template-columns: 1fr 1fr;
+  }
+  .hospitalite-img-large {
+    grid-column: span 2;
   }
 
   .footer-columns {
@@ -2407,19 +2054,11 @@ ul {
   }
 }
 
-/* --- Mobile Large (max 768px) --- */
 @media (max-width: 768px) {
-  :root {
-    --section-padding: 60px 0;
-  }
-
   .navbar {
     height: 46px;
   }
-  .nav-hamburger {
-    width: 46px;
-    height: 46px;
-  }
+  .nav-hamburger,
   .nav-phone {
     width: 46px;
     height: 46px;
@@ -2427,122 +2066,104 @@ ul {
   .nav-reserve {
     display: none;
   }
-  .nav-lang {
-    padding: 0 12px;
-    font-size: 0.66rem;
-  }
   .nav-logo-title {
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     letter-spacing: 4px;
   }
   .nav-logo-subtitle {
-    font-size: 0.58rem;
+    font-size: 0.56rem;
   }
 
   .hero-title {
-    font-size: 1.9rem;
+    font-size: 1.85rem;
   }
   .hero-info {
-    font-size: 0.68rem;
+    font-size: 0.66rem;
     flex-wrap: wrap;
     justify-content: center;
   }
 
   .four-blocks {
-    padding: 56px 0 48px;
+    padding: 52px 0 44px;
   }
   .four-blocks-grid {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
   .block-card-image {
-    height: 255px;
+    height: 240px;
   }
   .block-card-content {
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
   }
   .block-card-btn {
     align-self: flex-start;
   }
 
-  .hameau-top {
-    padding: 48px 5%;
+  .hameau-top,
+  .vins-top,
+  .table-top {
+    padding: 46px 5%;
   }
-  .hameau-banner {
-    height: 270px;
+  .hameau-banner,
+  .vins-banner,
+  .table-banner {
+    height: 250px;
   }
-  .hameau-content {
-    padding: 48px 5%;
+  .hameau-content,
+  .vins-content,
+  .table-content {
+    padding: 46px 5%;
   }
   .hameau-content-body {
     grid-template-columns: 1fr;
   }
   .hameau-image-right {
-    height: 260px;
+    height: 240px;
   }
   .hameau-bottom-images {
     grid-template-columns: 1fr;
-    gap: 14px;
+    gap: 12px;
   }
   .hameau-bottom-img {
-    height: 210px;
+    height: 200px;
   }
 
   .sejours-section {
-    padding: 56px 0 48px;
+    padding: 52px 0 44px;
   }
   .sejours-desc {
     padding: 0;
   }
   .sejours-card {
-    min-width: 278px;
-    max-width: 305px;
+    min-width: 270px;
+    max-width: 296px;
   }
   .sejours-card-image {
-    height: 330px;
+    height: 320px;
   }
 
-  .vins-top {
-    padding: 48px 5%;
-  }
-  .vins-banner {
-    height: 255px;
-  }
-  .vins-content {
-    padding: 48px 5%;
-  }
   .vins-content-inner {
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: 26px;
   }
   .vins-content-image {
-    height: 310px;
+    height: 290px;
   }
 
   .wine-bottles-grid {
     grid-template-columns: 1fr;
-    gap: 44px;
-  }
-  .wine-bottle-image {
-    height: 310px;
+    gap: 40px;
   }
   .wine-showcase,
   .wine-showcase-dark {
-    padding: 56px 5% 64px;
+    padding: 52px 5% 60px;
   }
 
-  .table-top {
-    padding: 48px 5%;
-  }
-  .table-banner {
-    height: 255px;
-  }
-  .table-content {
-    padding: 48px 5%;
-  }
   .table-content-block {
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: 26px;
   }
   .table-content-block.reversed {
     direction: ltr;
@@ -2551,39 +2172,42 @@ ul {
     padding-right: 0;
   }
   .table-image-side {
-    height: 270px;
+    height: 255px;
   }
   .table-extended {
-    padding: 48px 5%;
+    padding: 46px 5%;
   }
   .table-extended-top,
   .table-extended-bottom {
     grid-template-columns: 1fr;
-    gap: 22px;
+    gap: 20px;
   }
   .table-extended-image {
-    height: 230px;
+    height: 220px;
   }
 
   .deux-choix-section {
-    padding: 56px 0 48px;
+    padding: 52px 0 44px;
   }
   .deux-choix-grid {
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: 26px;
   }
   .choix-card-image {
-    height: 250px;
+    height: 240px;
   }
 
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 175px;
+    grid-auto-rows: 165px;
   }
   .gallery-item-wide {
     grid-column: span 2;
   }
 
+  .hospitalite-section {
+    padding: 52px 5%;
+  }
   .hospitalite-images {
     grid-template-columns: 1fr 1fr;
   }
@@ -2591,16 +2215,16 @@ ul {
     grid-column: span 2;
   }
   .hospitalite-img {
-    height: 240px;
+    height: 220px;
   }
 
   .provence-image-wrapper {
-    height: 58vh;
+    height: 55vh;
   }
 
   .footer-inner {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 32px;
   }
   .footer-brand {
     flex-direction: row;
@@ -2608,133 +2232,88 @@ ul {
   }
   .footer-columns {
     grid-template-columns: repeat(2, 1fr);
-    gap: 22px;
+    gap: 20px;
   }
 
-  .engagement-section {
-    padding: 64px 5%;
-  }
+  .engagement-section,
   .esprit-section {
-    padding: 64px 5%;
+    padding: 60px 5%;
   }
 }
 
-/* --- Mobile Small (max 480px) --- */
 @media (max-width: 480px) {
   .navbar {
     height: 42px;
   }
-  .nav-hamburger {
-    width: 42px;
-    height: 42px;
-  }
+  .nav-hamburger,
   .nav-phone {
     width: 42px;
     height: 42px;
-    font-size: 0.9rem;
-  }
-  .nav-lang {
-    padding: 0 10px;
-    font-size: 0.63rem;
   }
   .nav-logo-title {
-    font-size: 0.63rem;
+    font-size: 0.6rem;
     letter-spacing: 3px;
   }
   .nav-logo-subtitle {
     display: none;
   }
-
   .hero {
-    min-height: 500px;
+    min-height: 480px;
   }
   .hero-title {
-    font-size: 1.6rem;
-  }
-  .hero-info {
-    font-size: 0.63rem;
+    font-size: 1.55rem;
   }
 
-  .four-blocks-title-wrapper {
-    padding: 10px 14px;
-  }
   .four-blocks-title {
-    font-size: 1.25rem;
-  }
-  .block-card-image {
-    height: 205px;
-  }
-  .block-card-title {
-    font-size: 1.15rem;
-  }
-
-  .hameau-title,
-  .vins-title,
-  .table-title {
-    font-size: 1.6rem;
-  }
-  .hameau-banner {
-    height: 200px;
-  }
-  .hameau-image-right {
-    height: 200px;
-  }
-  .hameau-bottom-img {
-    height: 175px;
-  }
-
-  .sejours-card {
-    min-width: 248px;
-    max-width: 268px;
-  }
-  .sejours-card-image {
-    height: 290px;
-  }
-  .sejours-card-amenities {
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
-  .vins-banner {
-    height: 200px;
-  }
-  .vins-content-image {
-    height: 260px;
-  }
-  .wine-name {
-    font-size: 0.68rem;
-    letter-spacing: 2px;
-  }
-  .wine-bottle-image {
-    height: 270px;
-  }
-  .wine-bottle-image img {
-    max-width: 115px;
-  }
-  .wine-bottle-name {
     font-size: 1.2rem;
   }
-
-  .table-banner {
-    height: 200px;
-  }
-  .table-image-side {
-    height: 215px;
-  }
-  .table-extended-image {
+  .block-card-image {
     height: 195px;
   }
 
-  .choix-card-image {
-    height: 200px;
+  .hameau-banner,
+  .vins-banner,
+  .table-banner {
+    height: 190px;
   }
-  .quote-box {
-    padding: 18px 16px;
+  .hameau-image-right,
+  .table-image-side {
+    height: 195px;
+  }
+  .hameau-bottom-img,
+  .table-extended-image {
+    height: 170px;
+  }
+
+  .sejours-card {
+    min-width: 240px;
+    max-width: 260px;
+  }
+  .sejours-card-image {
+    height: 280px;
+  }
+  .sejours-card-amenities {
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+
+  .vins-content-image {
+    height: 250px;
+  }
+  .wine-bottle-image {
+    height: 260px;
+  }
+  .wine-bottle-image img {
+    max-width: 110px;
+  }
+
+  .choix-card-image {
+    height: 195px;
   }
 
   .gallery-grid {
     grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 145px;
+    grid-auto-rows: 135px;
   }
   .hospitalite-images {
     grid-template-columns: 1fr;
@@ -2743,19 +2322,19 @@ ul {
     grid-column: span 1;
   }
   .hospitalite-img {
-    height: 210px;
+    height: 195px;
   }
 
   .provence-image-wrapper {
-    height: 48vh;
-    min-height: 340px;
+    height: 46vh;
+    min-height: 320px;
   }
   .provence-content {
-    bottom: 36px;
+    bottom: 32px;
   }
 
   .footer-columns {
     grid-template-columns: 1fr 1fr;
-    gap: 18px;
+    gap: 16px;
   }
 }
