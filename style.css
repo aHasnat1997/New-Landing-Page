@@ -5,6 +5,8 @@
 
 /* ---------- CSS Custom Properties ---------- */
 :root {
+  --color-background: #f8f8f2;
+
   --color-primary: #b85c2a;
   --color-primary-dark: #9e4d22;
   --color-primary-light: #c97040;
@@ -50,7 +52,7 @@ html {
 body {
   font-family: var(--font-sans);
   color: var(--color-text);
-  background-color: var(--color-cream);
+  background-color: #f8f8f2;
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -109,11 +111,16 @@ ul {
 }
 .cta-link::after {
   content: "→";
-  font-size: 1rem;
+  font-size: 2rem;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  transform: translateY(-6px);
   transition: transform 0.3s ease;
 }
+
 .cta-link:hover::after {
-  transform: translateX(4px);
+  transform: translateY(-6px) translateX(4px);
 }
 
 /* ---------- Animations ---------- */
@@ -329,9 +336,10 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-primary);
+  background: var(--color-primary-dark);
   cursor: pointer;
   flex-shrink: 0;
+  border-right: 1px solid rgb(255, 255, 255);
 }
 .hamburger-icon {
   width: 20px;
@@ -353,7 +361,7 @@ ul {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgba(184, 92, 42, 0.88);
+  background: var(--color-primary-dark);
   backdrop-filter: blur(10px);
   padding: 0 20px;
 }
@@ -383,10 +391,10 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-primary);
+  background: var(--color-primary-dark);
   color: #fff;
   font-size: 1rem;
-  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  border-left: 1px solid rgb(255, 255, 255);
   transition: background 0.3s ease;
 }
 .nav-phone:hover {
@@ -397,14 +405,14 @@ ul {
   align-items: center;
   justify-content: center;
   padding: 0 20px;
-  background: var(--color-primary);
+  background: var(--color-primary-dark);
   color: #fff;
   font-family: var(--font-sans);
   font-size: 0.62rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   font-weight: 500;
-  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  border-left: 1px solid rgb(255, 255, 255);
   transition: background 0.3s ease;
 }
 .nav-reserve:hover {
@@ -415,14 +423,14 @@ ul {
   align-items: center;
   justify-content: center;
   padding: 0 14px;
-  background: var(--color-primary);
+  background: var(--color-primary-dark);
   color: #fff;
   font-family: var(--font-sans);
   font-size: 0.7rem;
   letter-spacing: 1px;
   font-weight: 500;
   gap: 4px;
-  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  border-left: 1px solid rgb(255, 255, 255);
   cursor: pointer;
 }
 .nav-lang::after {
@@ -497,25 +505,22 @@ ul {
    ============================================ */
 .four-blocks {
   padding: 80px 0 70px;
-  background: var(--color-cream);
+  background: var(--color-background);
 }
 
 /* Centered header with bordered title */
 .four-blocks-header {
   text-align: center;
-  max-width: 700px;
   margin: 0 auto 50px;
   padding: 0 5%;
 }
 .four-blocks-title-wrapper {
-  border: 1px solid var(--color-olive-light);
-  padding: 12px 28px;
   margin-bottom: 18px;
   display: inline-block;
 }
 .four-blocks-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.2rem, 2.5vw, 1.75rem);
+  font-size: clamp(3rem, 2.5vw, 1.75rem);
   font-weight: 400;
   color: var(--color-black);
   line-height: 1.3;
@@ -525,12 +530,10 @@ ul {
   font-weight: 300;
 }
 .four-blocks-desc {
-  font-family: var(--font-serif);
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--color-text-light);
   line-height: 1.7;
   margin-bottom: 16px;
-  font-style: italic;
 }
 
 /* 2x2 grid with horizontal gap, padded sides */
@@ -590,7 +593,7 @@ ul {
 }
 .block-card-title {
   font-family: var(--font-serif);
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 500;
   color: var(--color-black);
   margin-bottom: 4px;
@@ -608,16 +611,17 @@ ul {
 
 .btn-outline {
   display: inline-block;
-  padding: 8px 16px;
+  padding: 10px 16px;
   border: 1px solid var(--color-text-light);
   font-family: var(--font-sans);
-  font-size: 0.58rem;
+  font-size: 0.68rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--color-text);
   transition: all 0.3s ease;
   cursor: pointer;
   font-weight: 500;
+  border-radius: 9999px;
 }
 .btn-outline:hover {
   background: var(--color-olive);
@@ -635,7 +639,7 @@ ul {
 
 /* Dark olive top — 2 col text */
 .hameau-top {
-  background: var(--color-olive-dark);
+  background: #3e4a3f;
   padding: 70px 5%;
 }
 .hameau-top-inner {
@@ -659,7 +663,7 @@ ul {
 }
 .hameau-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+  font-size: clamp(2rem, 3.6vw, 3rem);
   font-weight: 300;
   line-height: 1.22;
   color: #fff;
@@ -678,9 +682,8 @@ ul {
 .hameau-top-right {
   color: rgba(255, 255, 255, 0.72);
   font-family: var(--font-serif);
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   line-height: 1.85;
-  font-style: italic;
 }
 
 /* Full-width banner — WIDE, no side padding */
