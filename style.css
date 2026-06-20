@@ -2129,6 +2129,7 @@ ul {
   .hameau-bottom-images {
     grid-template-columns: 1fr;
     gap: 12px;
+    margin-top: 0;
   }
   .hameau-bottom-img {
     height: 200px;
@@ -2136,6 +2137,9 @@ ul {
 
   .sejours-section {
     padding: 52px 0 44px;
+  }
+  .sejours-header {
+    max-width: 90%;
   }
   .sejours-desc {
     padding: 0;
@@ -2157,8 +2161,8 @@ ul {
   }
 
   .wine-bottles-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
   }
   .wine-showcase,
   .wine-showcase-dark {
@@ -2179,15 +2183,25 @@ ul {
     height: 255px;
   }
   .table-extended {
-    padding: 46px 5%;
+    padding: 46px 5% 52px;
+    margin-bottom: 0;
   }
   .table-extended-top,
   .table-extended-bottom {
     grid-template-columns: 1fr;
     gap: 20px;
   }
+  .table-extended-bottom {
+    position: static;
+  }
+  .quote-box {
+    margin-top: 0;
+  }
   .table-extended-image {
     height: 220px;
+  }
+  .table-extended-details p {
+    width: 100%;
   }
 
   .deux-choix-section {
@@ -2224,6 +2238,25 @@ ul {
 
   .provence-image-wrapper {
     height: 55vh;
+  }
+  .provence-content {
+    bottom: 8%;
+    padding: 0 5%;
+  }
+  .provence-title {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+  }
+  .provence-text {
+    font-size: 0.95rem;
+  }
+
+  .engagement-images-gallery img {
+    height: 280px;
+  }
+
+  .esprit-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
 
   .footer-inner {
@@ -2289,6 +2322,10 @@ ul {
     height: 170px;
   }
 
+  .sejours-header {
+    max-width: 100%;
+    padding: 0 5%;
+  }
   .sejours-card {
     min-width: 240px;
     max-width: 260px;
@@ -2303,6 +2340,10 @@ ul {
 
   .vins-content-image {
     height: 250px;
+  }
+  .wine-bottles-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
   .wine-bottle-image {
     height: 260px;
@@ -2330,11 +2371,29 @@ ul {
   }
 
   .provence-image-wrapper {
-    height: 46vh;
-    min-height: 320px;
+    height: 56vh;
+    min-height: 340px;
   }
   .provence-content {
-    bottom: 32px;
+    bottom: 28px;
+    padding: 0 5%;
+  }
+  .provence-title {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+  .provence-text {
+    font-size: 0.82rem;
+  }
+
+  .engagement-images-gallery {
+    grid-template-columns: 1fr;
+  }
+  .engagement-images-gallery img {
+    height: 220px;
+  }
+
+  .esprit-images img {
+    height: 220px;
   }
 
   .footer-columns {
