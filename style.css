@@ -676,8 +676,7 @@ ul {
 .hameau-tagline {
   font-family: var(--font-serif);
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.6);
-  font-style: italic;
+  color: rgb(255, 255, 255);
 }
 .hameau-top-right {
   color: rgba(255, 255, 255, 0.72);
@@ -709,20 +708,17 @@ ul {
 }
 .hameau-content-subtitle {
   font-family: var(--font-serif);
-  font-size: 0.82rem;
-  color: var(--color-olive-light);
-  font-style: italic;
+  font-size: 1.5rem;
+  color: #a8b79c;
   margin-bottom: 8px;
-  text-align: center;
 }
 .hameau-content-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-size: clamp(2rem, 3vw, 2.8rem);
   font-weight: 400;
   color: var(--color-black);
   margin-bottom: 36px;
   line-height: 1.3;
-  text-align: center;
 }
 .hameau-content-title em {
   font-style: italic;
@@ -737,16 +733,14 @@ ul {
   margin-bottom: 36px;
 }
 .hameau-text-col p {
-  font-family: var(--font-serif);
-  font-size: 0.86rem;
+  font-size: 0.9rem;
   color: var(--color-text-light);
   line-height: 1.85;
   margin-bottom: 16px;
-  font-style: italic;
 }
 .hameau-image-right {
   width: 100%;
-  height: 320px;
+  /* height: 320px; */
   overflow: hidden;
 }
 .hameau-image-right img {
@@ -764,10 +758,11 @@ ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 22px;
+  margin-top: -23.5rem;
 }
 .hameau-bottom-img {
   width: 100%;
-  height: 240px;
+  height: 340px;
   overflow: hidden;
 }
 .hameau-bottom-img img {
@@ -790,9 +785,15 @@ ul {
 }
 .sejours-header {
   text-align: center;
-  max-width: 640px;
+  max-width: 60%;
   margin: 0 auto 16px;
   padding: 0 5%;
+}
+.sejours-subtitle {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: #a8b79c;
+  margin-bottom: 8px;
 }
 .sejours-title {
   font-family: var(--font-serif);
@@ -809,10 +810,8 @@ ul {
 .sejours-desc {
   font-family: var(--font-serif);
   font-size: 0.86rem;
-  color: var(--color-text-light);
   line-height: 1.75;
   margin-bottom: 14px;
-  font-style: italic;
   padding: 0 6%;
 }
 .sejours-cta {
@@ -930,7 +929,6 @@ ul {
 }
 
 .vins-top {
-  background: var(--color-olive-dark);
   padding: 70px 5%;
 }
 .vins-top-inner {
@@ -954,28 +952,27 @@ ul {
 }
 .vins-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+  font-size: clamp(2.8rem, 3.6vw, 3.6rem);
   font-weight: 300;
   line-height: 1.22;
-  color: #fff;
+  color: #000000;
   margin-bottom: 14px;
 }
 .vins-title em {
   font-style: italic;
   font-weight: 300;
+  color: #c46a4a;
 }
 .vins-tagline {
   font-family: var(--font-serif);
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.6);
-  font-style: italic;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.6);
 }
 .vins-top-right {
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(0, 0, 0, 0.72);
   font-family: var(--font-serif);
   font-size: 0.88rem;
   line-height: 1.85;
-  font-style: italic;
 }
 
 .vins-banner {
@@ -1007,8 +1004,8 @@ ul {
 }
 .vins-content-subtitle {
   font-family: var(--font-serif);
-  font-size: 0.82rem;
-  color: var(--color-olive-light);
+  font-size: 1.5rem;
+  color: #c46a4a;
   font-style: italic;
   margin-bottom: 8px;
 }
@@ -1086,7 +1083,7 @@ ul {
    ============================================ */
 .wine-showcase {
   padding: 78px 5% 88px;
-  background: var(--color-cream);
+  background: #fff;
 }
 .wine-showcase-header {
   text-align: center;
@@ -1095,14 +1092,13 @@ ul {
 }
 .wine-showcase-subtitle {
   font-family: var(--font-serif);
-  font-size: 0.82rem;
+  font-size: 1.5rem;
   color: var(--color-terracotta);
-  font-style: italic;
   margin-bottom: 8px;
 }
 .wine-showcase-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-size: clamp(2.5rem, 3vw, 2.8rem);
   font-weight: 400;
   color: var(--color-black);
   margin-bottom: 14px;
@@ -1114,10 +1110,9 @@ ul {
 }
 .wine-showcase-desc {
   font-family: var(--font-serif);
-  font-size: 0.84rem;
+  font-size: 1rem;
   color: var(--color-text-light);
   line-height: 1.75;
-  font-style: italic;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -1152,7 +1147,7 @@ ul {
 }
 .wine-bottle-name {
   font-family: var(--font-serif);
-  font-size: 1.35rem;
+  font-size: 2.35rem;
   font-weight: 400;
   color: var(--color-black);
   margin-bottom: 5px;
@@ -1163,7 +1158,7 @@ ul {
 }
 .wine-bottle-type {
   font-family: var(--font-sans);
-  font-size: 0.58rem;
+  font-size: 1rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--color-terracotta);
@@ -1180,8 +1175,9 @@ ul {
 }
 .btn-outline-terracotta {
   display: inline-block;
-  padding: 8px 16px;
+  padding: 12px 16px;
   border: 1px solid var(--color-terracotta);
+  border-radius: 9999px;
   font-family: var(--font-sans);
   font-size: 0.56rem;
   letter-spacing: 3px;
@@ -1202,7 +1198,7 @@ ul {
    ============================================ */
 .wine-showcase-dark {
   padding: 78px 5% 88px;
-  background: var(--color-primary);
+  background: #c46a4a;
 }
 .wine-showcase-dark .wine-showcase-title {
   color: #fff;
@@ -1221,8 +1217,9 @@ ul {
 }
 .btn-outline-white {
   display: inline-block;
-  padding: 8px 16px;
+  padding: 12px 16px;
   border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 9999px;
   font-family: var(--font-sans);
   font-size: 0.56rem;
   letter-spacing: 3px;
@@ -1246,7 +1243,7 @@ ul {
 }
 
 .table-top {
-  background: var(--color-olive-dark);
+  background: #fff;
   padding: 70px 5%;
 }
 .table-top-inner {
@@ -1264,34 +1261,33 @@ ul {
   font-family: var(--font-sans);
   font-size: 0.68rem;
   letter-spacing: 2px;
-  color: var(--color-primary-light);
+  color: #c9a25d;
   margin-bottom: 16px;
   text-transform: uppercase;
 }
 .table-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+  font-size: clamp(2.8rem, 3.6vw, 3.6rem);
   font-weight: 300;
   line-height: 1.22;
-  color: #fff;
+  color: #000000;
   margin-bottom: 14px;
 }
 .table-title em {
   font-style: italic;
   font-weight: 300;
+  color: #c9a25d;
 }
 .table-tagline {
   font-family: var(--font-serif);
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.6);
-  font-style: italic;
+  color: rgb(0, 0, 0);
 }
 .table-top-right {
-  color: rgba(255, 255, 255, 0.72);
+  color: rgb(0, 0, 0);
   font-family: var(--font-serif);
   font-size: 0.88rem;
   line-height: 1.85;
-  font-style: italic;
 }
 
 .table-banner {
@@ -1335,14 +1331,13 @@ ul {
 }
 .table-content-subtitle {
   font-family: var(--font-serif);
-  font-size: 0.82rem;
-  color: var(--color-primary);
-  font-style: italic;
+  font-size: 1.2rem;
+  color: #c9a25d;
   margin-bottom: 8px;
 }
 .table-content-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.35rem, 2.6vw, 2rem);
+  font-size: clamp(2.35rem, 2.6vw, 2.5rem);
   font-weight: 400;
   color: var(--color-black);
   margin-bottom: 14px;
@@ -1359,14 +1354,6 @@ ul {
   line-height: 1.7;
   margin-bottom: 14px;
 }
-.table-content-text-serif {
-  font-family: var(--font-serif);
-  font-size: 0.86rem;
-  color: var(--color-text-light);
-  line-height: 1.85;
-  margin-bottom: 18px;
-  font-style: italic;
-}
 .table-links {
   margin-top: 4px;
 }
@@ -1381,7 +1368,7 @@ ul {
   font-size: 0.66rem;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--color-primary);
+  color: #c9a25d;
   font-weight: 500;
 }
 .table-link-item:first-child {
@@ -1392,7 +1379,7 @@ ul {
 }
 .table-link-arrow {
   font-size: 0.85rem;
-  color: var(--color-primary);
+  color: #c9a25d;
   transition: transform 0.3s ease;
 }
 .table-link-item:hover .table-link-arrow {
@@ -1419,6 +1406,8 @@ ul {
 .table-extended {
   background: #c4a46a; /* warm golden mustard — matches design image */
   padding: 70px 5%;
+  padding-bottom: 10rem;
+  margin-bottom: 5rem;
 }
 .table-extended-inner {
   max-width: var(--max-width);
@@ -1435,14 +1424,13 @@ ul {
 }
 .table-extended-subtitle {
   font-family: var(--font-serif);
-  font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.68);
-  font-style: italic;
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
   margin-bottom: 8px;
 }
 .table-extended-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-size: clamp(2rem, 3vw, 2.6rem);
   font-weight: 400;
   color: #fff;
   margin-bottom: 14px;
@@ -1460,11 +1448,10 @@ ul {
   margin-bottom: 14px;
 }
 .quote-box {
-  background: rgba(255, 255, 255, 0.13);
-  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: #c39036;
   padding: 24px 22px;
   align-self: start;
-  margin-top: 14px;
+  margin-top: 7rem;
 }
 .quote-box-text {
   font-family: var(--font-serif);
@@ -1483,9 +1470,10 @@ ul {
 }
 .table-extended-bottom {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 38px;
+  grid-template-columns: 1fr 2fr;
+  gap: 5rem;
   align-items: start;
+  position: absolute;
 }
 .table-extended-image {
   width: 100%;
@@ -1510,17 +1498,16 @@ ul {
   color: rgba(255, 255, 255, 0.82);
   line-height: 1.72;
   margin-bottom: 12px;
+  width: 70%;
 }
 .bullet-list {
   margin: 12px 0 16px;
   padding-left: 0;
 }
 .bullet-list li {
-  font-family: var(--font-serif);
-  font-size: 0.84rem;
+  font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.85);
   padding: 4px 0;
-  font-style: italic;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -1530,14 +1517,11 @@ ul {
   color: rgba(255, 255, 255, 0.48);
 }
 .table-closing-text {
-  font-family: var(--font-serif);
-  font-size: 0.86rem;
-  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.9rem;
+  color: var(--color-text-light) !important;
   line-height: 1.75;
-  font-style: italic;
   margin-top: 16px;
   padding-top: 16px;
-  border-top: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 /* ============================================
@@ -1545,7 +1529,7 @@ ul {
    ============================================ */
 .deux-choix-section {
   padding: 85px 0 65px;
-  background: var(--color-cream);
+  background: var(--color-background);
 }
 .deux-choix-header {
   text-align: center;
@@ -1618,7 +1602,7 @@ ul {
 }
 .choix-card-title {
   font-family: var(--font-serif);
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   font-weight: 500;
   color: var(--color-black);
   margin-bottom: 4px;
@@ -1640,7 +1624,7 @@ ul {
    ============================================ */
 .engagement-section {
   position: relative;
-  background: var(--color-olive-dark);
+  background: var(--color-primary);
   padding: 88px 5%;
   overflow: hidden;
   text-align: center;
@@ -1681,36 +1665,48 @@ ul {
 }
 .engagement-text {
   font-family: var(--font-serif);
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.72);
   line-height: 1.9;
-  font-style: italic;
+}
+.engagement-images-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin-top: 6px;
+}
+.engagement-images-gallery img {
+  width: 100%;
+  height: 486px;
+  object-fit: cover;
 }
 
 /* ============================================
    SECTION 12: L'ESPRIT DES LIEUX
    ============================================ */
 .esprit-section {
-  background: var(--color-cream);
+  background: var(--color-background);
   padding: 88px 5%;
 }
 .esprit-inner {
   max-width: var(--max-width);
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
 }
 .esprit-content {
   max-width: 540px;
 }
 .esprit-subtitle {
   font-family: var(--font-serif);
-  font-size: 0.82rem;
-  color: var(--color-olive-light);
-  font-style: italic;
+  font-size: 1.2rem;
+  color: #a8b79c;
   margin-bottom: 8px;
 }
 .esprit-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.6rem, 3.5vw, 2.5rem);
+  font-size: clamp(2.5rem, 3.5vw, 3rem);
   font-weight: 400;
   color: var(--color-black);
   line-height: 1.25;
@@ -1721,28 +1717,38 @@ ul {
   font-weight: 300;
 }
 .esprit-text {
-  font-family: var(--font-serif);
-  font-size: 0.86rem;
+  font-size: 0.9rem;
   color: var(--color-text-light);
   line-height: 1.85;
   margin-bottom: 14px;
-  font-style: italic;
+  text-align: justify;
+}
+
+.esprit-images {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.esprit-images img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  transition: transform 0.7s ease;
 }
 
 /* ============================================
    SECTION 13: PHOTO GALLERY
    ============================================ */
 .gallery-section {
-  background: var(--color-cream);
-  padding: 0 5% 65px;
+  background: var(--color-background);
 }
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 200px;
   gap: 6px;
-  max-width: var(--max-width);
-  margin: 0 auto;
+  margin: 6px auto;
 }
 .gallery-item {
   position: relative;
@@ -1830,6 +1836,7 @@ ul {
    ============================================ */
 .provence-section {
   background: var(--color-cream);
+  margin-top: 5rem;
 }
 .provence-image-wrapper {
   position: relative;
@@ -1846,15 +1853,11 @@ ul {
 .provence-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.465),
-    rgba(0, 0, 0, 0.659)
-  );
+  background: linear-gradient(to bottom, #a8b79c00, #3e4a3f);
 }
 .provence-content {
   position: absolute;
-  bottom: 50%;
+  bottom: 10%;
   /* right: 0; */
   transform: translateX(-50%);
   text-align: center;
@@ -1863,7 +1866,7 @@ ul {
 }
 .provence-title {
   font-family: var(--font-serif);
-  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-size: clamp(3rem, 5vw, 4rem);
   font-weight: 300;
   color: #fff;
   line-height: 1.25;
@@ -1881,10 +1884,10 @@ ul {
 }
 .provence-text {
   font-family: var(--font-serif);
-  font-size: 0.88rem;
-  color: var(--color-text-light);
-  line-height: 1.9;
-  font-style: italic;
+  font-size: 1.2rem;
+  color: #fff;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 /* ============================================
@@ -1940,7 +1943,7 @@ ul {
 }
 .footer-col-title {
   font-family: var(--font-sans);
-  font-size: 0.64rem;
+  font-size: 0.8rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #fff;
@@ -1951,10 +1954,8 @@ ul {
   margin-bottom: 8px;
 }
 .footer-col ul li a {
-  font-family: var(--font-serif);
-  font-size: 0.76rem;
+  font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.52);
-  font-style: italic;
   transition: color 0.3s ease;
 }
 .footer-col ul li a:hover {
