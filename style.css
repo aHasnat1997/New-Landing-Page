@@ -612,7 +612,7 @@ body.nav-open {
 .four-blocks-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 28px;
+  gap: 60px;
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 5%;
@@ -673,6 +673,7 @@ body.nav-open {
 .block-card-text {
   font-family: var(--font-sans);
   font-size: 0.76rem;
+  max-width: 250px;
   color: var(--color-text-light);
   line-height: 1.6;
 }
