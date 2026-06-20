@@ -329,6 +329,7 @@ ul {
   display: flex;
   align-items: stretch;
   height: 52px;
+  border-bottom: 1px solid rgb(255, 255, 255);
 }
 .nav-hamburger {
   width: 52px;
@@ -340,6 +341,7 @@ ul {
   cursor: pointer;
   flex-shrink: 0;
   border-right: 1px solid rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(255, 255, 255);
 }
 .hamburger-icon {
   width: 20px;
@@ -395,6 +397,7 @@ ul {
   color: #fff;
   font-size: 1rem;
   border-left: 1px solid rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(255, 255, 255);
   transition: background 0.3s ease;
 }
 .nav-phone:hover {
