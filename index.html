@@ -320,131 +320,174 @@
         <a href="#" class="cta-link">LIRE LA SUITE</a>
       </div>
 
-      <!-- Horizontal Scrolling Cards -->
+      <!-- JS Carousel -->
       <div
-        class="sejours-carousel"
+        class="sejours-carousel-wrapper"
         role="region"
         aria-label="Carousel des séjours"
       >
-        <!-- Card 1 -->
-        <article class="sejours-card reveal-fade">
-          <div class="sejours-card-image">
-            <img
-              src="images/stone_bastide.png"
-              alt="Le Hameau"
-              loading="lazy"
-            />
-            <div class="sejours-card-overlay">
-              <div class="sejours-card-number">01</div>
-              <h3 class="sejours-card-title">Le <em>Hameau</em></h3>
-              <div class="sejours-card-amenities">
-                <span class="amenity"
-                  ><span class="amenity-icon">&#9782;</span> 10 personnes</span
-                >
-                <span class="amenity"
-                  ><span class="amenity-icon">&#9963;</span> 4 chambres</span
-                >
-                <span class="amenity"
-                  ><span class="amenity-icon">&#9832;</span> 2 salles de
-                  bain</span
-                >
-              </div>
-              <a href="#" class="sejours-card-btn" id="discover-hameau"
-                >DÉCOUVRIR LE HAMEAU</a
-              >
-            </div>
-          </div>
-        </article>
+        <!-- Prev arrow -->
+        <button class="carousel-btn carousel-btn-prev" aria-label="Précédent">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
 
-        <!-- Card 2 -->
-        <article class="sejours-card reveal-fade">
-          <div class="sejours-card-image">
-            <img
-              src="images/pool_loungers.png"
-              alt="Le Bastidon"
-              loading="lazy"
-            />
-            <div class="sejours-card-overlay">
-              <div class="sejours-card-number">02</div>
-              <h3 class="sejours-card-title">Le <em>Bastidon</em></h3>
-              <div class="sejours-card-amenities">
-                <span class="amenity"
-                  ><span class="amenity-icon">&#9782;</span> 2 personnes</span
-                >
-                <span class="amenity"
-                  ><span class="amenity-icon">&#9963;</span> 1 chambre</span
-                >
-                <span class="amenity"
-                  ><span class="amenity-icon">&#9832;</span> 1 salle de
-                  bain</span
+        <!-- Track -->
+        <div class="sejours-carousel-track">
+          <!-- Card 1 -->
+          <article class="sejours-card">
+            <div class="sejours-card-image">
+              <img
+                src="images/stone_bastide.png"
+                alt="Le Hameau"
+                loading="lazy"
+              />
+              <div class="sejours-card-overlay">
+                <div class="sejours-card-info">
+                  <div class="sejours-card-number">01</div>
+                  <h3 class="sejours-card-title">Le <em>Hameau</em></h3>
+                  <div class="sejours-card-amenities">
+                    <span class="amenity"
+                      ><span class="amenity-icon">👥</span> 10 personnes</span
+                    >
+                    <span class="amenity"
+                      ><span class="amenity-icon">🏠</span> 4 chambres</span
+                    >
+                    <span class="amenity"
+                      ><span class="amenity-icon">🚿</span> 2 salles de
+                      bain</span
+                    >
+                  </div>
+                </div>
+                <a href="#" class="sejours-card-btn" id="discover-hameau"
+                  >DÉCOUVRIR LE HAMEAU</a
                 >
               </div>
-              <a href="#" class="sejours-card-btn" id="discover-bastidon"
-                >DÉCOUVRIR LE BASTIDON</a
-              >
             </div>
-          </div>
-        </article>
+          </article>
 
-        <!-- Card 3 -->
-        <article class="sejours-card reveal-fade">
-          <div class="sejours-card-image">
-            <img
-              src="images/pool_garden.png"
-              alt="Bergerie d'Aquin"
-              loading="lazy"
-            />
-            <div class="sejours-card-overlay">
-              <div class="sejours-card-number">03</div>
-              <h3 class="sejours-card-title">Bergerie d'<em>Aquin</em></h3>
-              <div class="sejours-card-amenities">
-                <span class="amenity"
-                  ><span class="amenity-icon">&#9782;</span> 10 personnes</span
-                >
-                <span class="amenity"
-                  ><span class="amenity-icon">&#9963;</span> 5 chambres</span
-                >
-                <span class="amenity"
-                  ><span class="amenity-icon">&#9832;</span> 3 salles de
-                  bain</span
+          <!-- Card 2 -->
+          <article class="sejours-card">
+            <div class="sejours-card-image">
+              <img
+                src="images/pool_loungers.png"
+                alt="Le Bastidon"
+                loading="lazy"
+              />
+              <div class="sejours-card-overlay">
+                <div class="sejours-card-info">
+                  <div class="sejours-card-number">02</div>
+                  <h3 class="sejours-card-title">Le <em>Bastidon</em></h3>
+                  <div class="sejours-card-amenities">
+                    <span class="amenity"
+                      ><span class="amenity-icon">👥</span> 2 personnes</span
+                    >
+                    <span class="amenity"
+                      ><span class="amenity-icon">🏠</span> 1 chambre</span
+                    >
+                    <span class="amenity"
+                      ><span class="amenity-icon">🚿</span> 1 salle de
+                      bain</span
+                    >
+                  </div>
+                </div>
+                <a href="#" class="sejours-card-btn" id="discover-bastidon"
+                  >DÉCOUVRIR LE BASTIDON</a
                 >
               </div>
-              <a href="#" class="sejours-card-btn" id="discover-bergerie"
-                >DÉCOUVRIR LA BERGERIE</a
-              >
             </div>
-          </div>
-        </article>
+          </article>
 
-        <!-- Card 4 -->
-        <article class="sejours-card reveal-fade">
-          <div class="sejours-card-image">
-            <img
-              src="images/aerial_villa.png"
-              alt="La Grande Bastide"
-              loading="lazy"
-            />
-            <div class="sejours-card-overlay">
-              <div class="sejours-card-number">04</div>
-              <h3 class="sejours-card-title">La Grande <em>Bastide</em></h3>
-              <div class="sejours-card-amenities">
-                <span class="amenity"
-                  ><span class="amenity-icon">&#9782;</span> 14 personnes</span
-                >
-                <span class="amenity"
-                  ><span class="amenity-icon">&#9963;</span> 7 chambres</span
-                >
-                <span class="amenity"
-                  ><span class="amenity-icon">&#9832;</span> 5 salles de
-                  bain</span
+          <!-- Card 3 -->
+          <article class="sejours-card">
+            <div class="sejours-card-image">
+              <img
+                src="images/pool_garden.png"
+                alt="Bergerie d'Aquin"
+                loading="lazy"
+              />
+              <div class="sejours-card-overlay">
+                <div class="sejours-card-info">
+                  <div class="sejours-card-number">03</div>
+                  <h3 class="sejours-card-title">Bergerie d'<em>Aquin</em></h3>
+                  <div class="sejours-card-amenities">
+                    <span class="amenity"
+                      ><span class="amenity-icon">👥</span> 10 personnes</span
+                    >
+                    <span class="amenity"
+                      ><span class="amenity-icon">🏠</span> 5 chambres</span
+                    >
+                    <span class="amenity"
+                      ><span class="amenity-icon">🚿</span> 3 salles de
+                      bain</span
+                    >
+                  </div>
+                </div>
+                <a href="#" class="sejours-card-btn" id="discover-bergerie"
+                  >DÉCOUVRIR LA BERGERIE</a
                 >
               </div>
-              <a href="#" class="sejours-card-btn" id="discover-bastide"
-                >DÉCOUVRIR LA BASTIDE</a
-              >
             </div>
-          </div>
-        </article>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="sejours-card">
+            <div class="sejours-card-image">
+              <img
+                src="images/aerial_villa.png"
+                alt="La Grande Bastide"
+                loading="lazy"
+              />
+              <div class="sejours-card-overlay">
+                <div class="sejours-card-info">
+                  <div class="sejours-card-number">04</div>
+                  <h3 class="sejours-card-title">La Grande <em>Bastide</em></h3>
+                  <div class="sejours-card-amenities">
+                    <span class="amenity"
+                      ><span class="amenity-icon">👥</span> 14 personnes</span
+                    >
+                    <span class="amenity"
+                      ><span class="amenity-icon">🏠</span> 7 chambres</span
+                    >
+                    <span class="amenity"
+                      ><span class="amenity-icon">🚿</span> 5 salles de
+                      bain</span
+                    >
+                  </div>
+                </div>
+                <a href="#" class="sejours-card-btn" id="discover-bastide"
+                  >DÉCOUVRIR LA BASTIDE</a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Next arrow -->
+        <button class="carousel-btn carousel-btn-next" aria-label="Suivant">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
       </div>
     </section>
 
@@ -1329,4 +1372,7 @@
       </div>
     </footer>
   </body>
+
+  <script defer src="main.js"></script>
+  <script defer src="carousel.js"></script>
 </html>
