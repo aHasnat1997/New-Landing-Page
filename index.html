@@ -23,6 +23,97 @@
   </head>
 
   <body>
+    <!-- ============ NAV OVERLAY + SLIDE PANEL ============ -->
+    <div class="nav-overlay" id="nav-overlay"></div>
+
+    <aside
+      class="nav-panel"
+      id="nav-panel"
+      aria-label="Menu principal"
+      aria-hidden="true"
+    >
+      <!-- Close button row -->
+      <div class="nav-panel-close-row">
+        <button
+          class="nav-panel-close"
+          id="nav-close"
+          aria-label="Fermer le menu"
+        >
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          >
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Navigation links -->
+      <nav class="nav-panel-links">
+        <a href="#hero" class="nav-panel-link">Accueil</a>
+        <a href="#four-blocks" class="nav-panel-link">Le Domaine</a>
+        <a href="#vins" class="nav-panel-link">Les Vins</a>
+        <a href="#sejours" class="nav-panel-link">Séjours &amp; Demeures</a>
+        <a href="#table" class="nav-panel-link">La Table de Blacailloux</a>
+        <a href="#evenements" class="nav-panel-link">Événements</a>
+      </nav>
+
+      <!-- Footer: contacts + social -->
+      <div class="nav-panel-footer">
+        <div class="nav-panel-contacts">
+          <div class="nav-contact-group">
+            <p class="nav-contact-label">Domaine viticole</p>
+            <p>Bastide de Blacailloux — Tourves</p>
+            <p class="nav-contact-phone">04 94 86 83 83</p>
+          </div>
+          <div class="nav-contact-group">
+            <p class="nav-contact-label">Séjours &amp; événements</p>
+            <p>Domaine de Blacailloux — Tourves</p>
+            <p class="nav-contact-phone">04 22 12 00 37</p>
+          </div>
+        </div>
+
+        <div class="nav-panel-social">
+          <a href="#" class="nav-social-btn" aria-label="YouTube">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.75 15.5v-7l6.25 3.5-6.25 3.5z"
+              />
+            </svg>
+          </a>
+          <a href="#" class="nav-social-btn" aria-label="Instagram">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </a>
+          <a href="#" class="nav-social-btn" aria-label="Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </aside>
+
     <!-- ============================================
        SECTION 1: HERO
        ============================================ -->
@@ -40,6 +131,7 @@
       <!-- Navigation Bar -->
       <nav class="navbar" id="navbar" aria-label="Navigation principale">
         <div
+          id="nav-hamburger"
           class="nav-hamburger"
           role="button"
           aria-label="Ouvrir le menu"
@@ -1375,4 +1467,5 @@
 
   <script defer src="main.js"></script>
   <script defer src="carousel.js"></script>
+  <script defer src="nav.js"></script>
 </html>
