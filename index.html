@@ -16,23 +16,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/e08ad5d7be.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
     <!-- ============ NAV OVERLAY + SLIDE PANEL ============ -->
-    <div class="nav-overlay" id="nav-overlay"></div>
+    <!-- <div class="nav-overlay" id="nav-overlay"></div> -->
 
-    <aside
+    <!-- <aside
       class="nav-panel"
       id="nav-panel"
       aria-label="Menu principal"
       aria-hidden="true"
     >
-      <!-- Close button row -->
+      Close button row
       <div class="nav-panel-close-row">
         <button
           class="nav-panel-close"
@@ -54,7 +58,7 @@
         </button>
       </div>
 
-      <!-- Navigation links -->
+      Navigation links
       <nav class="nav-panel-links">
         <a href="#hero" class="nav-panel-link">Accueil</a>
         <a href="#four-blocks" class="nav-panel-link">Le Domaine</a>
@@ -64,7 +68,7 @@
         <a href="#evenements" class="nav-panel-link">Événements</a>
       </nav>
 
-      <!-- Footer: contacts + social -->
+      Footer: contacts + social
       <div class="nav-panel-footer">
         <div class="nav-panel-contacts">
           <div class="nav-contact-group">
@@ -112,7 +116,7 @@
           </a>
         </div>
       </div>
-    </aside>
+    </aside> -->
 
     <!-- ============================================
        SECTION 1: HERO
@@ -129,7 +133,7 @@
       <div class="hero-overlay"></div>
 
       <!-- Navigation Bar -->
-      <nav class="navbar" id="navbar" aria-label="Navigation principale">
+      <!-- <nav class="navbar" id="navbar" aria-label="Navigation principale">
         <div
           id="nav-hamburger"
           class="nav-hamburger"
@@ -156,7 +160,7 @@
           <a href="#" class="nav-reserve" id="nav-reserve">RÉSERVER</a>
           <div class="nav-lang" role="button" tabindex="0">FR</div>
         </div>
-      </nav>
+      </nav> -->
 
       <!-- Hero Content -->
       <div class="hero-content">
@@ -164,7 +168,7 @@
           Découvrez le domaine<br />de <em>Blacailloux</em>
         </h1>
         <div class="hero-info">
-          <span>&#9872; 400 hectares</span>
+          <span>500 hectares</span>
           <span class="separator"></span>
           <span>Provence intérieure</span>
           <span class="separator"></span>
@@ -338,54 +342,50 @@
       <!-- Content Section Below -->
       <div class="hameau-content">
         <div class="hameau-content-inner">
-          <p class="hameau-content-subtitle reveal">~ Séjours et Demeures ~</p>
+          <p class="hameau-content-subtitle reveal">Séjours et Demeures</p>
           <h3 class="hameau-content-title reveal">
             Titre H2 long de section Domaine et Bastides <em>Blacailloux</em>
           </h3>
 
-          <div class="hameau-content-body">
-            <div class="hameau-text-col reveal-left">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
-                risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing
-                nec, ultricies sed, dolor. Cras elementum ultrices diam.
-                Maecenas ligula massa, varius a, semper congue, euismod non, mi.
-                Proin porttitor, orci nec nonummy molestie, enim est eleifend
-                mi, non fermentum diam nisl sit amet erat.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
-                risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing
-                nec, ultricies sed, dolor. Cras elementum ultrices diam.
-                Maecenas ligula massa, varius a, semper congue, euismod non, mi.
-                Proin porttitor, orci nec nonummy molestie, enim est eleifend
-                mi, non fermentum diam nisl sit amet erat.
-              </p>
+          <div style="display: flex; gap: 50px">
+            <div class="hameau-content-body">
+              <div class="hameau-text-col reveal-left">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  non risus. Suspendisse lectus tortor, dignissim sit amet,
+                  adipiscing nec, ultricies sed, dolor. Cras elementum ultrices
+                  diam. Maecenas ligula massa, varius a, semper congue, euismod
+                  non, mi. Proin porttitor, orci nec nonummy molestie, enim est
+                  eleifend mi, non fermentum diam nisl sit amet erat.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  non risus. Suspendisse lectus tortor, dignissim sit amet,
+                  adipiscing nec, ultricies sed, dolor. Cras elementum ultrices
+                  diam. Maecenas ligula massa, varius a, semper congue, euismod
+                  non, mi. Proin porttitor, orci nec nonummy molestie, enim est
+                  eleifend mi, non fermentum diam nisl sit amet erat.
+                </p>
+              </div>
+
+              <div class="hameau-bottom-images">
+                <div class="hameau-bottom-img parallax-hover reveal-left">
+                  <img
+                    src="images/stone_bastide.png"
+                    alt="Vue aérienne du domaine"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
             </div>
+
             <div class="hameau-image-right parallax-hover reveal-right">
               <img
-                src="images/stone_bastide.png"
+                src="images/aerial_villa.png"
                 alt="Bastide en pierre avec jardin"
                 loading="lazy"
               />
             </div>
-          </div>
-
-          <div class="hameau-bottom-images">
-            <div class="hameau-bottom-img parallax-hover reveal-left">
-              <img
-                src="images/aerial_villa.png"
-                alt="Vue aérienne du domaine"
-                loading="lazy"
-              />
-            </div>
-            <!-- <div class="hameau-bottom-img parallax-hover reveal-right">
-              <img
-                src="images/pool_garden.png"
-                alt="Jardin méditerranéen"
-                loading="lazy"
-              />
-            </div> -->
           </div>
         </div>
       </div>
@@ -396,7 +396,7 @@
        ============================================ -->
     <section class="sejours-section" id="sejours">
       <div class="sejours-header reveal">
-        <p class="sejours-subtitle">~ Séjours &amp; Demeures ~</p>
+        <p class="sejours-subtitle">Séjours &amp; Demeures</p>
         <h2 class="sejours-title">
           Certains séjours laissent une <em>trace.</em>
         </h2>
@@ -420,18 +420,7 @@
       >
         <!-- Prev arrow -->
         <button class="carousel-btn carousel-btn-prev" aria-label="Précédent">
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <polyline points="15 18 9 12 15 6"></polyline>
-          </svg>
+          <i class="fa-solid fa-arrow-left"></i>
         </button>
 
         <!-- Track -->
@@ -447,18 +436,20 @@
               <div class="sejours-card-overlay">
                 <div class="sejours-card-info">
                   <div class="sejours-card-number">01</div>
-                  <h3 class="sejours-card-title">Le <em>Hameau</em></h3>
+                  <h3 class="sejours-card-title">Le Hameau</h3>
                   <div class="sejours-card-amenities">
-                    <span class="amenity"
-                      ><span class="amenity-icon">👥</span> 10 personnes</span
-                    >
-                    <span class="amenity"
-                      ><span class="amenity-icon">🏠</span> 4 chambres</span
-                    >
-                    <span class="amenity"
-                      ><span class="amenity-icon">🚿</span> 2 salles de
-                      bain</span
-                    >
+                    <span class="amenity">
+                      <i class="fa-solid fa-user"></i>
+                      10 personnes
+                    </span>
+                    <span class="amenity">
+                      <i class="fa-solid fa-bed"></i>
+                      4 chambres
+                    </span>
+                    <span class="amenity">
+                      <i class="fa-solid fa-bath"></i>
+                      2 salles de bain
+                    </span>
                   </div>
                 </div>
                 <a href="#" class="sejours-card-btn" id="discover-hameau"
@@ -479,18 +470,20 @@
               <div class="sejours-card-overlay">
                 <div class="sejours-card-info">
                   <div class="sejours-card-number">02</div>
-                  <h3 class="sejours-card-title">Le <em>Bastidon</em></h3>
+                  <h3 class="sejours-card-title">Le Bastidon</h3>
                   <div class="sejours-card-amenities">
-                    <span class="amenity"
-                      ><span class="amenity-icon">👥</span> 2 personnes</span
-                    >
-                    <span class="amenity"
-                      ><span class="amenity-icon">🏠</span> 1 chambre</span
-                    >
-                    <span class="amenity"
-                      ><span class="amenity-icon">🚿</span> 1 salle de
-                      bain</span
-                    >
+                    <span class="amenity">
+                      <i class="fa-solid fa-user"></i>
+                      10 personnes
+                    </span>
+                    <span class="amenity">
+                      <i class="fa-solid fa-bed"></i>
+                      4 chambres
+                    </span>
+                    <span class="amenity">
+                      <i class="fa-solid fa-bath"></i>
+                      2 salles de bain
+                    </span>
                   </div>
                 </div>
                 <a href="#" class="sejours-card-btn" id="discover-bastidon"
@@ -511,18 +504,20 @@
               <div class="sejours-card-overlay">
                 <div class="sejours-card-info">
                   <div class="sejours-card-number">03</div>
-                  <h3 class="sejours-card-title">Bergerie d'<em>Aquin</em></h3>
+                  <h3 class="sejours-card-title">Bergerie d' Aquin</h3>
                   <div class="sejours-card-amenities">
-                    <span class="amenity"
-                      ><span class="amenity-icon">👥</span> 10 personnes</span
-                    >
-                    <span class="amenity"
-                      ><span class="amenity-icon">🏠</span> 5 chambres</span
-                    >
-                    <span class="amenity"
-                      ><span class="amenity-icon">🚿</span> 3 salles de
-                      bain</span
-                    >
+                    <span class="amenity">
+                      <i class="fa-solid fa-user"></i>
+                      10 personnes
+                    </span>
+                    <span class="amenity">
+                      <i class="fa-solid fa-bed"></i>
+                      4 chambres
+                    </span>
+                    <span class="amenity">
+                      <i class="fa-solid fa-bath"></i>
+                      2 salles de bain
+                    </span>
                   </div>
                 </div>
                 <a href="#" class="sejours-card-btn" id="discover-bergerie"
@@ -543,18 +538,20 @@
               <div class="sejours-card-overlay">
                 <div class="sejours-card-info">
                   <div class="sejours-card-number">04</div>
-                  <h3 class="sejours-card-title">La Grande <em>Bastide</em></h3>
+                  <h3 class="sejours-card-title">La Grande Bastide</h3>
                   <div class="sejours-card-amenities">
-                    <span class="amenity"
-                      ><span class="amenity-icon">👥</span> 14 personnes</span
-                    >
-                    <span class="amenity"
-                      ><span class="amenity-icon">🏠</span> 7 chambres</span
-                    >
-                    <span class="amenity"
-                      ><span class="amenity-icon">🚿</span> 5 salles de
-                      bain</span
-                    >
+                    <span class="amenity">
+                      <i class="fa-solid fa-user"></i>
+                      10 personnes
+                    </span>
+                    <span class="amenity">
+                      <i class="fa-solid fa-bed"></i>
+                      4 chambres
+                    </span>
+                    <span class="amenity">
+                      <i class="fa-solid fa-bath"></i>
+                      2 salles de bain
+                    </span>
                   </div>
                 </div>
                 <a href="#" class="sejours-card-btn" id="discover-bastide"
@@ -567,18 +564,7 @@
 
         <!-- Next arrow -->
         <button class="carousel-btn carousel-btn-next" aria-label="Suivant">
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <polyline points="9 18 15 12 9 6"></polyline>
-          </svg>
+          <i class="fa-solid fa-arrow-right"></i>
         </button>
       </div>
     </section>
@@ -623,7 +609,7 @@
       <div class="vins-content">
         <div class="vins-content-inner">
           <div class="vins-content-left">
-            <p class="vins-content-subtitle reveal">~ Les Vins ~</p>
+            <p class="vins-content-subtitle reveal">Les Vins</p>
             <h3 class="vins-content-title reveal">
               Cinq cuvées nées<br />du même <em>territoire.</em>
             </h3>
@@ -673,7 +659,7 @@
 
       <div class="vins-content" style="background-color: #f7f5f0">
         <div class="vins-content-inner">
-          <div class="vins-content-image parallax-hover reveal-right">
+          <div class="vins-content-image-left parallax-hover reveal-right">
             <img
               src="images/wine_toast.png"
               alt="Dégustation de vins rosés en Provence"
@@ -681,8 +667,10 @@
             />
           </div>
 
+          <div></div>
+
           <div class="vins-content-left">
-            <p class="vins-content-subtitle reveal">~ Les Vins ~</p>
+            <p class="vins-content-subtitle reveal">Les Vins</p>
             <h3 class="vins-content-title reveal">
               Cinq cuvées nées<br />du même <em>territoire.</em>
             </h3>
@@ -728,7 +716,7 @@
        ============================================ -->
     <section class="wine-showcase" id="wine-showcase">
       <div class="wine-showcase-header reveal">
-        <p class="wine-showcase-subtitle">~ H3, sous titre de partie ~</p>
+        <p class="wine-showcase-subtitle">H3, sous titre de partie</p>
         <h2 class="wine-showcase-title">
           H2 Sous titre de bloc et <em>description</em>
         </h2>
@@ -940,74 +928,88 @@
       <div class="table-content">
         <div class="table-content-inner">
           <!-- Block 1: Image Left, Text Right (Reversed) -->
-          <div class="table-content-block reversed">
-            <div class="table-text-side reveal-right">
-              <p class="table-content-subtitle">~ La Table de Blacailloux ~</p>
-              <h3 class="table-content-title">
-                Une cuisine à <em>l'image</em> du domaine.
-              </h3>
-              <p class="table-content-text">
-                Produits vivants, carte courte et sincère, vins du domaine.
-              </p>
-              <p class="table-content-text">
-                La table de Blacailloux ouvrira en 2026 avec une seule ambition
-                : que la cuisine ressemble au terroir qui l'entoure — pas besoin
-                de l'expliquer pour le comprendre. Une adresse qui ne cherchera
-                pas à être sur toutes les listes.
-              </p>
-              <div class="table-links">
-                <a href="#" class="table-link-item" id="esprit-du-lieu-2">
-                  <span>L'ESPRIT DU LIEU</span>
-                  <span class="table-link-arrow">→</span>
-                </a>
-                <a href="#" class="table-link-item" id="reserver-table-2">
-                  <span>RÉSERVER UNE TABLE</span>
-                  <span class="table-link-arrow">→</span>
-                </a>
+          <div style="background-color: #f7f5f0">
+            <div class="section-container">
+              <div class="table-content-block-reversed">
+                <div
+                  class="table-image-side-reversed parallax-hover reveal-left"
+                >
+                  <img
+                    src="images/gourmet_dish_2.jpg"
+                    alt="Plat gastronomique du chef"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div></div>
+
+                <div class="table-text-side reveal-right">
+                  <p class="table-content-subtitle">La Table de Blacailloux</p>
+                  <h3 class="table-content-title">
+                    Une cuisine à <em>l'image</em> du domaine.
+                  </h3>
+                  <p class="table-content-text">
+                    Produits vivants, carte courte et sincère, vins du domaine.
+                  </p>
+                  <p class="table-content-text">
+                    La table de Blacailloux ouvrira en 2026 avec une seule
+                    ambition : que la cuisine ressemble au terroir qui l'entoure
+                    — pas besoin de l'expliquer pour le comprendre. Une adresse
+                    qui ne cherchera pas à être sur toutes les listes.
+                  </p>
+                  <div class="table-links">
+                    <a href="#" class="table-link-item" id="esprit-du-lieu-2">
+                      <span>L'ESPRIT DU LIEU</span>
+                      <span class="table-link-arrow">→</span>
+                    </a>
+                    <a href="#" class="table-link-item" id="reserver-table-2">
+                      <span>RÉSERVER UNE TABLE</span>
+                      <span class="table-link-arrow">→</span>
+                    </a>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="table-image-side parallax-hover reveal-left">
-              <img
-                src="images/gourmet_dish_2.jpg"
-                alt="Plat gastronomique du chef"
-                loading="lazy"
-              />
             </div>
           </div>
 
           <!-- Block 2: Text Left, Image Right -->
-          <div class="table-content-block">
-            <div class="table-text-side reveal-left">
-              <p class="table-content-subtitle">~ La Table de Blacailloux ~</p>
-              <h3 class="table-content-title">
-                Une cuisine à <em>l'image</em> du domaine.
-              </h3>
-              <p class="table-content-text">
-                Produits vivants, carte courte et sincère, vins du domaine.
-              </p>
-              <p class="table-content-text">
-                La table de Blacailloux ouvrira en 2026 avec une seule ambition
-                : que la cuisine ressemble au terroir qui l'entoure — pas besoin
-                de l'expliquer pour le comprendre. Une adresse qui ne cherchera
-                pas à être sur toutes les listes.
-              </p>
-              <div class="table-links">
-                <a href="#" class="table-link-item" id="esprit-du-lieu">
-                  <span>L'ESPRIT DU LIEU</span>
-                  <span class="table-link-arrow">→</span>
-                </a>
-                <a href="#" class="table-link-item" id="reserver-table">
-                  <span>RÉSERVER UNE TABLE</span>
-                  <span class="table-link-arrow">→</span>
-                </a>
+          <div class="section-container">
+            <div class="table-content-block">
+              <div class="table-text-side reveal-right">
+                <p class="table-content-subtitle">La Table de Blacailloux</p>
+                <h3 class="table-content-title">
+                  Une cuisine à <em>l'image</em> du domaine.
+                </h3>
+                <p class="table-content-text">
+                  Produits vivants, carte courte et sincère, vins du domaine.
+                </p>
+                <p class="table-content-text">
+                  La table de Blacailloux ouvrira en 2026 avec une seule
+                  ambition : que la cuisine ressemble au terroir qui l'entoure —
+                  pas besoin de l'expliquer pour le comprendre. Une adresse qui
+                  ne cherchera pas à être sur toutes les listes.
+                </p>
+                <div class="table-links">
+                  <a href="#" class="table-link-item" id="esprit-du-lieu-2">
+                    <span>L'ESPRIT DU LIEU</span>
+                    <span class="table-link-arrow">→</span>
+                  </a>
+                  <a href="#" class="table-link-item" id="reserver-table-2">
+                    <span>RÉSERVER UNE TABLE</span>
+                    <span class="table-link-arrow">→</span>
+                  </a>
+                </div>
               </div>
-            </div>
-            <div class="table-image-side parallax-hover reveal-right">
-              <img
-                src="images/gourmet_dish.jpg"
-                alt="Plat gastronomique"
-                loading="lazy"
-              />
+
+              <div></div>
+
+              <div class="table-image-side parallax-hover reveal-left">
+                <img
+                  src="images/gourmet_dish_2.jpg"
+                  alt="Plat gastronomique du chef"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -1020,12 +1022,14 @@
     <section class="table-extended" id="table-extended">
       <div class="table-extended-inner">
         <!-- Top: Text Left + Quote Box Right -->
+        <div>
+          <p class="table-extended-subtitle">La Table de Blacailloux</p>
+          <h3 class="table-extended-title">
+            Une cuisine à <em>l'image</em> du domaine.
+          </h3>
+        </div>
         <div class="table-extended-top">
           <div class="table-extended-left reveal-left">
-            <p class="table-extended-subtitle">~ La Table de Blacailloux ~</p>
-            <h3 class="table-extended-title">
-              Une cuisine à <em>l'image</em> du domaine.
-            </h3>
             <p class="table-extended-text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
               risus. Suspendisse lectus tortor, adipiscing sit amet, adipiscing
@@ -1152,13 +1156,6 @@
        SECTION 11: UN ENGAGEMENT HUMAIN ET TERRITORIAL
        ============================================ -->
     <section class="engagement-section" id="engagement">
-      <!-- <div class="engagement-leaves">
-        <img
-          src="images/vineyard_sunset.png"
-          alt="Feuilles de vigne décoratives"
-          loading="lazy"
-        />
-      </div> -->
       <div class="engagement-body">
         <div class="engagement-inner reveal">
           <h2 class="engagement-title">
@@ -1189,7 +1186,7 @@
     </section>
 
     <!-- ============================================
-       SECTION 15: POUR UNE PROVENCE VIVANTE
+       SECTION 12: POUR UNE PROVENCE VIVANTE
        ============================================ -->
     <section class="provence-section" id="provence">
       <div class="provence-image-wrapper">
@@ -1247,12 +1244,12 @@
     </section>
 
     <!-- ============================================
-       SECTION 12: L'ESPRIT DES LIEUX
+       SECTION 13: L'ESPRIT DES LIEUX
        ============================================ -->
     <section class="esprit-section" id="esprit-des-lieux">
       <div class="esprit-inner">
         <div class="esprit-content reveal-left">
-          <p class="esprit-subtitle">~ L'esprit des lieux ~</p>
+          <p class="esprit-subtitle">L'esprit des lieux</p>
           <h2 class="esprit-title">Faire plus que du <em>vin</em></h2>
           <p class="esprit-text">
             Choisir Blacailloux, c'est entrer dans cette « Provence intérieure »
@@ -1291,7 +1288,7 @@
     </section>
 
     <!-- ============================================
-       SECTION 13: PHOTO GALLERY
+       SECTION 14: PHOTO GALLERY
        ============================================ -->
     <section class="gallery-section" id="gallery">
       <div class="gallery-grid">
@@ -1329,7 +1326,7 @@
     </section>
 
     <!-- ============================================
-       SECTION 14: UNE HOSPITALITÉ ANCRÉE
+       SECTION 15: UNE HOSPITALITÉ ANCRÉE
        ============================================ -->
     <!-- <section class="hospitalite-section" id="hospitalite">
       <div class="hospitalite-header">
@@ -1375,7 +1372,7 @@
     <!-- ============================================
        FOOTER
        ============================================ -->
-    <footer class="site-footer" id="footer">
+    <!-- <footer class="site-footer" id="footer">
       <div class="footer-inner">
         <div class="footer-brand">
           <div class="footer-logo-icon">
@@ -1462,7 +1459,7 @@
           </div>
         </div>
       </div>
-    </footer>
+    </footer> -->
   </body>
 
   <script defer src="main.js"></script>

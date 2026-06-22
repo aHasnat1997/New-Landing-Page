@@ -1,0 +1,308 @@
+/* ══════════════════════════════════════
+   HERO SECTION
+══════════════════════════════════════ */
+
+/* ── Animations ── */
+@keyframes heroTextReveal {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.05) 40%,
+    rgba(0, 0, 0, 0.05) 60%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+  z-index: 2;
+}
+
+/* ── Hero text ── */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 5;
+  width: 90%;
+  max-width: 680px;
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 5.5vw, 3.75rem); /* fixed: was "60px" with quotes */
+  font-weight: var(--fw-regular); /* 400 → The-Seasons-Regular */
+  color: #fff;
+  line-height: 1.18;
+  margin-bottom: 20px;
+  animation: heroTextReveal 1s ease 0.3s both;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.18);
+}
+
+.hero-title em {
+  font-family: var(--font-serif);
+  font-weight: var(--fw-light); /* 300 → The-Seasons-Light-Italic */
+  font-style: italic;
+}
+
+.hero-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: var(--fw-regular);
+  letter-spacing: var(--tracking-wide);
+  animation: heroTextReveal 1s ease 0.6s both;
+}
+
+.hero-info span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.hero-info .separator {
+  width: 3px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 50%;
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  color: #fff;
+  font-size: var(--text-4xl);
+  animation: floatDown 2s ease-in-out infinite;
+  opacity: 0.75;
+}
+.hero-scroll a {
+  color: #fff;
+}
+
+/* ══════════════════════════════════════
+   NAV PANEL (slide-in menu)
+══════════════════════════════════════ */
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 180;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.45s ease;
+}
+.nav-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.nav-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 340px;
+  height: 100vh;
+  background: var(--primary-dark);
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-100%);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+}
+.nav-panel.is-open {
+  transform: translateX(0);
+}
+
+.nav-panel-label-row {
+  padding: 10px 20px 6px;
+}
+.nav-panel-label {
+  font-size: var(--text-xs);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+  font-family: var(--font-sans);
+  font-weight: var(--fw-regular);
+}
+
+.nav-panel-close-row {
+  height: 52px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav-panel-close {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 2px;
+  color: #fff;
+  cursor: pointer;
+  transition:
+    background 0.25s,
+    border-color 0.25s;
+}
+.nav-panel-close:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.nav-panel-links {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 0 24px;
+  flex: 1;
+}
+
+.nav-panel-link {
+  font-family: var(--font-serif); /* The Seasons */
+  font-size: clamp(1.5rem, 2.2vw, 1.85rem);
+  font-weight: var(--fw-regular);
+  font-style: italic;
+  color: #fff;
+  padding: 18px 32px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  transition:
+    color 0.25s,
+    padding-left 0.25s;
+  text-decoration: none;
+}
+.nav-panel-link:first-child {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: var(--text-sm);
+  font-style: normal;
+  font-family: var(--font-sans);
+  font-weight: var(--fw-regular);
+  letter-spacing: 1px;
+  padding: 14px 32px;
+  border-bottom: none;
+}
+.nav-panel-link:hover {
+  color: rgba(255, 255, 255, 0.75);
+  padding-left: 40px;
+  opacity: 1;
+}
+.nav-panel-link:first-child:hover {
+  padding-left: 32px;
+}
+
+.nav-panel-footer {
+  padding: 24px 32px 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+.nav-panel-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+.nav-contact-group {
+  font-size: var(--text-xs);
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.7;
+  font-family: var(--font-sans);
+}
+.nav-contact-label {
+  color: rgba(255, 255, 255, 0.38);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 0.58rem;
+  margin-bottom: 2px;
+}
+.nav-contact-phone {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: var(--fw-medium);
+}
+
+.nav-panel-social {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.nav-social-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  transition:
+    background 0.25s,
+    border-color 0.25s,
+    color 0.25s;
+}
+.nav-social-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.7);
+  color: #fff;
+  opacity: 1;
+}
+
+/* Hamburger → X */
+.hamburger-icon span {
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+.nav-hamburger.is-open .hamburger-icon span:nth-child(1) {
+  transform: translateY(5.75px) rotate(45deg);
+}
+.nav-hamburger.is-open .hamburger-icon span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.nav-hamburger.is-open .hamburger-icon span:nth-child(3) {
+  transform: translateY(-5.75px) rotate(-45deg);
+}
+
+body.nav-open {
+  overflow: hidden;
+}

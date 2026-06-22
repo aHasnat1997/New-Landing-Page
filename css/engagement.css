@@ -1,0 +1,65 @@
+/* ============================================
+   SECTION 11: ENGAGEMENT
+   ============================================ */
+.engagement-section {
+  position: relative;
+  background: #c46a4a;
+  padding: 88px 5%;
+  overflow: hidden;
+  text-align: center;
+}
+.engagement-leaves {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.07;
+  pointer-events: none;
+}
+.engagement-leaves img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.engagement-body {
+  position: relative;
+  z-index: 2;
+}
+.engagement-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.engagement-title {
+  font-family: var(--font-serif);
+  font-size: var(--text-4xl);
+  font-weight: var(--fw-regular);
+  color: #fff;
+  line-height: 1.3;
+  margin-bottom: 24px;
+}
+.engagement-title em {
+  font-style: italic;
+  font-weight: var(--fw-regular);
+}
+.engagement-text {
+  margin-top: 2rem;
+  font-family: var(--font-sans);
+  font-size: var(--text-md);
+  max-width: 842px;
+  margin: 0 auto;
+  color: #f7f5f0;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.engagement-images-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+.engagement-images-gallery img {
+  width: 100%;
+  height: 486px;
+  object-fit: cover;
+}

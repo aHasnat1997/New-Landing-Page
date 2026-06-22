@@ -1,0 +1,56 @@
+/* ============================================
+   SECTION 15: POUR UNE PROVENCE VIVANTE
+   ============================================ */
+.provence-section {
+  background: var(--color-cream);
+  margin-top: 5rem;
+}
+.provence-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 95vh;
+  min-height: var(--min-height);
+  overflow: hidden;
+}
+.provence-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.provence-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, #a8b79c00, #3e4a3f);
+}
+.provence-content {
+  position: absolute;
+  bottom: 10%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+}
+.provence-title {
+  font-family: var(--font-serif);
+  font-size: var(--text-5xl);
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.25;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.2);
+}
+.provence-title em {
+  font-style: italic;
+  font-weight: 300;
+}
+.provence-text-block {
+  padding: 52px 5%;
+  margin: 0 auto;
+  text-align: center;
+}
+.provence-text {
+  margin-top: 5rem;
+  font-family: var(--font-sans);
+  font-size: var(--text-lg);
+  color: #ffffff;
+  max-width: 821px;
+  margin: 0 auto;
+}

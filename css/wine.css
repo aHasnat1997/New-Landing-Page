@@ -1,0 +1,179 @@
+/* ============================================
+   SECTION 6: WINE BOTTLES (LIGHT / CREAM BG)
+   ============================================ */
+.wine-showcase {
+  padding: 78px 5% 88px;
+  background: #fff;
+}
+.wine-showcase-header {
+  text-align: center;
+  max-width: 80%;
+  margin: 0 auto 52px;
+}
+.wine-showcase-subtitle {
+  font-family: var(--font-sans);
+  font-size: var(--text-3xl);
+  font-weight: var(--fw-light);
+  color: #c46a4a;
+  margin-bottom: 8px;
+  padding: 0px 15px;
+  position: relative;
+}
+.wine-showcase-subtitle::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 38%;
+  display: block;
+  width: 10px;
+  height: 2px;
+  background: #c46a4a;
+  margin: 10px auto;
+}
+.wine-showcase-subtitle::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 61%;
+  display: block;
+  width: 10px;
+  height: 2px;
+  background: #c46a4a;
+  margin: 10px auto;
+}
+.wine-showcase-title {
+  font-family: var(--font-serif);
+  font-size: var(--text-4xl);
+  font-weight: var(--fw-regular);
+  color: var(--black);
+  margin-bottom: 36px;
+  line-height: 1.3;
+}
+.wine-showcase-title em {
+  font-style: italic;
+  font-weight: var(--fw-regular);
+}
+.wine-showcase-desc {
+  font-size: var(--text-lg);
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.wine-bottles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.wine-bottle-card {
+  text-align: center;
+}
+.wine-bottle-image {
+  width: 100%;
+  height: 551px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  overflow: hidden;
+}
+.wine-bottle-image img {
+  max-height: 100%;
+  max-width: 155px;
+  object-fit: contain;
+  transition: transform 0.7s ease;
+}
+.wine-bottle-card:hover .wine-bottle-image img {
+  transform: translateY(-8px);
+}
+.wine-bottle-name {
+  font-family: var(--font-serif);
+  font-size: var(--text-4xl);
+  font-weight: var(--fw-regular);
+  color: var(--color-black);
+  margin-bottom: 5px;
+}
+.wine-bottle-name em {
+  font-style: italic;
+  font-weight: var(--fw-regular);
+}
+.wine-bottle-type {
+  font-family: var(--font-sans);
+  font-size: 20px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.wine-bottle-desc {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  color: var(--text-light);
+  line-height: 1.65;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+.btn-outline-terracotta {
+  display: inline-block;
+  padding: 15px 20px;
+  border: 1px solid var(--terracotta);
+  border-radius: 9999px;
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-weight: 500;
+}
+.btn-outline-terracotta:hover {
+  background: var(--terracotta);
+  color: #fff;
+  opacity: 1;
+}
+
+/* ============================================
+   SECTION 7: WINE BOTTLES (DARK TERRACOTTA BG)
+   ============================================ */
+.wine-showcase-dark {
+  padding: 78px 5% 88px;
+  background: #c46a4a;
+}
+.wine-showcase-dark .wine-showcase-title {
+  color: #fff;
+}
+.wine-showcase-dark .wine-showcase-desc {
+  color: rgba(255, 255, 255, 0.75);
+}
+.wine-showcase-dark .wine-bottle-name {
+  color: #fff;
+}
+.wine-showcase-dark .wine-bottle-type {
+  color: rgba(255, 255, 255, 0.7);
+}
+.wine-showcase-dark .wine-bottle-desc {
+  color: rgba(255, 255, 255, 0.72);
+}
+.btn-outline-white {
+  display: inline-block;
+  padding: 15px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 9999px;
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #fff;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-weight: 500;
+}
+.btn-outline-white:hover {
+  background: #fff;
+  color: var(--primary);
+  opacity: 1;
+}
