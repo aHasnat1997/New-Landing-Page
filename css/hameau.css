@@ -59,7 +59,7 @@
 /* Full-width banner — WIDE, no side padding */
 .hameau-banner {
   width: 100%;
-  height: 480px;
+  height: 580px;
   overflow: hidden;
 }
 .hameau-banner img {
@@ -138,6 +138,7 @@
   width: 100%;
 }
 .hameau-bottom-img {
+  margin-top: 30px;
   width: 100%;
   height: 331px;
 }
@@ -153,6 +154,7 @@
 
 .hameau-image-right {
   width: 100%;
+  height: 654px;
 }
 .hameau-image-right img {
   width: 100%;
