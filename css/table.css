@@ -214,8 +214,8 @@
    ============================================ */
 .table-extended {
   background: #c4a46a; /* warm golden mustard — matches design image */
-  padding: 70px 5%;
-  padding-bottom: 13rem;
+  padding: 80px 5%;
+  padding-bottom: 14rem;
   margin-bottom: 8rem;
 }
 .table-extended-inner {
@@ -353,6 +353,5 @@
   font-size: 0.9rem;
   color: var(--text-light) !important;
   line-height: 1.75;
-  margin-top: 16px;
-  padding-top: 16px;
+  padding-top: 55px;
 }
