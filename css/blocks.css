@@ -90,7 +90,7 @@
 }
 
 .block-card-number::after {
-  content: "";
+  content: "~";
   display: block;
   width: 49.5px;
   height: 1px;

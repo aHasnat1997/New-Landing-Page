@@ -300,12 +300,12 @@
 .table-extended-bottom {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 5rem;
+  gap: 48px;
   align-items: start;
   position: absolute;
 }
 .table-extended-image {
-  width: 557px;
+  width: 616px;
   height: 400px;
   overflow: hidden;
   margin-top: -1rem;
@@ -331,19 +331,15 @@
   padding-left: 0;
 }
 .bullet-list li {
-  font-size: 0.9rem;
+  font-size: var(--text-md);
   color: rgba(255, 255, 255, 0.85);
   padding: 4px 0;
   display: flex;
   align-items: center;
   gap: 8px;
 }
-.bullet-list li::before {
-  content: "~";
-  color: rgba(255, 255, 255, 0.48);
-}
 .table-closing-text {
-  font-size: 0.9rem;
+  font-size: var(--text-md);
   color: var(--text-light) !important;
   line-height: 1.75;
   padding-top: 55px;
