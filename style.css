@@ -496,6 +496,28 @@ a:hover {
   opacity: 0.8;
 }
 
+.gallery-icons {
+  width: 100%;
+  position: absolute;
+  bottom: 9px;
+  right: 0;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gallery-icons-inner {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.gallery-icon {
+  width: 24px;
+  height: 24px;
+}
+
 /* ============================================
    SECTION 14: UNE HOSPITALITÉ ANCRÉE — TERRACOTTA BG
    ============================================ */

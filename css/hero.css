@@ -61,7 +61,7 @@
 
 .hero-title {
   font-family: var(--font-serif);
-  font-size: clamp(2.4rem, 5.5vw, 3.75rem); /* fixed: was "60px" with quotes */
+  font-size: var(--text-5xl); /* fixed: was "60px" with quotes */
   font-weight: var(--fw-regular); /* 400 → The-Seasons-Regular */
   color: #fff;
   line-height: 1.18;
@@ -83,7 +83,7 @@
   gap: 12px;
   color: rgba(255, 255, 255, 0.9);
   font-family: var(--font-sans);
-  font-size: var(--text-base);
+  font-size: var(--text-lg);
   font-weight: var(--fw-regular);
   letter-spacing: var(--tracking-wide);
   animation: heroTextReveal 1s ease 0.6s both;

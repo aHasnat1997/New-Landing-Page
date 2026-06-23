@@ -4,10 +4,28 @@
 .wine-showcase {
   padding: 78px 5% 88px;
   background: #fff;
+  position: relative;
 }
+.wine-shadow-tree-right {
+  position: absolute;
+  top: 20%;
+  right: 0%;
+  width: 500px;
+  height: auto;
+}
+
+.wine-shadow-tree-left {
+  position: absolute;
+  top: -2%;
+  left: 0%;
+  width: 500px;
+  height: auto;
+  transform: rotate(180deg);
+}
+
 .wine-showcase-header {
   text-align: center;
-  max-width: 80%;
+  width: 60%;
   margin: 0 auto 52px;
 }
 .wine-showcase-subtitle {
@@ -117,7 +135,7 @@
 }
 .btn-outline-terracotta {
   display: inline-block;
-  padding: 15px 20px;
+  padding: 15px 25px;
   border: 1px solid var(--terracotta);
   border-radius: 9999px;
   font-family: var(--font-sans);

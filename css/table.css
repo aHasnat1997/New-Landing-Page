@@ -29,7 +29,6 @@
   letter-spacing: 2px;
   color: #c9a25d;
   margin-bottom: 16px;
-  text-transform: uppercase;
 }
 .table-title {
   font-family: var(--font-serif);
@@ -213,15 +212,25 @@
    SECTION 9: TABLE EXTENDED — GOLDEN MUSTARD BG
    ============================================ */
 .table-extended {
-  background: #c4a46a; /* warm golden mustard — matches design image */
-  padding: 80px 5%;
+  background: #c4a46a;
+  padding: 94px 0;
   padding-bottom: 14rem;
   margin-bottom: 8rem;
 }
 .table-extended-inner {
   max-width: var(--max-width);
   margin: 0 auto;
+  position: relative;
+  padding-top: 4rem;
 }
+.table-extended-bg {
+  position: absolute;
+  top: -8%;
+  right: -20%;
+  width: 766px;
+  height: 469px;
+}
+
 .table-extended-top {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -331,7 +340,7 @@
   color: rgba(255, 255, 255, 0.82);
   line-height: 1.72;
   margin-bottom: 12px;
-  width: 70%;
+  width: 100%;
 }
 .bullet-list {
   margin: 12px 0 16px;

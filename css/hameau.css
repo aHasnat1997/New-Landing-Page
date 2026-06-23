@@ -8,7 +8,7 @@
 /* Dark olive top — 2 col text */
 .hameau-top {
   background: #3e4a3f;
-  padding: 70px 0;
+  padding: 94px 0;
 }
 .hameau-top-inner {
   max-width: var(--max-width);
@@ -17,7 +17,6 @@
   grid-template-columns: 1.5fr 1fr;
   gap: 60px;
   align-items: center;
-  padding: 4rem 0;
 }
 .hameau-top-left {
   color: #fff;
@@ -29,7 +28,6 @@
   letter-spacing: 2px;
   color: #a8b79c;
   margin-bottom: 16px;
-  text-transform: uppercase;
 }
 .hameau-title {
   font-family: var(--font-serif);

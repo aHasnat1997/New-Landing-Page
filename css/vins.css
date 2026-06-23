@@ -6,7 +6,7 @@
 }
 
 .vins-top {
-  padding: 70px 5%;
+  padding: 94px 0;
 }
 .vins-top-inner {
   max-width: var(--max-width);
@@ -15,7 +15,6 @@
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
-  padding: 4rem 0;
 }
 .vins-top-left {
   color: #fff;
@@ -26,7 +25,6 @@
   letter-spacing: 2px;
   color: #c46a4a;
   margin-bottom: 16px;
-  text-transform: uppercase;
 }
 .vins-title {
   font-family: var(--font-serif);
@@ -67,8 +65,17 @@
 }
 
 .vins-content {
-  background: var(--color-white);
+  background: #ffffff;
   padding: 70px 5%;
+  position: relative;
+}
+.vins-content-shadow-leaves {
+  position: absolute;
+  top: 150px;
+  left: -37%;
+  width: 90%;
+  height: 620px;
+  z-index: 1;
 }
 .vins-content-inner {
   max-width: var(--max-width);
