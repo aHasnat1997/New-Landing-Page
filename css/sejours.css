@@ -66,7 +66,7 @@
 }
 
 .sejours-desc {
-  font-size: var(--text-lg);
+  font-size: var(--text-md);
   color: var(--text-light);
   line-height: 1.7;
   margin-bottom: 16px;
@@ -164,7 +164,7 @@
   align-items: center;
   gap: 9px;
   font-family: var(--font-sans);
-  font-size: var(--text-md);
+  font-size: 16px;
   color: white;
   margin-bottom: 4px;
 }
@@ -180,7 +180,7 @@
 
 .sejours-card-title {
   font-family: var(--font-serif);
-  font-size: var(--text-2xl);
+  font-size: 28px;
   font-weight: 400;
   margin-bottom: 12px;
   line-height: 1.2;
@@ -202,7 +202,7 @@
 }
 
 .amenity-text {
-  font-size: var(--text-base);
+  font-size: 14px;
   margin-top: 3px;
 }
 

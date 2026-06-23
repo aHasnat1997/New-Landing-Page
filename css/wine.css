@@ -103,7 +103,7 @@
 }
 .wine-bottle-name {
   font-family: var(--font-serif);
-  font-size: var(--text-4xl);
+  font-size: 48px;
   font-weight: var(--fw-regular);
   color: var(--color-black);
   margin-bottom: 5px;

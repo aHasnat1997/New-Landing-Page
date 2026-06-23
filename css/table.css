@@ -292,7 +292,7 @@
 }
 .quote-box-author {
   font-family: var(--font-sans);
-  font-size: 0.68rem;
+  font-size: 14px;
   color: #fff;
   letter-spacing: 1px;
   text-align: right;

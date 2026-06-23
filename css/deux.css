@@ -55,7 +55,7 @@
   align-items: center;
   gap: 9px;
   font-family: var(--font-sans);
-  font-size: 0.7rem;
+  font-size: 14px;
   color: #6f6b64;
   margin-bottom: 5px;
 }
@@ -68,7 +68,7 @@
 }
 .choix-card-title {
   font-family: var(--font-serif);
-  font-size: var(--text-3xl);
+  font-size: 28px;
   font-weight: var(--fw-regular);
   color: #3e4a3f;
   margin-bottom: 4px;
