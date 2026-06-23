@@ -699,7 +699,7 @@ a {
     padding: 52px 0 44px;
   }
   .sejours-header {
-    max-width: 90%;
+    max-width: var(--max-width);
   }
   .sejours-desc {
     padding: 0;

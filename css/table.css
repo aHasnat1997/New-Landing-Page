@@ -52,7 +52,7 @@
 .table-top-right {
   color: #6f6b64;
   font-family: var(--font-sans);
-  font-size: var(--text-base);
+  font-size: var(--text-md);
   line-height: 160%;
 }
 
@@ -272,7 +272,8 @@
   font-size: var(--text-md);
   color: rgba(255, 255, 255, 0.82);
   line-height: 160%;
-  margin-bottom: 14px;
+  margin-bottom: 20px;
+  text-align: justify;
 }
 .quote-box {
   background: #c39036;
@@ -305,8 +306,9 @@
 }
 .table-extended-image {
   width: 557px;
-  height: 350px;
+  height: 400px;
   overflow: hidden;
+  margin-top: -1rem;
 }
 .table-extended-image img {
   width: 100%;

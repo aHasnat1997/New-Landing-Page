@@ -147,11 +147,10 @@
 }
 
 .hameau-image-right {
-  width: 100%;
+  width: 541px;
   height: 654px;
 }
 .hameau-image-right img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }

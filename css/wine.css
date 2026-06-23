@@ -25,7 +25,7 @@
 
 .wine-showcase-header {
   text-align: center;
-  width: 60%;
+  width: 85%;
   margin: 0 auto 52px;
 }
 .wine-showcase-subtitle {
@@ -41,7 +41,7 @@
   content: "";
   position: absolute;
   top: 20%;
-  left: 38%;
+  left: 34.5%;
   display: block;
   width: 10px;
   height: 2px;
@@ -52,7 +52,7 @@
   content: "";
   position: absolute;
   top: 20%;
-  left: 61%;
+  left: 64.5%;
   display: block;
   width: 10px;
   height: 2px;
@@ -90,7 +90,7 @@
 }
 .wine-bottle-image {
   width: 100%;
-  height: 400px;
+  height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -98,7 +98,7 @@
 }
 .wine-bottle-image img {
   max-height: 100%;
-  max-width: 155px;
+  width: 275px;
   object-fit: contain;
 }
 .wine-bottle-name {
