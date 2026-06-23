@@ -144,10 +144,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.7s ease;
-}
-.hameau-bottom-img:hover img {
-  transform: scale(1.03);
 }
 
 .hameau-image-right {
@@ -158,8 +154,4 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.7s ease;
-}
-.hameau-image-right:hover img {
-  transform: scale(1.03);
 }

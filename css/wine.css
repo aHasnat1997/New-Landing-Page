@@ -100,10 +100,6 @@
   max-height: 100%;
   max-width: 155px;
   object-fit: contain;
-  transition: transform 0.7s ease;
-}
-.wine-bottle-card:hover .wine-bottle-image img {
-  transform: translateY(-8px);
 }
 .wine-bottle-name {
   font-family: var(--font-serif);
@@ -143,14 +139,8 @@
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--terracotta);
-  transition: all 0.3s ease;
   cursor: pointer;
   font-weight: 500;
-}
-.btn-outline-terracotta:hover {
-  background: var(--terracotta);
-  color: #fff;
-  opacity: 1;
 }
 
 /* ============================================
@@ -185,12 +175,6 @@
   letter-spacing: 3px;
   text-transform: uppercase;
   color: #fff;
-  transition: all 0.3s ease;
   cursor: pointer;
   font-weight: 500;
-}
-.btn-outline-white:hover {
-  background: #fff;
-  color: var(--primary);
-  opacity: 1;
 }

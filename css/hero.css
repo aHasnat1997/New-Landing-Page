@@ -3,18 +3,6 @@
 ══════════════════════════════════════ */
 
 /* ── Animations ── */
-@keyframes heroTextReveal {
-  from {
-    opacity: 0;
-    transform: translateY(28px);
-    filter: blur(4px);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-    filter: none;
-  }
-}
 
 .hero {
   position: relative;
@@ -66,7 +54,6 @@
   color: #fff;
   line-height: 1.18;
   margin-bottom: 20px;
-  animation: heroTextReveal 1s ease 0.3s both;
   text-shadow: 0 2px 24px rgba(0, 0, 0, 0.18);
 }
 
@@ -86,7 +73,6 @@
   font-size: var(--text-lg);
   font-weight: var(--fw-regular);
   letter-spacing: var(--tracking-wide);
-  animation: heroTextReveal 1s ease 0.6s both;
 }
 
 .hero-info span {
@@ -110,7 +96,6 @@
   z-index: 5;
   color: #fff;
   font-size: var(--text-4xl);
-  animation: floatDown 2s ease-in-out infinite;
   opacity: 0.75;
 }
 .hero-scroll a {
@@ -127,7 +112,6 @@
   z-index: 180;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.45s ease;
 }
 .nav-overlay.is-open {
   opacity: 1;
@@ -145,7 +129,6 @@
   display: flex;
   flex-direction: column;
   transform: translateX(-100%);
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   overflow-y: auto;
 }
 .nav-panel.is-open {
@@ -183,13 +166,6 @@
   border-radius: 2px;
   color: #fff;
   cursor: pointer;
-  transition:
-    background 0.25s,
-    border-color 0.25s;
-}
-.nav-panel-close:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.6);
 }
 
 .nav-panel-links {
@@ -207,9 +183,6 @@
   color: #fff;
   padding: 18px 32px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-  transition:
-    color 0.25s,
-    padding-left 0.25s;
   text-decoration: none;
 }
 .nav-panel-link:first-child {
@@ -221,14 +194,6 @@
   letter-spacing: 1px;
   padding: 14px 32px;
   border-bottom: none;
-}
-.nav-panel-link:hover {
-  color: rgba(255, 255, 255, 0.75);
-  padding-left: 40px;
-  opacity: 1;
-}
-.nav-panel-link:first-child:hover {
-  padding-left: 32px;
 }
 
 .nav-panel-footer {
@@ -274,24 +239,8 @@
   justify-content: center;
   color: rgba(255, 255, 255, 0.75);
   text-decoration: none;
-  transition:
-    background 0.25s,
-    border-color 0.25s,
-    color 0.25s;
-}
-.nav-social-btn:hover {
-  background: rgba(255, 255, 255, 0.15);
-  border-color: rgba(255, 255, 255, 0.7);
-  color: #fff;
-  opacity: 1;
 }
 
-/* Hamburger → X */
-.hamburger-icon span {
-  transition:
-    transform 0.3s ease,
-    opacity 0.3s ease;
-}
 .nav-hamburger.is-open .hamburger-icon span:nth-child(1) {
   transform: translateY(5.75px) rotate(45deg);
 }

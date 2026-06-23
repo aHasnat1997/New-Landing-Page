@@ -25,7 +25,6 @@
 .provence-content {
   position: absolute;
   bottom: 10%;
-  transform: translateX(-50%);
   text-align: center;
   width: 100%;
 }
