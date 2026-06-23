@@ -84,13 +84,13 @@
   align-items: center;
   gap: 9px;
   font-family: var(--font-sans);
-  font-size: 0.7rem;
+  font-size: 14px;
   color: var(--text-light);
   margin-bottom: 4px;
 }
 
 .block-card-number::after {
-  content: "~";
+  content: "";
   display: block;
   width: 49.5px;
   height: 1px;
