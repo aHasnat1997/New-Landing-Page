@@ -285,11 +285,6 @@ a {
   gap: 10px;
   font-weight: var(--fw-medium);
 }
-.cta-link::after {
-  content: "→";
-  font-size: var(--text-3xl);
-  transform: translateY(-5px);
-}
 
 .parallax-hover {
   overflow: hidden;
