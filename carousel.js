@@ -20,19 +20,42 @@
     firstClone.classList.add("is-clone");
     lastClone.classList.add("is-clone");
 
-    track.appendChild(firstClone); // clone of first → after last
-    track.insertBefore(lastClone, realCards[0]); // clone of last  → before first
+    track.appendChild(firstClone);
+    track.insertBefore(lastClone, realCards[0]);
 
-    /* Re-query all cards including clones */
     var allCards = Array.prototype.slice.call(
       track.querySelectorAll(".sejours-card"),
     );
-    /* real cards now sit at indices 1 … total  (0 = lastClone, total+1 = firstClone) */
 
-    var current = 1; // start on the first real card (index 1)
+    var current = 1;
     var isAnimating = false;
 
-    /* ── Scroll so that card[index] is centred ── */
+    /* ── Dots ── */
+    var dotsWrapper = wrapper.querySelector(".sejours-carousel-dots");
+    var dots = [];
+
+    if (dotsWrapper) {
+      realCards.forEach(function (_, i) {
+        var dot = document.createElement("button");
+        dot.className = "sejours-dot" + (i === 0 ? " is-active" : "");
+        dot.setAttribute("aria-label", "Slide " + (i + 1));
+        dot.addEventListener("click", function () {
+          resetAuto();
+          goTo(i + 1); // +1 because index 0 is the lastClone
+        });
+        dotsWrapper.appendChild(dot);
+        dots.push(dot);
+      });
+    }
+
+    function updateDots() {
+      var realIndex = current - 1; // subtract 1 to account for lastClone at index 0
+      dots.forEach(function (dot, i) {
+        dot.classList.toggle("is-active", i === realIndex);
+      });
+    }
+
+    /* ── Scroll helpers ── */
     function getTargetScroll(index) {
       var card = allCards[index];
       var trackRect = track.getBoundingClientRect();
@@ -46,13 +69,8 @@
 
     function scrollTo(index, instant) {
       var target = getTargetScroll(index);
-      if (instant) {
-        track.style.scrollBehavior = "auto";
-        track.scrollLeft = target;
-      } else {
-        track.style.scrollBehavior = "smooth";
-        track.scrollLeft = target;
-      }
+      track.style.scrollBehavior = instant ? "auto" : "smooth";
+      track.scrollLeft = target;
     }
 
     function goTo(index, instant) {
@@ -60,23 +78,24 @@
       current = index;
       scrollTo(current, instant);
       updateCards();
+      updateDots();
 
       if (!instant) {
         isAnimating = true;
         setTimeout(function () {
           isAnimating = false;
 
-          /* ── Silent reposition: if on a clone, jump to real counterpart ── */
+          /* Silent reposition on clone hit */
           if (current === 0) {
-            /* Was on lastClone (before first real) → jump to real last */
             current = total;
             scrollTo(current, true);
             updateCards();
+            updateDots();
           } else if (current === allCards.length - 1) {
-            /* Was on firstClone (after last real) → jump to real first */
             current = 1;
             scrollTo(current, true);
             updateCards();
+            updateDots();
           }
         }, 700);
       }
@@ -90,14 +109,37 @@
       });
     }
 
+    /* ── Autoplay ── */
+    var autoTimer = null;
+    var AUTO_DELAY = 3000;
+
+    function startAuto() {
+      autoTimer = setInterval(function () {
+        goTo(current + 1);
+      }, AUTO_DELAY);
+    }
+
+    function resetAuto() {
+      clearInterval(autoTimer);
+      startAuto();
+    }
+
+    /* Pause on hover, resume on leave */
+    wrapper.addEventListener("mouseenter", function () {
+      clearInterval(autoTimer);
+    });
+    wrapper.addEventListener("mouseleave", startAuto);
+
+    /* ── Buttons ── */
     btnPrev.addEventListener("click", function () {
+      resetAuto();
       goTo(current - 1);
     });
     btnNext.addEventListener("click", function () {
+      resetAuto();
       goTo(current + 1);
     });
 
-    /* Buttons always visible */
     btnPrev.style.opacity = btnNext.style.opacity = "1";
     btnPrev.style.pointerEvents = btnNext.style.pointerEvents = "auto";
 
@@ -127,6 +169,7 @@
       if (!isDragging) return;
       isDragging = false;
       track.classList.remove("is-dragging");
+      resetAuto();
       if (dragDistance < -60) goTo(current + 1);
       else if (dragDistance > 60) goTo(current - 1);
       else goTo(current);
@@ -144,6 +187,7 @@
 
     track.addEventListener("touchend", function (e) {
       var diff = touchStartX - e.changedTouches[0].clientX;
+      resetAuto();
       if (diff > 60) goTo(current + 1);
       else if (diff < -60) goTo(current - 1);
       else goTo(current);
@@ -151,8 +195,14 @@
 
     /* ── Keyboard ── */
     document.addEventListener("keydown", function (e) {
-      if (e.key === "ArrowRight") goTo(current + 1);
-      if (e.key === "ArrowLeft") goTo(current - 1);
+      if (e.key === "ArrowRight") {
+        resetAuto();
+        goTo(current + 1);
+      }
+      if (e.key === "ArrowLeft") {
+        resetAuto();
+        goTo(current - 1);
+      }
     });
 
     /* ── Resize ── */
@@ -164,8 +214,8 @@
       }, 100);
     });
 
-    /* Start on real first card */
     goTo(1, true);
+    startAuto();
   }
 
   if (document.readyState === "loading") {
