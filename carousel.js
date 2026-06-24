@@ -114,9 +114,9 @@
     var AUTO_DELAY = 3000;
 
     function startAuto() {
-      // autoTimer = setInterval(function () {
-      //   goTo(current + 1);
-      // }, AUTO_DELAY);
+      autoTimer = setInterval(function () {
+        goTo(current + 1);
+      }, AUTO_DELAY);
     }
 
     function resetAuto() {
