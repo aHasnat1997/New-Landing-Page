@@ -6,7 +6,7 @@
 }
 
 .vins-top {
-  padding: 94px 0;
+  padding: 97px 0;
 }
 .vins-top-inner {
   max-width: var(--max-width);
@@ -21,22 +21,25 @@
 }
 .vins-keywords {
   font-family: var(--font-sans);
-  font-size: var(--text-lg);
-  letter-spacing: 2px;
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: 0%;
   color: #c46a4a;
-  margin-bottom: 16px;
+  transform: translate(-1.5px, -4px);
 }
 .vins-title {
   font-family: var(--font-serif);
-  font-size: var(--text-5xl);
-  font-weight: var(--fw-regular);
-  line-height: 1.22;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: -3%;
   color: #3e4a3f;
-  margin-bottom: 14px;
+  margin-bottom: 27px;
+  margin-top: 15px;
 }
 .vins-title em {
   font-style: italic;
-  font-weight: var(--fw-regular);
+  font-weight: 400;
   color: #c46a4a;
 }
 .vins-tagline {
@@ -44,12 +47,16 @@
   font-size: var(--text-lg);
   font-weight: var(--fw-regular);
   color: #3e4a3f;
+  padding-left: 9px;
 }
 .vins-top-right {
+  width: 529px;
   color: #6f6b64;
   font-family: var(--font-sans);
-  font-size: var(--text-md);
+  font-size: 16px;
   line-height: 160%;
+  letter-spacing: 0%;
+  transform: translate(82px, 12px);
 }
 
 .vins-banner {

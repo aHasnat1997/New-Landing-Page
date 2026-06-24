@@ -8,14 +8,13 @@
 /* Dark olive top — 2 col text */
 .hameau-top {
   background: #3e4a3f;
-  padding: 94px 0;
+  padding: 94px 0 96px;
 }
 .hameau-top-inner {
   max-width: var(--max-width);
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1.5fr 1fr;
-  gap: 60px;
   align-items: center;
 }
 .hameau-top-left {
@@ -24,16 +23,20 @@
 }
 .hameau-keywords {
   font-family: var(--font-sans);
-  font-size: var(--text-lg);
-  letter-spacing: 2px;
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  font-weight: 400;
   color: #a8b79c;
-  margin-bottom: 16px;
+  margin-top: -1.5px;
+  margin-bottom: 19px;
 }
 .hameau-title {
   font-family: var(--font-serif);
-  font-size: var(--text-5xl);
+  font-size: 60px;
   font-weight: var(--fw-regular);
-  line-height: 1.22;
+  line-height: 100%;
+  letter-spacing: -3%;
   color: #fff;
   margin-bottom: 14px;
 }
@@ -43,15 +46,23 @@
 }
 .hameau-tagline {
   font-family: var(--font-sans);
-  font-size: var(--text-lg);
+  font-size: 18px;
   font-weight: var(--fw-regular);
+  line-height: 140%;
+  letter-spacing: 0%;
   color: rgb(255, 255, 255);
+  padding-left: 9px;
+  padding-top: 16px;
 }
 .hameau-top-right {
+  width: 530px;
   color: rgb(255, 255, 255);
   font-family: var(--font-sans);
-  font-size: var(--text-base);
+  font-size: 16px;
   line-height: 160%;
+  letter-spacing: 0%;
+  padding-top: 25px;
+  transform: translateX(1px);
 }
 
 /* Full-width banner — WIDE, no side padding */
@@ -69,7 +80,7 @@
 /* White bg content area */
 .hameau-content {
   background: var(--color-white);
-  padding: 70px 5%;
+  padding: 102px 0;
 }
 .hameau-content-inner {
   max-width: var(--max-width);
@@ -77,18 +88,20 @@
 }
 .hameau-content-subtitle {
   font-family: var(--font-sans);
-  font-size: var(--text-3xl);
-  font-weight: var(--fw-light);
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 140%;
+  letter-spacing: -3%;
   color: #a8b79c;
-  margin-bottom: 8px;
+  margin-bottom: 19.5px;
   padding: 0px 15px;
   position: relative;
 }
 .hameau-content-subtitle::after {
   content: "";
   position: absolute;
-  top: 25%;
-  left: 0;
+  top: 13%;
+  left: -2px;
   display: block;
   width: 10px;
   height: 2px;
@@ -98,8 +111,8 @@
 .hameau-content-subtitle::before {
   content: "";
   position: absolute;
-  top: 25%;
-  left: 22.2%;
+  top: 12%;
+  left: 21.5%;
   display: block;
   width: 10px;
   height: 2px;
@@ -109,10 +122,13 @@
 
 .hameau-content-title {
   font-family: var(--font-serif);
-  font-size: var(--text-4xl);
+  font-size: 42px;
   font-weight: var(--fw-regular);
+  line-height: 53.04px;
+  letter-spacing: -0.88px;
   color: var(--color-black);
-  margin-bottom: 36px;
+  margin-bottom: 48px;
+  margin-left: -2px;
   line-height: 1.3;
 }
 .hameau-content-title em {
@@ -125,19 +141,31 @@
   flex-direction: column;
   max-width: 50%;
 }
+
+.hameau-text-col {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 669px;
+}
+
 .hameau-text-col p {
-  font-size: var(--text-md);
+  margin-top: 4px;
+  transform: translateX(-1.5px);
+  font-size: 16px;
   color: var(--text-light);
   line-height: 160%;
   margin-bottom: 20px;
-  text-align: justify;
+  letter-spacing: 0%;
+  /* text-align: justify; */
 }
 .hameau-bottom-images {
   width: 100%;
+  transform: translateX(-1.8px);
 }
 .hameau-bottom-img {
-  margin-top: 30px;
-  width: 100%;
+  margin-top: 15px;
+  width: 669px;
   height: 331px;
 }
 .hameau-bottom-img img {
@@ -147,8 +175,9 @@
 }
 
 .hameau-image-right {
-  width: 541px;
+  width: 551px;
   height: 654px;
+  transform: translateX(25px);
 }
 .hameau-image-right img {
   width: 100%;
