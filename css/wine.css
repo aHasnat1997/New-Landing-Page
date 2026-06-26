@@ -30,14 +30,15 @@
 }
 .wine-showcase-subtitle {
   font-family: var(--font-sans);
-  font-size: var(--text-3xl);
-  font-weight: var(--fw-light);
+  font-size: 26px;
+  font-weight: 300;
   color: #c46a4a;
   margin-bottom: -12px;
   padding: 11px 0px;
   position: relative;
   line-height: 140%;
   letter-spacing: -3%;
+  transform: translate(2px, 2px);
 }
 .wine-showcase-subtitle::after {
   content: "";
@@ -63,24 +64,26 @@
 }
 .wine-showcase-title {
   font-family: var(--font-serif);
-  font-size: var(--text-4xl);
-  font-weight: var(--fw-regular);
+  font-size: 42px;
+  font-weight: 400;
   color: var(--black);
-  line-height:53.04px;
+  line-height: 53.04px;
   letter-spacing: -0.88px;
   margin-bottom: 2px;
+  transform: translate(1px, -1px);
 }
 .wine-showcase-title em {
   font-style: italic;
-  font-weight: var(--fw-regular);
+  font-weight: 400;
 }
 .wine-showcase-desc {
-  font-size:16px;
+  font-size: 16px;
   color: var(--text-light);
-  line-height:160%;
+  line-height: 160%;
   max-width: 1278px;
   letter-spacing: 0%;
   margin: 0 auto;
+  transform: translate(1px, 1px);
 }
 
 .wine-bottles-grid {
@@ -100,13 +103,14 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  margin-top: 54px;
+  margin-top: 55px;
   margin-left: 60px;
 }
 .wine-bottle-image img {
   max-height: 100%;
   width: 275px;
   object-fit: contain;
+  transform: translate(0px, -0.5px);
 }
 .wine-bottle-name {
   font-family: var(--font-serif);
@@ -119,6 +123,7 @@
   margin-left: -1px;
   letter-spacing: -3%;
   font-weight: 400;
+  transform: translate(2px, -2px);
 }
 .wine-bottle-name em {
   font-style: italic;
@@ -133,37 +138,46 @@
   margin-bottom: 23px;
   font-weight: 400;
   line-height: 160%;
+  transform: translate(2px, -0px);
 }
 .wine-bottle-desc {
+  width: 400px;
+  vertical-align: middle;
   font-family: var(--font-sans);
-  font-size: var(--text-base);
+  font-size: 16px;
   color: var(--text-light);
   text-align: center;
-  line-height:180%;
-  letter-spacing: 3.1%;
+  line-height: 160%;
+  letter-spacing: 0%;
   font-weight: 400;
-  margin-bottom: 24px;
-  padding: 0px 10px;
+  margin-bottom: 21.5px;
+  transform: translate(-1.5px, -3px);
 }
 .btn-outline-terracotta {
   display: inline-block;
-  padding: 17px 20px;
+  padding: 20px 26px 17px 20px;
   border: 1px solid var(--terracotta);
   border-radius: 9999px;
   font-family: var(--font-sans);
-  font-size: var(--text-xs);
-  letter-spacing: 3px;
+  font-size: 13px;
+  line-height: 100%;
+  letter-spacing: 10%;
   text-transform: uppercase;
   color: var(--terracotta);
   cursor: pointer;
   font-weight: 400;
 }
 
+.btn-outline-terracotta span {
+  display: inline-block;
+  transform: translate(4px, 0px);
+}
+
 /* ============================================
    SECTION 7: WINE BOTTLES (DARK TERRACOTTA BG)
    ============================================ */
 .wine-showcase-dark {
-  padding: 78px 5% 88px;
+  padding: 134px 5% 97px;
   background: #c46a4a;
   margin-top: 10px;
 }
@@ -175,23 +189,34 @@
 }
 .wine-showcase-dark .wine-bottle-name {
   color: #fff;
+  transform: translate(1px, -1px);
 }
 .wine-showcase-dark .wine-bottle-type {
   color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 160%;
+  letter-spacing: 4px;
 }
 .wine-showcase-dark .wine-bottle-desc {
   color: rgba(255, 255, 255, 0.72);
 }
 .btn-outline-white {
   display: inline-block;
-  padding: 15px 20px;
+  padding: 23.5px 26px 16px 21px;
   border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 9999px;
   font-family: var(--font-sans);
-  font-size: var(--text-xs);
-  letter-spacing: 3px;
+  font-size: 13px;
+  line-height: 100%;
+  letter-spacing: 10%;
   text-transform: uppercase;
   color: #fff;
   cursor: pointer;
   font-weight: 500;
+}
+
+.btn-outline-white span {
+  display: inline-block;
+  transform: translate(5px, -3px);
 }

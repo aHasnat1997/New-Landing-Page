@@ -768,13 +768,6 @@ a {
   .table-extended-image {
     height: 220px;
   }
-  .table-extended-details p {
-    width: 100%;
-  }
-
-  .deux-choix-section {
-    padding: 52px 0 44px;
-  }
   .deux-choix-grid {
     grid-template-columns: 1fr;
     gap: 26px;
